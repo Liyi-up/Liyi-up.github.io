@@ -409,7 +409,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>9.8k</span>
+              <span>9.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -429,7 +429,6 @@
 
       
           <h2 id="响应式开发"><a href="#响应式开发" class="headerlink" title="响应式开发"></a>响应式开发</h2><h3 id="响应式开发原理"><a href="#响应式开发原理" class="headerlink" title="响应式开发原理"></a>响应式开发原理</h3><p>就是使用媒体查询针对不同宽度的设备进行布局和样式的设置，从而适配不同设备的目的</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -437,26 +436,23 @@
 <th>尺寸区间</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>超小屏幕（手机）</td>
 <td>&lt; 768px</td>
 </tr>
 <tr>
 <td>小屏设备（平板）</td>
-<td>>=768px ~&lt; 992px</td>
+<td>&gt;=768px ~&lt; 992px</td>
 </tr>
 <tr>
 <td>中等屏幕（桌面显示器）</td>
-<td>>=992px ~ &lt;1200px</td>
+<td>&gt;=992px ~ &lt;1200px</td>
 </tr>
 <tr>
 <td>宽屏设备（大桌面显示器）</td>
-<td>>=1200px</td>
+<td>&gt;=1200px</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/07/13/CSS%E6%A0%B7%E5%BC%8F%E8%A1%A8-%E7%A7%BB%E5%8A%A8WEB%E5%BC%80%E5%8F%91%E4%B9%8B%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/#more" rel="contents">
@@ -507,10 +503,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-07-13 09:30:00 / 修改时间：17:43:12" itemprop="dateCreated datePublished" datetime="2021-07-13T09:30:00+08:00">2021-07-13</time>
+              <time title="创建时间：2021-07-13 09:30:00" itemprop="dateCreated datePublished" datetime="2021-07-13T09:30:00+08:00">2021-07-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-14 09:59:59" itemprop="dateModified" datetime="2021-07-14T09:59:59+08:00">2021-07-14</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -555,14 +557,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>11k</span>
+              <span>24k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>10 分钟</span>
+              <span>22 分钟</span>
             </span>
 
         </div>
@@ -574,8 +576,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Iterator-迭代器"><a href="#Iterator-迭代器" class="headerlink" title="Iterator 迭代器"></a>Iterator 迭代器</h2><p><code>iterator</code> 是 ES6 新增的一种遍历机制，类似于数据解构的代理，使用它可以让我们不用直接对数据解构对象本身进行操作。</p>
-<h3 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h3><ul>
+          <h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><h3 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h3><p>iterator` 是 ES6 新增的一种遍历机制，类似于数据解构的代理，使用它可以让我们不用直接对数据解构对象本身进行操作。</p>
+<h4 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h4><ul>
 <li>迭代器是一个同一的接口，它的作用是使各种数据结构可以被便捷访问，它是通过一个键为Symbol.iterator 的方法来实现。</li>
 </ul>
           <!--noindex-->
@@ -704,6 +706,7 @@
           <h2 id="jQuery-拷贝对象"><a href="#jQuery-拷贝对象" class="headerlink" title="jQuery 拷贝对象"></a>jQuery 拷贝对象</h2><p>如果想要把某个对象拷贝（合并）给另外一个对象使用，此时可以使用$.extend() 方法</p>
 <p><strong>语法：</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.extend([deep],traget,object1,[objectN])</span><br></pre></td></tr></table></figure>
+
 <p>1.<code>deep</code>：如果设为true为深拷贝，默认为false 浅拷贝</p>
 <p>2.<code>traget</code>：要拷贝的目标对象</p>
 <p>3.<code>object1</code>：待拷贝到第一个对象的对象</p>
@@ -827,6 +830,7 @@
 
       
           <h2 id="jQuery-事件注册"><a href="#jQuery-事件注册" class="headerlink" title="jQuery 事件注册"></a>jQuery 事件注册</h2><h3 id="单个事件注册"><a href="#单个事件注册" class="headerlink" title="单个事件注册"></a>单个事件注册</h3><h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">element.事件（<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"div"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;事件处理程序&#125;)</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
@@ -1044,7 +1048,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">19:47</span>
+    <span title="站点阅读时长">20:04</span>
 </div>
 
 <!--
