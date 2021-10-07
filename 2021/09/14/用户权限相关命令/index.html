@@ -321,42 +321,39 @@
 <li>对 <strong>文件／目录</strong> 的权限包括：</li>
 </ul>
 <a id="more"></a>
-<div class="table-container">
+
 <table>
 <thead>
 <tr>
-<th style="text-align:center">序号</th>
-<th style="text-align:center">权限</th>
-<th style="text-align:center">英文</th>
-<th style="text-align:center">缩写</th>
-<th style="text-align:center">数字代号</th>
+<th align="center">序号</th>
+<th align="center">权限</th>
+<th align="center">英文</th>
+<th align="center">缩写</th>
+<th align="center">数字代号</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">01</td>
-<td style="text-align:center">读</td>
-<td style="text-align:center">read</td>
-<td style="text-align:center">r</td>
-<td style="text-align:center">4</td>
+<tbody><tr>
+<td align="center">01</td>
+<td align="center">读</td>
+<td align="center">read</td>
+<td align="center">r</td>
+<td align="center">4</td>
 </tr>
 <tr>
-<td style="text-align:center">02</td>
-<td style="text-align:center">写</td>
-<td style="text-align:center">write</td>
-<td style="text-align:center">w</td>
-<td style="text-align:center">2</td>
+<td align="center">02</td>
+<td align="center">写</td>
+<td align="center">write</td>
+<td align="center">w</td>
+<td align="center">2</td>
 </tr>
 <tr>
-<td style="text-align:center">03</td>
-<td style="text-align:center">执行</td>
-<td style="text-align:center">excute</td>
-<td style="text-align:center">x</td>
-<td style="text-align:center">1</td>
+<td align="center">03</td>
+<td align="center">执行</td>
+<td align="center">excute</td>
+<td align="center">x</td>
+<td align="center">1</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h3 id="组"><a href="#组" class="headerlink" title="组"></a>组</h3><ul>
 <li>为了方便用户管理，提出了 <strong>组</strong> 的概念，如下图所示</li>
 </ul>
@@ -383,6 +380,7 @@
 <li>命令格式如下：</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +/-rwx 文件名|目录名</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>提示：以上方式会一次性修改 <code>拥有者</code> / <code>组</code> 权限，有关 <code>chmod</code> 的高级用法，后续会讲</p>
 </blockquote>
@@ -402,7 +400,6 @@
 <h2 id="组管理-终端命令"><a href="#组管理-终端命令" class="headerlink" title="组管理 终端命令"></a><strong>组管理</strong> 终端命令</h2><blockquote>
 <p>提示：<strong>创建组</strong> / <strong>删除组</strong> 的终端命令都需要通过 <code>sudo</code> 执行</p>
 </blockquote>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -411,8 +408,7 @@
 <th>作用</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>01</td>
 <td>groupadd 组名</td>
 <td>添加组</td>
@@ -432,9 +428,7 @@
 <td>chgrp -R 组名 文件/目录名</td>
 <td>递归修改文件/目录的所属组</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <blockquote>
 <p>提示：</p>
 <ul>
@@ -454,8 +448,7 @@
 <h2 id="用户管理-终端命令"><a href="#用户管理-终端命令" class="headerlink" title="用户管理 终端命令"></a><strong>用户管理</strong> 终端命令</h2><blockquote>
 <p>提示：<strong>创建用户</strong> / <strong>删除用户</strong> / <strong>修改其他用户密码</strong> 的终端命令都需要通过 <code>sudo</code> 执行</p>
 </blockquote>
-<h3 id="创建用户／设置密码／删除用户"><a href="#创建用户／设置密码／删除用户" class="headerlink" title="创建用户／设置密码／删除用户"></a>创建用户／设置密码／删除用户</h3><div class="table-container">
-<table>
+<h3 id="创建用户／设置密码／删除用户"><a href="#创建用户／设置密码／删除用户" class="headerlink" title="创建用户／设置密码／删除用户"></a>创建用户／设置密码／删除用户</h3><table>
 <thead>
 <tr>
 <th>序号</th>
@@ -464,8 +457,7 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>01</td>
 <td>useradd -m -g 组 新建用户名</td>
 <td>添加新用户</td>
@@ -485,14 +477,11 @@
 </tr>
 <tr>
 <td>04</td>
-<td>cat /etc/passwd \</td>
-<td>grep 用户名</td>
+<td>cat /etc/passwd | grep 用户名</td>
 <td>确认用户信息</td>
 <td>新建用户后，用户信息会保存在 /etc/passwd 文件中</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <blockquote>
 <p>提示：</p>
 <ul>
@@ -501,8 +490,7 @@
 <li>用户信息保存在 <code>/etc/passwd</code> 文件中</li>
 </ul>
 </blockquote>
-<h3 id="查看用户信息"><a href="#查看用户信息" class="headerlink" title="查看用户信息"></a>查看用户信息</h3><div class="table-container">
-<table>
+<h3 id="查看用户信息"><a href="#查看用户信息" class="headerlink" title="查看用户信息"></a>查看用户信息</h3><table>
 <thead>
 <tr>
 <th>序号</th>
@@ -510,8 +498,7 @@
 <th>作用</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>01</td>
 <td>id [用户名]</td>
 <td>查看用户 UID 和 GID 信息</td>
@@ -526,9 +513,7 @@
 <td>whoami</td>
 <td>查看当前登录用户的账户名</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h4 id="passwd-文件"><a href="#passwd-文件" class="headerlink" title="passwd 文件"></a>passwd 文件</h4><p><code>/etc/passwd</code> 文件存放的是用户的信息，由 6 个分号组成的 7 个信息，分别是</p>
 <ol>
 <li>用户名</li>
@@ -548,10 +533,12 @@
 <p>提示：设置了用户的附加组之后，需要重新登录才能生效！</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改用户的主组（passwd 中的 GID）</span></span><br><span class="line">usermod -g 组 用户名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改用户的附加组</span></span><br><span class="line">usermod -G 组 用户名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改用户登录 Shell</span></span><br><span class="line">usermod -s /bin/bash 用户名</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>注意：默认使用 <code>useradd</code> 添加的用户是没有权限使用 <code>sudo</code> 以 <code>root</code> 身份执行命令的，可以使用以下命令，将用户添加到 <code>sudo</code> 附加组中</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">usermod -G sudo 用户名</span><br></pre></td></tr></table></figure>
+
 <h4 id="which（重要）"><a href="#which（重要）" class="headerlink" title="which（重要）"></a>which（重要）</h4><blockquote>
 <p>提示</p>
 <ul>
@@ -563,6 +550,7 @@
 <li><code>which</code> 命令可以查看执行命令所在位置，例如：</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">which</span> ls</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出</span></span><br><span class="line"><span class="comment"># /bin/ls</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">which</span> useradd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出</span></span><br><span class="line"><span class="comment"># /usr/sbin/useradd</span></span><br></pre></td></tr></table></figure>
+
 <h5 id="bin-和-sbin"><a href="#bin-和-sbin" class="headerlink" title="bin 和 sbin"></a><code>bin</code> 和 <code>sbin</code></h5><ul>
 <li>在 <code>Linux</code> 中，绝大多数可执行文件都是保存在 <code>/bin</code>、<code>/sbin</code>、<code>/usr/bin</code>、<code>/usr/sbin</code></li>
 <li><code>/bin</code>（<code>binary</code>）是二进制执行文件目录，主要用于具体应用</li>
@@ -576,8 +564,7 @@
 <li><code>cd</code> 这个终端命令是内置在系统内核中的，没有独立的文件，因此用 <code>which</code> 无法找到 <code>cd</code> 命令的位置</li>
 </ul>
 </blockquote>
-<h3 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h3><div class="table-container">
-<table>
+<h3 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h3><table>
 <thead>
 <tr>
 <th>序号</th>
@@ -586,8 +573,7 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>01</td>
 <td>su - 用户名</td>
 <td>切换用户，并且切换目录</td>
@@ -597,17 +583,15 @@
 <td>02</td>
 <td>exit</td>
 <td>退出当前登录账户</td>
+<td></td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <ul>
 <li><code>su</code> 不接用户名，可以切换到 <code>root</code>，但是不推荐使用，因为不安全</li>
 <li><code>exit</code> 示意图如下：</li>
 </ul>
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/09/14/4FNGLD.png" alt="003_su和exit示意图"></p>
-<h2 id="修改文件权限"><a href="#修改文件权限" class="headerlink" title="修改文件权限"></a>修改文件权限</h2><div class="table-container">
-<table>
+<h2 id="修改文件权限"><a href="#修改文件权限" class="headerlink" title="修改文件权限"></a>修改文件权限</h2><table>
 <thead>
 <tr>
 <th>序号</th>
@@ -615,8 +599,7 @@
 <th>作用</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>01</td>
 <td>chown</td>
 <td>修改拥有者</td>
@@ -631,17 +614,17 @@
 <td>chmod</td>
 <td>修改权限</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <ul>
 <li>命令格式如下：</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改文件|目录的拥有者</span></span><br><span class="line">chown 用户名 文件名|目录名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 递归修改文件|目录的组</span></span><br><span class="line">chgrp -R 组名 文件名|目录名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 递归修改文件权限</span></span><br><span class="line">chmod -R 755 文件名|目录名</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><code>chmod</code> 在设置权限时，可以简单地使用三个数字分别对应 <strong>拥有者</strong> ／ <strong>组</strong> 和 <strong>其他</strong> 用户的权限</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 直接修改文件|目录的 读|写|执行 权限，但是不能精确到 拥有者|组|其他</span></span><br><span class="line">chmod +/-rwx 文件名|目录名</span><br></pre></td></tr></table></figure>
+
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/09/14/4FNGLD.png" alt="004_文件权限示意图"></p>
 <ul>
 <li>常见数字组合有（<code>u</code>表示用户／<code>g</code>表示组／<code>o</code>表示其他）：<ul>
@@ -894,7 +877,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">23:51</span>
+    <span title="站点阅读时长">23:55</span>
 </div>
 
 <!--

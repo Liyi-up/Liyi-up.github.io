@@ -450,6 +450,7 @@
 </li>
 <li><p>可以多次调用setState(), 只会触发一次重新渲染</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.state = &#123;<span class="attr">count</span>:<span class="number">1</span>&#125;</span><br><span class="line"><span class="keyword">this</span>.setState(&#123;</span><br><span class="line">  count:<span class="keyword">this</span>.state.count+<span class="number">1</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.state.count)  <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
           <!--noindex-->
@@ -579,7 +580,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="组件通讯介绍"><a href="#组件通讯介绍" class="headerlink" title="组件通讯介绍"></a>组件通讯介绍</h2><font color="red">组件</font>是独立封闭的单元，默认情况下，只能使用组件自己的数据，在组件化过程中，我们将一个完整的功能拆分成多个组件，以及更好的完成整个应用的功能。而在这个过程中，多个组件之间不可避免的要共享某些数据。为了实现这些功能，就需要打破组件独立封闭性，让其与外界沟通，这个过程就是<font color="red">组件通讯</font>
+          <h2 id="组件通讯介绍"><a href="#组件通讯介绍" class="headerlink" title="组件通讯介绍"></a>组件通讯介绍</h2><p><font color="red">组件</font>是独立封闭的单元，默认情况下，只能使用组件自己的数据，在组件化过程中，我们将一个完整的功能拆分成多个组件，以及更好的完成整个应用的功能。而在这个过程中，多个组件之间不可避免的要共享某些数据。为了实现这些功能，就需要打破组件独立封闭性，让其与外界沟通，这个过程就是<font color="red">组件通讯</font></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/07/19/React-%E7%BB%84%E4%BB%B6%E9%AB%98%E7%BA%A7/#more" rel="contents">
@@ -951,14 +952,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.9k</span>
+              <span>3.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -970,11 +971,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="React概述"><a href="#React概述" class="headerlink" title="React概述"></a>React概述</h2><font color="red">React</font>是一个用于<font color="red">构建用户界面的JavaScript库</font>，React主要来写HTML页面，或<font color="red">构建Web应用</font>，如果从MVC的角度来看，React仅仅是试图层（V），也就是只负责试图的渲染，而并非提供了完整的M和C的功能。
-
-React 起源于 Facebook 的内部项目，后又用来架设 instagram 的网站，并于2013年5月开源
-
-[React官网](https://react.docschina.org/)
+          <h2 id="React概述"><a href="#React概述" class="headerlink" title="React概述"></a>React概述</h2><p><font color="red">React</font>是一个用于<font color="red">构建用户界面的JavaScript库</font>，React主要来写HTML页面，或<font color="red">构建Web应用</font>，如果从MVC的角度来看，React仅仅是试图层（V），也就是只负责试图的渲染，而并非提供了完整的M和C的功能。</p>
+<p>React 起源于 Facebook 的内部项目，后又用来架设 instagram 的网站，并于2013年5月开源</p>
+<p><a href="https://react.docschina.org/" target="_blank" rel="noopener">React官网</a></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/12/15/React-%E5%9F%BA%E7%A1%80/#more" rel="contents">
@@ -1416,7 +1415,7 @@ React 起源于 Facebook 的内部项目，后又用来架设 instagram 的网�
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-10-07 10:06:34 / 修改时间：10:20:15" itemprop="dateCreated datePublished" datetime="2021-10-07T10:06:34+08:00">2021-10-07</time>
+              <time title="创建时间：2021-10-07 10:06:34 / 修改时间：10:23:00" itemprop="dateCreated datePublished" datetime="2021-10-07T10:06:34+08:00">2021-10-07</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1699,7 +1698,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">23:51</span>
+    <span title="站点阅读时长">23:55</span>
 </div>
 
 <!--

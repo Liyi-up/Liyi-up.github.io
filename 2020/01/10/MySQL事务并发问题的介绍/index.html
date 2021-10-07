@@ -307,7 +307,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>992</span>
+              <span>970</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -336,7 +336,30 @@
 <hr>
 <ul>
 <li><h3 id="数据库事务的隔离性-数据库系统必须具有隔离并发运行各个事务的能力，使他们不会互相影响，避免各种并发问题。"><a href="#数据库事务的隔离性-数据库系统必须具有隔离并发运行各个事务的能力，使他们不会互相影响，避免各种并发问题。" class="headerlink" title="数据库事务的隔离性:数据库系统必须具有隔离并发运行各个事务的能力，使他们不会互相影响，避免各种并发问题。"></a>数据库事务的隔离性:数据库系统必须具有隔离并发运行各个事务的能力，使他们不会互相影响，避免各种并发问题。</h3></li>
-<li><h3 id="数据库提供的4种事务隔离级别"><a href="#数据库提供的4种事务隔离级别" class="headerlink" title="数据库提供的4种事务隔离级别:"></a>数据库提供的4种事务隔离级别:</h3><p>|  隔离级别   | 描述  |<br>|  ——  | ——  |<br>| READ UNCOMMTTED(读未提交的数据)  | 允许事务读取未被其他是位于提交的变更、脏读，不可重复读和幻读的问题都会出现 |<br>| READ COMMITED(读已提交数据) | 只允许事务读取已经被其他事务提交的变更，可以避免脏读，但不可重读和幻读问题仍然会出现 |<br>| REPEATABLE READ(可重复读)  | 确保事务可以多次从一个字段中读取相同的值，在这个事务持续期间，禁止其他事务对这个字段进行更新，可避免脏读和不可重复读，但幻读的问题仍然存在。 |<br>| SERIALLIZABLE(串行化)  | 确保事务可以从一个表种读取相同的行，在这个事务持续期间，禁止其他事务对该表执行插入，更新和删除操作，所有并发问题都可以避免，但性能十分低下。 |</p>
+<li><h3 id="数据库提供的4种事务隔离级别"><a href="#数据库提供的4种事务隔离级别" class="headerlink" title="数据库提供的4种事务隔离级别:"></a>数据库提供的4种事务隔离级别:</h3><table>
+<thead>
+<tr>
+<th>隔离级别</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>READ UNCOMMTTED(读未提交的数据)</td>
+<td>允许事务读取未被其他是位于提交的变更、脏读，不可重复读和幻读的问题都会出现</td>
+</tr>
+<tr>
+<td>READ COMMITED(读已提交数据)</td>
+<td>只允许事务读取已经被其他事务提交的变更，可以避免脏读，但不可重读和幻读问题仍然会出现</td>
+</tr>
+<tr>
+<td>REPEATABLE READ(可重复读)</td>
+<td>确保事务可以多次从一个字段中读取相同的值，在这个事务持续期间，禁止其他事务对这个字段进行更新，可避免脏读和不可重复读，但幻读的问题仍然存在。</td>
+</tr>
+<tr>
+<td>SERIALLIZABLE(串行化)</td>
+<td>确保事务可以从一个表种读取相同的行，在这个事务持续期间，禁止其他事务对该表执行插入，更新和删除操作，所有并发问题都可以避免，但性能十分低下。</td>
+</tr>
+</tbody></table>
 </li>
 <li><h3 id="Oracle支持2种事务隔离级别-READ-UNCOMMTTED-SERIALLIZABLE。Oracle默认的事务隔离级别为-READ-UNCOMMTTED"><a href="#Oracle支持2种事务隔离级别-READ-UNCOMMTTED-SERIALLIZABLE。Oracle默认的事务隔离级别为-READ-UNCOMMTTED" class="headerlink" title="Oracle支持2种事务隔离级别:READ UNCOMMTTED,SERIALLIZABLE。Oracle默认的事务隔离级别为:READ UNCOMMTTED"></a>Oracle支持2种事务隔离级别:READ UNCOMMTTED,SERIALLIZABLE。Oracle默认的事务隔离级别为:READ UNCOMMTTED</h3></li>
 <li><h3 id="Mysql支持4种事务隔级别，Mysql默认事务隔离级别为-READ-UNCOMMTTED"><a href="#Mysql支持4种事务隔级别，Mysql默认事务隔离级别为-READ-UNCOMMTTED" class="headerlink" title="Mysql支持4种事务隔级别，Mysql默认事务隔离级别为:READ UNCOMMTTED"></a>Mysql支持4种事务隔级别，Mysql默认事务隔离级别为:READ UNCOMMTTED</h3></li>
@@ -594,7 +617,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">23:51</span>
+    <span title="站点阅读时长">23:55</span>
 </div>
 
 <!--

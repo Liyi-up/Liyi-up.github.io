@@ -311,71 +311,67 @@
 </ul>
 <p>数学符号表链接：<a href="https://zh.wikipedia.org/wiki/数学符号表" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/数学符号表</a></p>
 <a id="more"></a>
+
 <h2 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h2><ul>
 <li>是完成基本的算术运算使用的符号，用来处理四则运算</li>
 </ul>
-<div class="table-container">
 <table>
 <thead>
 <tr>
-<th style="text-align:center">运算符</th>
-<th style="text-align:center">描述</th>
+<th align="center">运算符</th>
+<th align="center">描述</th>
 <th>实例</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">+</td>
-<td style="text-align:center">加</td>
+<tbody><tr>
+<td align="center">+</td>
+<td align="center">加</td>
 <td>10 + 20 = 30</td>
 </tr>
 <tr>
-<td style="text-align:center">-</td>
-<td style="text-align:center">减</td>
+<td align="center">-</td>
+<td align="center">减</td>
 <td>10 - 20 = -10</td>
 </tr>
 <tr>
-<td style="text-align:center">*</td>
-<td style="text-align:center">乘</td>
+<td align="center">*</td>
+<td align="center">乘</td>
 <td>10 * 20 = 200</td>
 </tr>
 <tr>
-<td style="text-align:center">/</td>
-<td style="text-align:center">除</td>
+<td align="center">/</td>
+<td align="center">除</td>
 <td>10 / 20 = 0.5</td>
 </tr>
 <tr>
-<td style="text-align:center">//</td>
-<td style="text-align:center">取整除</td>
+<td align="center">//</td>
+<td align="center">取整除</td>
 <td>返回除法的整数部分（商） 9 // 2 输出结果 4</td>
 </tr>
 <tr>
-<td style="text-align:center">%</td>
-<td style="text-align:center">取余数</td>
+<td align="center">%</td>
+<td align="center">取余数</td>
 <td>返回除法的余数 9 % 2 = 1</td>
 </tr>
 <tr>
-<td style="text-align:center">**</td>
-<td style="text-align:center">幂</td>
+<td align="center">**</td>
+<td align="center">幂</td>
 <td>又称次方、乘方，2 ** 3 = 8</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <ul>
 <li>在 Python 中 <code>*</code> 运算符还可以用于字符串，计算结果就是字符串重复指定次数的结果</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]: <span class="string">"-"</span> * <span class="number">50</span></span><br><span class="line">Out[<span class="number">1</span>]: <span class="string">'----------------------------------------'</span></span><br></pre></td></tr></table></figure>
-<h2 id="比较（关系）运算符"><a href="#比较（关系）运算符" class="headerlink" title="比较（关系）运算符"></a>比较（关系）运算符</h2><div class="table-container">
-<table>
+
+<h2 id="比较（关系）运算符"><a href="#比较（关系）运算符" class="headerlink" title="比较（关系）运算符"></a>比较（关系）运算符</h2><table>
 <thead>
 <tr>
 <th>运算符</th>
 <th>描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>==</td>
 <td>检查两个操作数的值是否 <strong>相等</strong>，如果是，则条件成立，返回 True</td>
 </tr>
@@ -399,15 +395,12 @@
 <td>&lt;=</td>
 <td>检查左操作数的值是否 <strong>小于或等于</strong> 右操作数的值，如果是，则条件成立，返回 True</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <blockquote>
 <p>Python 2.x 中判断 <strong>不等于</strong> 还可以使用 <code>&lt;&gt;</code> 运算符</p>
 <p><code>!=</code> 在 Python 2.x 中同样可以用来判断 <strong>不等于</strong></p>
 </blockquote>
-<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><div class="table-container">
-<table>
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><table>
 <thead>
 <tr>
 <th>运算符</th>
@@ -415,8 +408,7 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>and</td>
 <td>x and y</td>
 <td>只有 x 和 y 的值都为 True，才会返回 True<br>否则只要 x 或者 y 有一个值为 False，就返回 False</td>
@@ -431,15 +423,12 @@
 <td>not x</td>
 <td>如果 x 为 True，返回 False<br>如果 x 为 False，返回 True</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><ul>
 <li>在 Python 中，使用 <code>=</code> 可以给变量赋值</li>
 <li>在算术运算时，为了简化代码的编写，<code>Python</code> 还提供了一系列的 与 <strong>算术运算符</strong> 对应的 <strong>赋值运算符</strong></li>
 <li>注意：<strong>赋值运算符中间不能使用空格</strong></li>
 </ul>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -448,8 +437,7 @@
 <th>实例</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>=</td>
 <td>简单的赋值运算符</td>
 <td>c = a + b 将 a + b 的运算结果赋值为 c</td>
@@ -467,7 +455,7 @@
 <tr>
 <td>*=</td>
 <td>乘法赋值运算符</td>
-<td>c <em>= a 等效于 c = c </em> a</td>
+<td>c *= a 等效于 c = c * a</td>
 </tr>
 <tr>
 <td>/=</td>
@@ -487,15 +475,12 @@
 <tr>
 <td>**=</td>
 <td>幂赋值运算符</td>
-<td>c <strong>= a 等效于 c = c </strong> a</td>
+<td>c *<em>= a 等效于 c = c *</em> a</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h2 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h2><ul>
 <li>以下表格的算数优先级由高到最低顺序排列</li>
 </ul>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -503,8 +488,7 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>**</td>
 <td>幂 (最高优先级)</td>
 </tr>
@@ -532,9 +516,7 @@
 <td>not or and</td>
 <td>逻辑运算符</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 
     </div>
 
@@ -778,7 +760,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">23:51</span>
+    <span title="站点阅读时长">23:55</span>
 </div>
 
 <!--
