@@ -50,15 +50,13 @@
   };
 </script>
 
-  <meta name="description" content="HTTPHTTP协议是Hyper Text Transfer Protocol（超文本传输协议）的缩写,是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。. HTTP是一个基于TCP&#x2F;IP通信协议来传递数据（HTML 文件, 图片文件, 查询结果等）。 MDN 文档：HTTP概述 - HTTP | MDN (mozilla.org) HTTP请求交互的">
+  <meta name="description" content="HTTPHTTP协议是Hyper Text Transfer Protocol（超文本传输协议）的缩写,是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。. HTTP是一个基于TCP&#x2F;IP通信协议来传递数据（HTML 文件, 图片文件, 查询结果等）。  MDN 文档：[HTTP概述 - HTTP | MDN (mozilla.org)](https:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网络通讯-axios">
 <meta property="og:url" content="https://liyi-up.top/2021/07/24/%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF-axios/index.html">
 <meta property="og:site_name" content="Liyi&#39;s personal blog">
-<meta property="og:description" content="HTTPHTTP协议是Hyper Text Transfer Protocol（超文本传输协议）的缩写,是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。. HTTP是一个基于TCP&#x2F;IP通信协议来传递数据（HTML 文件, 图片文件, 查询结果等）。 MDN 文档：HTTP概述 - HTTP | MDN (mozilla.org) HTTP请求交互的">
+<meta property="og:description" content="HTTPHTTP协议是Hyper Text Transfer Protocol（超文本传输协议）的缩写,是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。. HTTP是一个基于TCP&#x2F;IP通信协议来传递数据（HTML 文件, 图片文件, 查询结果等）。  MDN 文档：[HTTP概述 - HTTP | MDN (mozilla.org)](https:">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==">
-<meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==">
 <meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==">
 <meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==">
 <meta property="article:published_time" content="2021-07-24T08:42:40.000Z">
@@ -300,14 +298,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>6.9k</span>
+              <span>7.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
+              <span>7 分钟</span>
             </span>
 
         </div>
@@ -319,192 +317,231 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><p><font color="red">HTTP协议</font>是Hyper Text Transfer Protocol（超文本传输协议）的缩写,是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。. HTTP是一个<font color="red">基于TCP/IP通信协议来传递数据</font>（HTML 文件, 图片文件, 查询结果等）。</p>
-<p>MDN 文档：<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview" target="_blank" rel="noopener">HTTP概述 - HTTP | MDN (mozilla.org)</a></p>
-<h3 id="HTTP请求交互的基本过程"><a href="#HTTP请求交互的基本过程" class="headerlink" title="HTTP请求交互的基本过程"></a>HTTP请求交互的基本过程</h3><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/07/24/WcCOnP.png" alt="HTTP协议"></p>
+        <h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><font color="red">HTTP协议</font>是Hyper Text Transfer Protocol（超文本传输协议）的缩写,是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。. HTTP是一个<font color="red">基于TCP/IP通信协议来传递数据</font>（HTML 文件, 图片文件, 查询结果等）。
+
+MDN 文档：[HTTP概述 - HTTP | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview)
+
+### HTTP请求交互的基本过程
+
+![HTTP协议](https://z3.ax1x.com/2021/07/24/WcCOnP.png)
+
 <a id="more"></a>
 
-<p>1.前后应用从浏览器端向服务器发送HTTP请求（请求报文）</p>
-<p>2.后台服务器接收到请求后，调度服务器应用处理请求，向浏览器端返回HTTP响应（响应报文）</p>
-<p>3.浏览器端接收到响应后，解析显示响应体/调用监视回调</p>
-<h3 id="HTTP请求报文"><a href="#HTTP请求报文" class="headerlink" title="HTTP请求报文"></a>HTTP请求报文</h3><p><strong>请求行：</strong></p>
+1.前后应用从浏览器端向服务器发送HTTP请求（请求报文）
+
+2.后台服务器接收到请求后，调度服务器应用处理请求，向浏览器端返回HTTP响应（响应报文）
+
+3.浏览器端接收到响应后，解析显示响应体/调用监视回调
+
+### HTTP请求报文
+
+**请求行：**
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">method url</span><br><span class="line">GET    &#x2F;product_detail?id&#x3D;2</span><br><span class="line">POST   &#x2F;login</span><br></pre></td></tr></table></figure>
 
-<p><strong>多个请求头:</strong></p>
+**多个请求头:**
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Host: www.baidu.com</span><br><span class="line">Cookie: BAIDUID&#x3D;AD3B0FA706E; BIDUPSID&#x3D;AD3B0FA706;</span><br><span class="line">Content-Type: application&#x2F;x-www-form-urlencoded 或者 application&#x2F;</span><br></pre></td></tr></table></figure>
 
-<p><strong>请求体:</strong></p>
+**请求体:**
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">username&#x3D;tom&amp;pwd&#x3D;123</span><br><span class="line">&#123;&quot;username&quot;: &quot;tom&quot;, &quot;pwd&quot;: 123</span><br></pre></td></tr></table></figure>
 
-<h3 id="HTTP-响应报文"><a href="#HTTP-响应报文" class="headerlink" title="HTTP 响应报文"></a>HTTP 响应报文</h3><p><strong>响应状态行:</strong></p>
+### HTTP 响应报文
+
+**响应状态行:**
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">status statusTest</span><br></pre></td></tr></table></figure>
 
-<p><strong>多个响应头:</strong></p>
+**多个响应头:**
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: text&#x2F;html;charset&#x3D;utf-8 </span><br><span class="line">Set-Cookie: BD_CK_SAM&#x3D;1;path&#x3D;&#x2F;</span><br></pre></td></tr></table></figure>
 
-<p><strong>响应体:</strong></p>
-<p>html 文本/json 文本/js/css/图片</p>
-<h3 id="post-请求体参数格式"><a href="#post-请求体参数格式" class="headerlink" title="post 请求体参数格式"></a>post 请求体参数格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: application&#x2F;x-www-form-urlencoded;charset&#x3D;utf-8</span><br></pre></td></tr></table></figure>
+**响应体:**
 
-<p>用于键值对参数，参数的键值用=连接, 参数之间用&amp;连接 </p>
-<p>例如:<code>name=%E5%B0%8F%E6%98%8E&amp;age=12</code></p>
+html 文本/json 文本/js/css/图片
+
+### post 请求体参数格式
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: application&#x2F;x-www-form-urlencoded;charset&#x3D;utf-8</span><br></pre></td></tr></table></figure>
+
+用于键值对参数，参数的键值用=连接, 参数之间用&连接 
+
+例如:` name=%E5%B0%8F%E6%98%8E&age=12`
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: application&#x2F;json;charset&#x3D;utf-8</span><br></pre></td></tr></table></figure>
 
-<p>用于 json 字符串参数 </p>
-<p>例如: <code>{&quot;name&quot;: &quot;%E5%B0%8F%E6%98%8E&quot;, &quot;age&quot;: 12}</code></p>
+用于 json 字符串参数 
+
+例如: `{"name": "%E5%B0%8F%E6%98%8E", "age": 12}`
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: multipart&#x2F;form-data</span><br></pre></td></tr></table></figure>
 
-<p>用于文件上传请求</p>
-<h3 id="常见的响应状态码"><a href="#常见的响应状态码" class="headerlink" title="常见的响应状态码"></a>常见的响应状态码</h3><table>
-<thead>
-<tr>
-<th>状态</th>
-<th>参数</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>200</td>
-<td>OK</td>
-<td>请求成功。一般用于 GET 与 POST 请</td>
-</tr>
-<tr>
-<td>201</td>
-<td>Created</td>
-<td>已创建。成功请求并创建了新的资源</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized</td>
-<td>未授权/请求要求用户的身份认证</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found</td>
-<td>服务器无法根据客户端的请求找到资源</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error</td>
-<td>服务器内部错误，无法完成请求</td>
-</tr>
-</tbody></table>
-<h3 id="不同类型的请求及其作"><a href="#不同类型的请求及其作" class="headerlink" title="不同类型的请求及其作"></a>不同类型的请求及其作</h3><p>1.<code>GET</code>: 从服务器端读取数据</p>
-<p>2.<code>POST</code>: 向服务器端添加新数据</p>
-<p>3.<code>PUT</code>: 更新服务器端已经数据</p>
-<p>4.<code>DELETE</code>: 删除服务器端数据</p>
-<h3 id="API-的分类"><a href="#API-的分类" class="headerlink" title="API 的分类"></a>API 的分类</h3><h4 id="REST-API-restfu"><a href="#REST-API-restfu" class="headerlink" title="REST API(restfu)"></a>REST API(restfu)</h4><p>1.发送请求进行 CRUD 哪个操作由请求方式来</p>
-<p>2.同一个请求路径可以进行多个操作</p>
-<p>3.请求方式会用到 GET/POST/PUT/DELET</p>
-<h4 id="非-REST-API-restle"><a href="#非-REST-API-restle" class="headerlink" title="非 REST API (restle)"></a>非 REST API (restle)</h4><p>1.请求方式不决定请求的 CRUD 操作</p>
-<p>2.一个请求路径只对应一个操作</p>
-<p>3.一般只有 GET/POS</p>
-<h3 id="使用-json-server-搭建-REST-API"><a href="#使用-json-server-搭建-REST-API" class="headerlink" title="使用 json-server 搭建 REST API"></a>使用 json-server 搭建 REST API</h3><h4 id="json-server-是什么"><a href="#json-server-是什么" class="headerlink" title="json-server 是什么"></a>json-server 是什么</h4><p>用来快速搭建 REST API 的工具包</p>
-<h4 id="使用-json-serve"><a href="#使用-json-serve" class="headerlink" title="使用 json-serve"></a>使用 json-serve</h4><p>1.在线文档: <a href="https://github.com/typicode/json-server" target="_blank" rel="noopener">https://github.com/typicode/json-server</a></p>
-<p>2.下载: <code>npm install  json-server -g</code></p>
-<p>3.目标根目录下创建数据库 json 文件: db.json</p>
-<p>4.启动服务器执行命令: json-server –watch db.js</p>
-<h4 id="使用浏览器访问测试"><a href="#使用浏览器访问测试" class="headerlink" title="使用浏览器访问测试"></a>使用浏览器访问测试</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;localhost:3000&#x2F;posts</span><br><span class="line">http:&#x2F;&#x2F;localhost:3000&#x2F;posts&#x2F;1</span><br></pre></td></tr></table></figure>
+用于文件上传请求
 
-<h4 id="使用-axios-访问测"><a href="#使用-axios-访问测" class="headerlink" title="使用 axios 访问测"></a>使用 axios 访问测</h4><h2 id="XHR-的理解和使用"><a href="#XHR-的理解和使用" class="headerlink" title="XHR 的理解和使用"></a>XHR 的理解和使用</h2><p><code>XMLHttpRequest</code>（XHR）对象用于与服务器交互。通过 XMLHttpRequest 可以在不刷新页面的情况下请求特定 URL，获取数据。这允许网页在不影响用户操作的情况下，更新页面的局部内容。<code>XMLHttpRequest</code> 在 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/AJAX" target="_blank" rel="noopener">AJAX</a> 编程中被大量使用。</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/07/24/WcEbcQ.png" alt="XHR的理解与使用"></p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest" target="_blank" rel="noopener">XMLHttpRequest - Web API 接口参考 | MDN (mozilla.org)</a></p>
-<h3 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h3><p>1.使用<code>XMLHttpRequest(XHR)</code>对象可以与服务器交互,也就是发送ajax请求</p>
-<p>2.前端可以获取数据,而无需让整个的页面刷新</p>
-<p>3.这使得Web页面可以只更新页面的局部,而不影响用户的操作</p>
-<h3 id="区别一般http请求与ajax请求"><a href="#区别一般http请求与ajax请求" class="headerlink" title="区别一般http请求与ajax请求"></a>区别一般http请求与ajax请求</h3><p>1.ajax请求是一种特别的http请求</p>
-<p>2.对服务器端来说,没有任何区别,区别在于浏览器</p>
-<p>3.浏览器端发送请求:只有XHR或fetch发出的才是ajax请求,其他所有的都是非ajax请求</p>
-<p>4.浏览器端接收到响应</p>
-<ul>
-<li>一般请求: 浏览器一般会直接显示响应体数据, 也就是我们常说的刷新/ 跳转页面</li>
-<li>ajax 请求: 浏览器不会对界面进行任何更新操作, 只是调用监视的回调 函数并传入响应相关数据</li>
-</ul>
-<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><ol>
-<li><p><code>XMLHttpRequest():</code>创建 XHR 对象的构造函数</p>
-</li>
-<li><p><code>status:</code>响应状态码值, 比如 200, 404</p>
-</li>
-<li><p><code>statusText:</code>响应状态文本</p>
-</li>
-<li><p><code>readyState:</code>标识请求状态的只读属性</p>
-<table>
-<thead>
-<tr>
-<th>标识码</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>0</td>
-<td>初始</td>
-</tr>
-<tr>
-<td>1</td>
-<td>open()之后</td>
-</tr>
-<tr>
-<td>2</td>
-<td>send()之后</td>
-</tr>
-<tr>
-<td>3</td>
-<td>请求中</td>
-</tr>
-<tr>
-<td>4</td>
-<td>请求完成</td>
-</tr>
-</tbody></table>
-</li>
-<li><p><code>onreadystatechange:</code> 绑定 readyState 改变的监</p>
-</li>
-<li><p><code>responseType:</code> 指定响应数据类型, 如果是’json’, 得到响应后自动解析响应体数据</p>
-</li>
-<li><p><code>response:</code>响应体数据, 类型取决于 responseType 的指</p>
-</li>
-<li><p><code>timeout:</code>指定请求超时时间, 默认为 0 代表没有限</p>
-</li>
-<li><p><code>ontimeout:</code> 绑定超时的监听</p>
-</li>
-<li><p><code>onerror:</code>绑定请求网络错误的监听</p>
-</li>
-<li><p><code>open():</code>初始化一个请求, 参数为: <code>(method, url[, async])</code></p>
-</li>
-<li><p><code>send(data):</code>发送请求</p>
-</li>
-<li><p><code>abort():</code>中断请求</p>
-</li>
-<li><p><code>getResponseHeader(name):</code> 获取指定名称的响应头值</p>
-</li>
-<li><p><code>getAllResponseHeaders():</code> 获取所有响应头组成的字符串</p>
-</li>
-<li><p><code>setRequestHeader(name, value):</code>设置请求头</p>
-</li>
-</ol>
-<h3 id="XHR-的-ajax-封装-简单版axios"><a href="#XHR-的-ajax-封装-简单版axios" class="headerlink" title="XHR 的 ajax 封装(简单版axios)"></a>XHR 的 ajax 封装(简单版axios)</h3><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>1.函数返回值是<font color="red">promise</font>,成功的结果为response,异常为error</p>
-<p>2.能处理多种类型的请求:GET/POST/PUT/DELETE</p>
-<p>3.函数的参数为一个配置对象</p>
+### 常见的响应状态码
+
+| 状态 | 参数                  | 解释                               |
+| ---- | --------------------- | ---------------------------------- |
+| 200  | OK                    | 请求成功。一般用于 GET 与 POST 请  |
+| 201  | Created               | 已创建。成功请求并创建了新的资源   |
+| 401  | Unauthorized          | 未授权/请求要求用户的身份认证      |
+| 404  | Not Found             | 服务器无法根据客户端的请求找到资源 |
+| 500  | Internal Server Error | 服务器内部错误，无法完成请求       |
+
+### 不同类型的请求及其作
+
+1.`GET`: 从服务器端读取数据
+
+2.`POST`: 向服务器端添加新数据
+
+3.`PUT`: 更新服务器端已经数据
+
+4.`DELETE`: 删除服务器端数据
+
+### API 的分类
+
+#### REST API(restfu)
+
+1.发送请求进行 CRUD 哪个操作由请求方式来
+
+2.同一个请求路径可以进行多个操作
+
+3.请求方式会用到 GET/POST/PUT/DELET
+
+#### 非 REST API (restle)
+
+1.请求方式不决定请求的 CRUD 操作
+
+2.一个请求路径只对应一个操作
+
+3.一般只有 GET/POS
+
+### 使用 json-server 搭建 REST API
+
+#### json-server 是什么
+
+用来快速搭建 REST API 的工具包
+
+####  使用 json-serve
+
+1.在线文档: https://github.com/typicode/json-server
+
+2.下载: `npm install  json-server -g`
+
+3.目标根目录下创建数据库 json 文件: db.json
+
+4.启动服务器执行命令: json-server --watch db.js
+
+#### 使用浏览器访问测试
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;localhost:3000&#x2F;posts</span><br><span class="line">http:&#x2F;&#x2F;localhost:3000&#x2F;posts&#x2F;1</span><br></pre></td></tr></table></figure>
+
+#### 使用 axios 访问测
+
+## XHR 的理解和使用
+
+`XMLHttpRequest`（XHR）对象用于与服务器交互。通过 XMLHttpRequest 可以在不刷新页面的情况下请求特定 URL，获取数据。这允许网页在不影响用户操作的情况下，更新页面的局部内容。`XMLHttpRequest` 在 [AJAX](https://developer.mozilla.org/zh-CN/docs/Glossary/AJAX) 编程中被大量使用。
+
+![XHR的理解与使用](https://z3.ax1x.com/2021/07/24/WcEbcQ.png)
+
+[XMLHttpRequest - Web API 接口参考 | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest)
+
+### 理解
+
+1.使用`XMLHttpRequest(XHR)`对象可以与服务器交互,也就是发送ajax请求
+
+2.前端可以获取数据,而无需让整个的页面刷新
+
+3.这使得Web页面可以只更新页面的局部,而不影响用户的操作
+
+### 区别一般http请求与ajax请求
+
+1.ajax请求是一种特别的http请求
+
+2.对服务器端来说,没有任何区别,区别在于浏览器
+
+3.浏览器端发送请求:只有XHR或fetch发出的才是ajax请求,其他所有的都是非ajax请求
+
+4.浏览器端接收到响应
+
+- 一般请求: 浏览器一般会直接显示响应体数据, 也就是我们常说的刷新/ 跳转页面
+- ajax 请求: 浏览器不会对界面进行任何更新操作, 只是调用监视的回调 函数并传入响应相关数据
+
+### API
+
+1. `XMLHttpRequest():`创建 XHR 对象的构造函数
+
+2. `status: `响应状态码值, 比如 200, 404
+
+3. `statusText: `响应状态文本
+
+4. `readyState: `标识请求状态的只读属性
+
+   | 标识码 | 描述       |
+   | ------ | ---------- |
+   | 0      | 初始       |
+   | 1      | open()之后 |
+   | 2      | send()之后 |
+   | 3      | 请求中     |
+   | 4      | 请求完成   |
+
+5. `onreadystatechange:` 绑定 readyState 改变的监
+
+6. `responseType:` 指定响应数据类型, 如果是'json', 得到响应后自动解析响应体数据
+
+7. `response: `响应体数据, 类型取决于 responseType 的指
+
+8. `timeout: `指定请求超时时间, 默认为 0 代表没有限
+
+9. `ontimeout:` 绑定超时的监听
+
+10. `onerror: `绑定请求网络错误的监听
+
+11. `open(): `初始化一个请求, 参数为: `(method, url[, async])`
+
+12. `send(data): `发送请求
+
+13. `abort(): `中断请求
+
+14. `getResponseHeader(name):` 获取指定名称的响应头值
+
+15. `getAllResponseHeaders():` 获取所有响应头组成的字符串
+
+16. `setRequestHeader(name, value): `设置请求头
+
+###  XHR 的 ajax 封装(简单版axios)
+
+#### 特点
+
+1.函数返回值是<font color="red">promise</font>,成功的结果为response,异常为error
+
+2.能处理多种类型的请求:GET/POST/PUT/DELETE
+
+3.函数的参数为一个配置对象
+
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">url: <span class="string">''</span>, <span class="comment">// 请求地址</span></span><br><span class="line">method: <span class="string">''</span>, <span class="comment">// 请求方式 GET/POST/PUT/DELETE</span></span><br><span class="line">params: &#123;&#125;, <span class="comment">// GET/DELETE 请求的 query 参数</span></span><br><span class="line">data: &#123;&#125;, <span class="comment">// POST 或 DELETE 请求的请求体参数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>4.<font color="red">响应 json数据自动解析为 js</font></p>
+4.<font color="red">响应 json数据自动解析为 js</font>
+
 <h4 id="编码实现"><a href="#编码实现" class="headerlink" title="编码实现"></a>编码实现</h4><h2 id="axios-的理解和使用"><a href="#axios-的理解和使用" class="headerlink" title="axios 的理解和使用"></a>axios 的理解和使用</h2><h3 id="axios是什么"><a href="#axios是什么" class="headerlink" title="axios是什么?"></a>axios是什么?</h3><p>1.前端流行的ajax请求库</p>
 <p>2.react/vue 官方都推荐使用axios 发送 ajax请求</p>
 <p>3.文档: <a href="https://github.com/axios/axios" target="_blank" rel="noopener">https://github.com/axios/axios</a></p>
-<h3 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h3><p>1.基本promise的异步 ajax请求库</p>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>1.基本promise的异步 ajax请求库</p>
 <p>2.浏览器端/node端都可以使用</p>
 <p>3.支持请求/响应拦截器</p>
 <p>4.支持请求取消</p>
 <p>5.请求/响应数据转换</p>
 <p>6.批量发送多个请求</p>
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">axios(config): 通用/最本质的发任意类型请求的方式</span><br><span class="line">axios(url[, config]): 可以只指定 url 发 <span class="keyword">get</span> 请求</span><br><span class="line">axios.request(config): 等同于 axios(config)</span><br><span class="line">axios.<span class="keyword">get</span>(url[, config]): 发 <span class="keyword">get</span> 请求</span><br><span class="line">axios.delete(url[, config]): 发 delete 请求</span><br><span class="line">axios.post(url[, data, config]): 发 post 请求</span><br><span class="line">axios.put(url[, data, config]): 发 put 请求</span><br><span class="line">axios.defaults.xxx: 请求的默认全局配置</span><br><span class="line">axios.interceptors.request.use(): 添加请求拦截器</span><br><span class="line">axios.interceptors.response.use(): 添加响应拦截器</span><br><span class="line">axios.create([config]): 创建一个新的 axios(它没有下面的功能)</span><br><span class="line">axios.Cancel(): 用于创建取消请求的错误对象</span><br><span class="line">axios.CancelToken(): 用于创建取消请求的 token 对象</span><br><span class="line">axios.isCancel(): 是否是一个取消请求的错误</span><br><span class="line">axios.all(promises): 用于批量执行多个异步请求</span><br><span class="line">axios.spread(): 用来指定接收所有成功数据的回调函数的方</span><br></pre></td></tr></table></figure>
-
 <h3 id="难点语法的理解和使用"><a href="#难点语法的理解和使用" class="headerlink" title="难点语法的理解和使用"></a>难点语法的理解和使用</h3><h4 id="axios-create-config"><a href="#axios-create-config" class="headerlink" title="axios.create(config)"></a>axios.create(config)</h4><p>1.根据指定配置创建一个新的 axios, 也就就每个新 axios 都有自己的配置 </p>
 <p>2.新 axios 只是没有取消请求和批量发请求的方法, 其它所有语法都是一致的</p>
 <p>3.为什么要设计这个语法?</p>
 <ul>
 <li>需求: 项目中有部分接口需要的配置与另一部分接口需要的配置不太一 样, 如何处理</li>
-<li><font color="red">解决: 创建 2 个新 axios, 每个都有自己特有的配置, 分别应用到不同要 求的接口请求中</font></li>
+<li><font color="red">解决: 创建 2 个新 axios, 每个都有自己特有的配置, 分别应用到不同要 求的接口请求中</font>
+
+</li>
 </ul>
 <h4 id="拦截器函数-ajax-请求-请求的回调函数的调用顺序"><a href="#拦截器函数-ajax-请求-请求的回调函数的调用顺序" class="headerlink" title="拦截器函数/ajax 请求/请求的回调函数的调用顺序"></a>拦截器函数/ajax 请求/请求的回调函数的调用顺序</h4><p>1.说明: 调用 axios()并不是立即发送 ajax 请求, 而是需要经历一个较长的流</p>
 <p>2.流程: </p>
@@ -520,7 +557,6 @@
 <p>2.实现功能</p>
 <p>点击按钮, 取消某个正在请求中的请求 在请求一个接口前, 取消前面一个未完成的请求</p>
 <h2 id="axios-源码分析"><a href="#axios-源码分析" class="headerlink" title="axios 源码分析"></a>axios 源码分析</h2><h3 id="源码目录结构"><a href="#源码目录结构" class="headerlink" title="源码目录结构"></a>源码目录结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">├── &#x2F;dist&#x2F; # 项目输出目录</span><br><span class="line">├── &#x2F;lib&#x2F; # 项目源码目录</span><br><span class="line">│ ├── &#x2F;adapters&#x2F; # 定义请求的适配器 xhr、http</span><br><span class="line">│ │ ├── http.js # 实现 http 适配器(包装 http 包)</span><br><span class="line">│ │ └── xhr.js # 实现 xhr 适配器(包装 xhr 对象)</span><br><span class="line">│ ├── &#x2F;cancel&#x2F; # 定义取消功能</span><br><span class="line">│ ├── &#x2F;core&#x2F; # 一些核心功能</span><br><span class="line">│ │ ├── Axios.js # axios 的核心主类</span><br><span class="line">│ │ ├── dispatchRequest.js # 用来调用 http 请求适配器方法发送请求的函数</span><br><span class="line">│ │ ├── InterceptorManager.js # 拦截器的管理器</span><br><span class="line">│ │ └── settle.js # 根据 http 响应状态，改变 Promise 的状态</span><br><span class="line">│ ├── &#x2F;helpers&#x2F; # 一些辅助方法</span><br><span class="line">│ ├── axios.js # 对外暴露接口</span><br><span class="line">│ ├── defaults.js # axios 的默认配置</span><br><span class="line">│ └── utils.js # 公用工具</span><br><span class="line">├── package.json # 项目信息</span><br><span class="line">├── index.d.ts # 配置 TypeScript 的声明文件</span><br><span class="line">└── index.js # 入口文件</span><br></pre></td></tr></table></figure>
-
 <h3 id="源码分析"><a href="#源码分析" class="headerlink" title="源码分析"></a>源码分析</h3><h4 id="axios与Axios的关系"><a href="#axios与Axios的关系" class="headerlink" title="axios与Axios的关系"></a>axios与Axios的关系</h4><p>1.从语法上来说: axios 不是 Axios 的实例</p>
 <p>2.从功能上来说: axios 是 Axios 的实例</p>
 <p>3.axios是<code>Axios.prototype.request</code>函数<code>bind()</code>返回的函数</p>
@@ -530,16 +566,15 @@
 <p>2.都有发特定请求的各种方法:<code>get()/post()/put()/delete()</code></p>
 <p>3.都有默认配置和拦截器的属性: <code>defaults/interceptors</code></p>
 <p><strong>不同:</strong></p>
-<p><font color="red">1.默认匹配的值很可能不一样</font></p>
-<p><font color="red">2.instance 没有 axios 后面添加的一些方法:<code>create()/CancelToken()/all()</code></font></p>
-<h3 id="源码难点与流程分析"><a href="#源码难点与流程分析" class="headerlink" title="源码难点与流程分析"></a>源码难点与流程分析</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">1. axios与Axios的关系</span><br><span class="line">    axios函数对应的是Axios.prototype.request方法通过bind(Axiox的实例)产生的函数</span><br><span class="line">    axios有Axios原型上的所有发特定类型请求的方法: get()&#x2F;post()&#x2F;put()&#x2F;delete()</span><br><span class="line">    axios有Axios的实例上的所有属性: defaults&#x2F;interceptors</span><br><span class="line">    后面又添加了create()&#x2F;CancelToken()&#x2F;all()</span><br><span class="line"></span><br><span class="line">2. axios.create()返回的对象与axios的区别</span><br><span class="line">    1). 相同: </span><br><span class="line">        都是一个能发任意请求的函数: request(config)</span><br><span class="line">        都有发特定请求的各种方法: get()&#x2F;post()&#x2F;put()&#x2F;delete()</span><br><span class="line">        都有默认配置和拦截器的属性: defaults&#x2F;interceptors</span><br><span class="line">    2). 不同:</span><br><span class="line">        默认匹配的值不一样</span><br><span class="line">        instance没有axios后面添加的一引起方法: create()&#x2F;CancelToken()&#x2F;all()</span><br><span class="line"></span><br><span class="line">3. axios发请求的流程</span><br><span class="line">    1). 整体流程: request(config)  &#x3D;&#x3D;&#x3D;&gt; dispatchRequest(config) &#x3D;&#x3D;&#x3D;&gt; xhrAdapter(config)</span><br><span class="line">    2). request(config): 将请求拦截器 &#x2F; dispatchRequest() &#x2F; 响应拦截器 通过promise链串连起来, 返回promise</span><br><span class="line">    3). dispatchRequest(config): 转换请求数据 &#x3D;&#x3D;&#x3D;&gt; 调用xhrAdapter()发请求 &#x3D;&#x3D;&#x3D;&gt; 请求返回后转换响应数据. 返回promise</span><br><span class="line">    4). xhrAdapter(config): 创建XHR对象, 根据config进行相应设置, 发送特定请求, 并接收响应数据, 返回promise</span><br></pre></td></tr></table></figure>
+<font color="red">1.默认匹配的值很可能不一样</font>
 
+<font color="red">2.instance 没有 axios 后面添加的一些方法:` create()/CancelToken()/all()`</font>
+
+<h3 id="源码难点与流程分析"><a href="#源码难点与流程分析" class="headerlink" title="源码难点与流程分析"></a>源码难点与流程分析</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">1. axios与Axios的关系</span><br><span class="line">    axios函数对应的是Axios.prototype.request方法通过bind(Axiox的实例)产生的函数</span><br><span class="line">    axios有Axios原型上的所有发特定类型请求的方法: get()&#x2F;post()&#x2F;put()&#x2F;delete()</span><br><span class="line">    axios有Axios的实例上的所有属性: defaults&#x2F;interceptors</span><br><span class="line">    后面又添加了create()&#x2F;CancelToken()&#x2F;all()</span><br><span class="line"></span><br><span class="line">2. axios.create()返回的对象与axios的区别</span><br><span class="line">    1). 相同: </span><br><span class="line">        都是一个能发任意请求的函数: request(config)</span><br><span class="line">        都有发特定请求的各种方法: get()&#x2F;post()&#x2F;put()&#x2F;delete()</span><br><span class="line">        都有默认配置和拦截器的属性: defaults&#x2F;interceptors</span><br><span class="line">    2). 不同:</span><br><span class="line">        默认匹配的值不一样</span><br><span class="line">        instance没有axios后面添加的一引起方法: create()&#x2F;CancelToken()&#x2F;all()</span><br><span class="line"></span><br><span class="line">3. axios发请求的流程</span><br><span class="line">    1). 整体流程: request(config)  &#x3D;&#x3D;&#x3D;&gt; dispatchRequest(config) &#x3D;&#x3D;&#x3D;&gt; xhrAdapter(config)</span><br><span class="line">    2). request(config): 将请求拦截器 &#x2F; dispatchRequest() &#x2F; 响应拦截器 通过promise链串连起来, 返回promise</span><br><span class="line">    3). dispatchRequest(config): 转换请求数据 &#x3D;&#x3D;&#x3D;&gt; 调用xhrAdapter()发请求 &#x3D;&#x3D;&#x3D;&gt; 请求返回后转换响应数据. 返回promise</span><br><span class="line">    4). xhrAdapter(config): 创建XHR对象, 根据config进行相应设置, 发送特定请求, 并接收响应数据, 返回promise</span><br></pre></td></tr></table></figure>
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="http://vipkshttp1.wiz.cn/ks/share/resources/49c30824-dcdf-4bd0-af2a-708f490b44a1/584701e2-1d9b-4523-b9b2-0f33e838dd7f/index_files/e5692e36861bd1d2fa1735c5ab801af7.png" alt></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4. axios的请求&#x2F;响应拦截器是什么?</span><br><span class="line">    1). 请求拦截器: 在真正发请求前, 可以对请求进行检查或配置进行特定处理的函数, </span><br><span class="line">               包括成功&#x2F;失败的函数, 传递的必须是config</span><br><span class="line">    2). 响应拦截器: 在请求返回后, 可以对响应数据进行特定处理的函数,</span><br><span class="line">               包括成功&#x2F;失败的函数, 传递的默认是response</span><br></pre></td></tr></table></figure>
-
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="http://vipkshttp1.wiz.cn/ks/share/resources/49c30824-dcdf-4bd0-af2a-708f490b44a1/584701e2-1d9b-4523-b9b2-0f33e838dd7f/index_files/b0f95169782409e7576bc9704b93b693.png" alt></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">5. axios的请求&#x2F;响应数据转换器是什么?</span><br><span class="line">    1). 请求转换器: 对请求头和请求体数据进行特定处理的函数</span><br><span class="line">        setContentTypeIfUnset(headers, &#39;application&#x2F;json;charset&#x3D;utf-8&#39;);</span><br><span class="line">        return JSON.stringify(data)</span><br><span class="line">    2). 响应转换器: 将响应体json字符串解析为js对象或数组的函数</span><br><span class="line">        response.data &#x3D; JSON.parse(response.data)</span><br><span class="line">6. response的整体结构</span><br><span class="line">    &#123;</span><br><span class="line">        data,</span><br><span class="line">        status,</span><br><span class="line">        statusText,</span><br><span class="line">        headers,</span><br><span class="line">        config,</span><br><span class="line">        request</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">7. error的整体结构</span><br><span class="line">    &#123;</span><br><span class="line">        message,</span><br><span class="line">        request,</span><br><span class="line">        response</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">8. 如何取消未完成的请求</span><br><span class="line">    1).当配置了cancelToken对象时, 保存cancel函数</span><br><span class="line">        创建一个用于将来中断请求的cancelPromise</span><br><span class="line">        并定义了一个用于取消请求的cancel函数</span><br><span class="line">        将cancel函数传递出来</span><br><span class="line">    2.调用cancel()取消请求</span><br><span class="line">        执行cacel函数, 传入错误信息message</span><br><span class="line">        内部会让cancelPromise变为成功, 且成功的值为一个Cancel对象</span><br><span class="line">        在cancelPromise的成功回调中中断请求, 并让发请求的proimse失败, 失败的reason为Cacel对象</span><br></pre></td></tr></table></figure>
-
 
     </div>
 
@@ -645,7 +680,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP"><span class="nav-number">1.</span> <span class="nav-text">HTTP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP请求交互的基本过程"><span class="nav-number">1.1.</span> <span class="nav-text">HTTP请求交互的基本过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP请求报文"><span class="nav-number">1.2.</span> <span class="nav-text">HTTP请求报文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-响应报文"><span class="nav-number">1.3.</span> <span class="nav-text">HTTP 响应报文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#post-请求体参数格式"><span class="nav-number">1.4.</span> <span class="nav-text">post 请求体参数格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的响应状态码"><span class="nav-number">1.5.</span> <span class="nav-text">常见的响应状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不同类型的请求及其作"><span class="nav-number">1.6.</span> <span class="nav-text">不同类型的请求及其作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#API-的分类"><span class="nav-number">1.7.</span> <span class="nav-text">API 的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#REST-API-restfu"><span class="nav-number">1.7.1.</span> <span class="nav-text">REST API(restfu)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非-REST-API-restle"><span class="nav-number">1.7.2.</span> <span class="nav-text">非 REST API (restle)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-json-server-搭建-REST-API"><span class="nav-number">1.8.</span> <span class="nav-text">使用 json-server 搭建 REST API</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#json-server-是什么"><span class="nav-number">1.8.1.</span> <span class="nav-text">json-server 是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-json-serve"><span class="nav-number">1.8.2.</span> <span class="nav-text">使用 json-serve</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用浏览器访问测试"><span class="nav-number">1.8.3.</span> <span class="nav-text">使用浏览器访问测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-axios-访问测"><span class="nav-number">1.8.4.</span> <span class="nav-text">使用 axios 访问测</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XHR-的理解和使用"><span class="nav-number">2.</span> <span class="nav-text">XHR 的理解和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#理解"><span class="nav-number">2.1.</span> <span class="nav-text">理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#区别一般http请求与ajax请求"><span class="nav-number">2.2.</span> <span class="nav-text">区别一般http请求与ajax请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#API"><span class="nav-number">2.3.</span> <span class="nav-text">API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XHR-的-ajax-封装-简单版axios"><span class="nav-number">2.4.</span> <span class="nav-text">XHR 的 ajax 封装(简单版axios)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特点"><span class="nav-number">2.4.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编码实现"><span class="nav-number">2.4.2.</span> <span class="nav-text">编码实现</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#axios-的理解和使用"><span class="nav-number">3.</span> <span class="nav-text">axios 的理解和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#axios是什么"><span class="nav-number">3.1.</span> <span class="nav-text">axios是什么?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特点-1"><span class="nav-number">3.2.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">3.3.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#难点语法的理解和使用"><span class="nav-number">3.4.</span> <span class="nav-text">难点语法的理解和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#axios-create-config"><span class="nav-number">3.4.1.</span> <span class="nav-text">axios.create(config)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拦截器函数-ajax-请求-请求的回调函数的调用顺序"><span class="nav-number">3.4.2.</span> <span class="nav-text">拦截器函数&#x2F;ajax 请求&#x2F;请求的回调函数的调用顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取消请求"><span class="nav-number">3.4.3.</span> <span class="nav-text">取消请求</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#axios-源码分析"><span class="nav-number">4.</span> <span class="nav-text">axios 源码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#源码目录结构"><span class="nav-number">4.1.</span> <span class="nav-text">源码目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码分析"><span class="nav-number">4.2.</span> <span class="nav-text">源码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#axios与Axios的关系"><span class="nav-number">4.2.1.</span> <span class="nav-text">axios与Axios的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#instance与axios的区别"><span class="nav-number">4.2.2.</span> <span class="nav-text">instance与axios的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码难点与流程分析"><span class="nav-number">4.3.</span> <span class="nav-text">源码难点与流程分析</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP"><span class="nav-number">1.</span> <span class="nav-text">HTTP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#编码实现"><span class="nav-number">1.0.1.</span> <span class="nav-text">编码实现</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#axios-的理解和使用"><span class="nav-number">2.</span> <span class="nav-text">axios 的理解和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#axios是什么"><span class="nav-number">2.1.</span> <span class="nav-text">axios是什么?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特点"><span class="nav-number">2.2.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">2.3.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#难点语法的理解和使用"><span class="nav-number">2.4.</span> <span class="nav-text">难点语法的理解和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#axios-create-config"><span class="nav-number">2.4.1.</span> <span class="nav-text">axios.create(config)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拦截器函数-ajax-请求-请求的回调函数的调用顺序"><span class="nav-number">2.4.2.</span> <span class="nav-text">拦截器函数&#x2F;ajax 请求&#x2F;请求的回调函数的调用顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取消请求"><span class="nav-number">2.4.3.</span> <span class="nav-text">取消请求</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#axios-源码分析"><span class="nav-number">3.</span> <span class="nav-text">axios 源码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#源码目录结构"><span class="nav-number">3.1.</span> <span class="nav-text">源码目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码分析"><span class="nav-number">3.2.</span> <span class="nav-text">源码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#axios与Axios的关系"><span class="nav-number">3.2.1.</span> <span class="nav-text">axios与Axios的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#instance与axios的区别"><span class="nav-number">3.2.2.</span> <span class="nav-text">instance与axios的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码难点与流程分析"><span class="nav-number">3.3.</span> <span class="nav-text">源码难点与流程分析</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
       <div class="site-overview-wrap sidebar-panel">
@@ -660,7 +695,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">166</span>
+          <span class="site-state-item-count">167</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -783,7 +818,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">23:49</span>
+    <span title="站点阅读时长">23:51</span>
 </div>
 
 <!--

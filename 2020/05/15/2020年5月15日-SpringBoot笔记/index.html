@@ -50,12 +50,12 @@
   };
 </script>
 
-  <meta name="description" content="一、配置外置Servlet容器嵌入式Servlet容器:–应用jar包打包方式；  优点:简单、便携； 缺点:默认不支持JSP，优化和定制比较复杂(使用定制器【ServerProperties、自定义EmbeddedWebServerFactoryCustomizerAutoConfiguration，自己编写嵌入式Servlet容器工厂】)；  外置Servlet容器:外部安装Tomcat–应用">
+  <meta name="description" content="一、配置外置Servlet容器嵌入式Servlet容器:—应用jar包打包方式；  优点:简单、便携； 缺点:默认不支持JSP，优化和定制比较复杂(使用定制器【ServerProperties、自定义EmbeddedWebServerFactoryCustomizerAutoConfiguration，自己编写嵌入式Servlet容器工厂】)；  外置Servlet容器:外部安装Tomcat—应用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2020年5月15日-SpringBoot-外置Servlet">
 <meta property="og:url" content="https://liyi-up.top/2020/05/15/2020%E5%B9%B45%E6%9C%8815%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Liyi&#39;s personal blog">
-<meta property="og:description" content="一、配置外置Servlet容器嵌入式Servlet容器:–应用jar包打包方式；  优点:简单、便携； 缺点:默认不支持JSP，优化和定制比较复杂(使用定制器【ServerProperties、自定义EmbeddedWebServerFactoryCustomizerAutoConfiguration，自己编写嵌入式Servlet容器工厂】)；  外置Servlet容器:外部安装Tomcat–应用">
+<meta property="og:description" content="一、配置外置Servlet容器嵌入式Servlet容器:—应用jar包打包方式；  优点:简单、便携； 缺点:默认不支持JSP，优化和定制比较复杂(使用定制器【ServerProperties、自定义EmbeddedWebServerFactoryCustomizerAutoConfiguration，自己编写嵌入式Servlet容器工厂】)；  外置Servlet容器:外部安装Tomcat—应用">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-15T11:42:58.000Z">
 <meta property="article:modified_time" content="2021-04-08T07:16:01.584Z">
@@ -301,14 +301,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.2k</span>
+              <span>1.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -320,19 +320,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="一、配置外置Servlet容器"><a href="#一、配置外置Servlet容器" class="headerlink" title="一、配置外置Servlet容器"></a>一、配置外置Servlet容器</h2><p>嵌入式Servlet容器:–应用jar包打包方式；</p>
+        <h2 id="一、配置外置Servlet容器"><a href="#一、配置外置Servlet容器" class="headerlink" title="一、配置外置Servlet容器"></a>一、配置外置Servlet容器</h2><p>嵌入式Servlet容器:—应用jar包打包方式；</p>
 <ul>
 <li>优点:简单、便携；</li>
 <li>缺点:默认不支持JSP，优化和定制比较复杂(使用定制器【ServerProperties、自定义EmbeddedWebServerFactoryCustomizerAutoConfiguration，自己编写嵌入式Servlet容器工厂】)；</li>
 </ul>
-<p>外置Servlet容器:外部安装Tomcat–应用war包方式打包；</p>
+<p>外置Servlet容器:外部安装Tomcat—应用war包方式打包；</p>
 <p>步骤:</p>
 <ol>
 <li><p>必须创建一个war项目;</p>
 </li>
 <li><p>将嵌入式Tomcat指定为provided;</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-tomcat<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <a id="more"></a>
 </li>
 <li><p>必须编写一个SpringBootServletInitializer的子类，并调用configure方法</p>
@@ -356,7 +355,7 @@
 </li>
 <li><p>C:\Users\liyi.m2\repository\org\springframework\spring-web\5.2.6.RELEASE\spring-web-5.2.6.RELEASE.jar!\META-INF\services\javax.servlet.ServletContainerInitializer</p>
 </li>
-<li><p>SpringServletContainerInitializer将@HandlesTypes({WebApplicationInitializer.class})标注的所有这个类型的类都传入到onStartup方法中 Set&lt;Class&lt;?&gt;&gt;；为这些webAppInitializerClasses类型的类创建实例；</p>
+<li><p>SpringServletContainerInitializer将@HandlesTypes({WebApplicationInitializer.class})标注的所有这个类型的类都传入到onStartup方法中 Set<Class<?>&gt;；为这些webAppInitializerClasses类型的类创建实例；</Class<?></p>
 </li>
 <li><p>每一个WebApplicationInitializer都会调用自己的onStartup方法；![WebApplicationInitializer的实现.png)</p>
 </li>
@@ -367,7 +366,6 @@
 </li>
 <li><p>Spring应用启动变创建ioc容器</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ConfigurableApplicationContext <span class="title">run</span><span class="params">(String... args)</span> </span>&#123;</span><br><span class="line">        StopWatch stopWatch = <span class="keyword">new</span> StopWatch();</span><br><span class="line">        stopWatch.start();</span><br><span class="line">        ConfigurableApplicationContext context = <span class="keyword">null</span>;</span><br><span class="line">        Collection&lt;SpringBootExceptionReporter&gt; exceptionReporters = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        <span class="keyword">this</span>.configureHeadlessProperty();</span><br><span class="line">        SpringApplicationRunListeners listeners = <span class="keyword">this</span>.getRunListeners(args);</span><br><span class="line">        listeners.starting();</span><br><span class="line"></span><br><span class="line">        Collection exceptionReporters;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            ApplicationArguments applicationArguments = <span class="keyword">new</span> DefaultApplicationArguments(args);</span><br><span class="line">            ConfigurableEnvironment environment = <span class="keyword">this</span>.prepareEnvironment(listeners, applicationArguments);</span><br><span class="line">            <span class="keyword">this</span>.configureIgnoreBeanInfo(environment);</span><br><span class="line">            Banner printedBanner = <span class="keyword">this</span>.printBanner(environment);</span><br><span class="line">            context = <span class="keyword">this</span>.createApplicationContext();</span><br><span class="line">            exceptionReporters = this.getSpringFactoriesInstances(SpringBootExceptionReporter.class, new Class[]&#123;ConfigurableApplicationContext.class&#125;, context);</span><br><span class="line">            <span class="keyword">this</span>.prepareContext(context, environment, listeners, applicationArguments, printedBanner);</span><br><span class="line">            <span class="comment">//刷新ioc容器并且初始化</span></span><br><span class="line">            <span class="keyword">this</span>.refreshContext(context);</span><br><span class="line">            <span class="keyword">this</span>.afterRefresh(context, applicationArguments);</span><br><span class="line">            stopWatch.stop();</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.logStartupInfo) &#123;</span><br><span class="line">                (<span class="keyword">new</span> StartupInfoLogger(<span class="keyword">this</span>.mainApplicationClass)).logStarted(<span class="keyword">this</span>.getApplicationLog(), stopWatch);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            listeners.started(context);</span><br><span class="line">            <span class="keyword">this</span>.callRunners(context, applicationArguments);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Throwable var10) &#123;</span><br><span class="line">            <span class="keyword">this</span>.handleRunFailure(context, var10, exceptionReporters, listeners);</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(var10);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            listeners.running(context);</span><br><span class="line">            <span class="keyword">return</span> context;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Throwable var9) &#123;</span><br><span class="line">            <span class="keyword">this</span>.handleRunFailure(context, var9, exceptionReporters, (SpringApplicationRunListeners)<span class="keyword">null</span>);</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(var9);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
 <p>启动Servlet容器再启动SpringBoot应用</p>
 </li>
 </ol>
@@ -491,7 +489,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">166</span>
+          <span class="site-state-item-count">167</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -614,7 +612,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">23:49</span>
+    <span title="站点阅读时长">23:51</span>
 </div>
 
 <!--

@@ -316,27 +316,14 @@
       
         <h1 id="1-val"><a href="#1-val" class="headerlink" title="1. val()"></a>1. val()</h1><p>定义和用法:<br>val() 方法返回或设置被选元素的值。</p>
 <p>元素的值是通过 value 属性设置的。其中有部分元素没有value，该方法大多用于 input 元素。</p>
-<p>如果该方法未设置参数，则返回被选元素的当前值。</p>
-<a id="more"></a>
-<p>1.1获取元素中的值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#name&quot;).val()     &#x2F;&#x2F;获取id&#x3D;&quot;name&quot;的value值</span><br></pre></td></tr></table></figure>
-<p>1.2赋予元素值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#name&quot;).val(value)  &#x2F;&#x2F;value表示你赋予的值</span><br></pre></td></tr></table></figure>
+<p>如果该方法未设置参数，则返回被选元素的当前值。<br><a id="more"></a><br>1.1获取元素中的值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#name&quot;).val()     &#x2F;&#x2F;获取id&#x3D;&quot;name&quot;的value值</span><br></pre></td></tr></table></figure><br>1.2赋予元素值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#name&quot;).val(value)  &#x2F;&#x2F;value表示你赋予的值</span><br></pre></td></tr></table></figure></p>
 <h1 id="2-HTML"><a href="#2-HTML" class="headerlink" title="2. .HTML()"></a>2. .HTML()</h1><p>定义和用法:<br>html() 方法返回或设置被选元素的内容 (inner HTML)。</p>
 <p>如果该方法未设置参数，则返回被选元素的当前内容。</p>
-<p>2.1当使用该方法返回一个值时，它会返回第一个匹配元素的内容。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#name&quot;).html() &#x2F;&#x2F;获取第一个id&#x3D;name的内容</span><br></pre></td></tr></table></figure>
-<p>2.2当使用该方法设置一个值时，它会覆盖所有匹配元素的内容。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#name&quot;).html(&quot;需要赋予的值&quot;)</span><br></pre></td></tr></table></figure>
-<p>#3. attr()：<br>定义和用法<br>attr() 方法设置或返回被选元素的属性值。</p>
+<p>2.1当使用该方法返回一个值时，它会返回第一个匹配元素的内容。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#name&quot;).html() &#x2F;&#x2F;获取第一个id&#x3D;name的内容</span><br></pre></td></tr></table></figure><br>2.2当使用该方法设置一个值时，它会覆盖所有匹配元素的内容。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#name&quot;).html(&quot;需要赋予的值&quot;)</span><br></pre></td></tr></table></figure></p>
+<h1 id="3-attr-："><a href="#3-attr-：" class="headerlink" title="3. attr()："></a>3. attr()：</h1><p>定义和用法<br>attr() 方法设置或返回被选元素的属性值。</p>
 <p>根据该方法不同的参数，其工作方式也有所差异。</p>
-<p>3.1返回被选元素的属性值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;name&quot;).attr(&quot;你所要赋予的值&quot;);</span><br></pre></td></tr></table></figure>
-<p>3.2设置被选元素的属性和值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;name&quot;).attr(attribute,value)</span><br></pre></td></tr></table></figure>
-<p>区别：<br>1.val()—一般 用在input上，val主要运用于表单元素上，而不用在其他元素，用来获取input或者是select的值（但我用val给select赋值时无法显示，不知道为什么）<br>2.html()和text()、attr（）可用在多种元素上，但是html()相当于依据源代码返回，也就是在返回的内容中会包含各种tag，而text()则相当于是依据页面显示返回，返回的内容是出去各种tag之间的内容</p>
-<h1 id="补充-text"><a href="#补充-text" class="headerlink" title="补充.text():"></a>补充.text():</h1><p>text 属性可设置或返回选项的文本值<br>定义和用法:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var text1 &#x3D; $(“div”).text(); &#x2F;&#x2F;text中可设置参数文本</span><br><span class="line">var text2 &#x3D; $(“div”).text(&#39;w&#39;);</span><br><span class="line">console.log(text1);</span><br><span class="line">console.log(text2);</span><br></pre></td></tr></table></figure>
+<p>3.1返回被选元素的属性值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;name&quot;).attr(&quot;你所要赋予的值&quot;);</span><br></pre></td></tr></table></figure><br>3.2设置被选元素的属性和值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;name&quot;).attr(attribute,value)</span><br></pre></td></tr></table></figure><br>区别：<br>1.val()—一般 用在input上，val主要运用于表单元素上，而不用在其他元素，用来获取input或者是select的值（但我用val给select赋值时无法显示，不知道为什么）<br>2.html()和text()、attr（）可用在多种元素上，但是html()相当于依据源代码返回，也就是在返回的内容中会包含各种tag，而text()则相当于是依据页面显示返回，返回的内容是出去各种tag之间的内容</p>
+<h1 id="补充-text"><a href="#补充-text" class="headerlink" title="补充.text():"></a>补充.text():</h1><p>text 属性可设置或返回选项的文本值<br>定义和用法:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var text1 &#x3D; $(“div”).text(); &#x2F;&#x2F;text中可设置参数文本</span><br><span class="line">var text2 &#x3D; $(“div”).text(&#39;w&#39;);</span><br><span class="line">console.log(text1);</span><br><span class="line">console.log(text2);</span><br></pre></td></tr></table></figure></p>
 
     </div>
 
@@ -442,7 +429,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-val"><span class="nav-number">1.</span> <span class="nav-text">1. val()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-HTML"><span class="nav-number">2.</span> <span class="nav-text">2. .HTML()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#补充-text"><span class="nav-number">3.</span> <span class="nav-text">补充.text():</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-val"><span class="nav-number">1.</span> <span class="nav-text">1. val()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-HTML"><span class="nav-number">2.</span> <span class="nav-text">2. .HTML()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-attr-："><span class="nav-number">3.</span> <span class="nav-text">3. attr()：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#补充-text"><span class="nav-number">4.</span> <span class="nav-text">补充.text():</span></a></li></ol></div>
       </div>
       <!--/noindex-->
       <div class="site-overview-wrap sidebar-panel">
@@ -457,7 +444,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">166</span>
+          <span class="site-state-item-count">167</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -580,7 +567,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">23:49</span>
+    <span title="站点阅读时长">23:51</span>
 </div>
 
 <!--
