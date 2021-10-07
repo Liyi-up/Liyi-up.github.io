@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liyi-up.top/"/>
-  <updated>2021-10-07T02:23:00.797Z</updated>
+  <updated>2021-10-07T02:41:31.565Z</updated>
   <id>https://liyi-up.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Http缓存-协商与强制缓存</title>
+    <link href="https://liyi-up.top/2021/10/07/Http%E7%BC%93%E5%AD%98-%E5%8D%8F%E5%95%86%E4%B8%8E%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98/"/>
+    <id>https://liyi-up.top/2021/10/07/Http%E7%BC%93%E5%AD%98-%E5%8D%8F%E5%95%86%E4%B8%8E%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98/</id>
+    <published>2021-10-07T02:39:28.000Z</published>
+    <updated>2021-10-07T02:41:31.565Z</updated>
+    
+    <content type="html"><![CDATA[<p>通常根据是否需要向服务器重新发起HTTP请求去确认缓存是否有效将缓存分为强制缓存和协商缓存</p><h2 id="强制缓存"><a href="#强制缓存" class="headerlink" title="强制缓存"></a><strong>强制缓存</strong></h2><p><code>强制缓存</code>就是直接从浏览器缓存查找该结果，并根据结果的缓存规则来决定是否使用该缓存的过程。</p><a id="more"></a><ul><li>不存在该缓存结果和标识，强制缓存失效，则直接向服务器发起请求（跟第一次发起请求一致）</li><li>存在缓存结果和标识，但结果已失效，强制缓存失效，则使用协商缓存</li><li>存在缓存结果和标识，并且结果未失效，强制缓存生效，直接返回该结果</li></ul><p>控制强制缓存的字段分别是<code>Expires</code>和<code>Cache-Control</code>，其中<code>Cache-Control</code>优先级比<code>Expires</code>高。</p><h3 id="Expires"><a href="#Expires" class="headerlink" title="Expires"></a><strong>Expires</strong></h3><p><code>Expires</code>是HTTP/1.0控制网页缓存的字段，其值为服务器返回该请求结果缓存的到期时间，即再次发起该请求时，如果客户端的时间小于<code>Expires</code>的值时，直接使用缓存结果。</p><h3 id="Expires是HTTP-1-0的字段，但现在浏览器默认使用HTTP-1-1，那么HTTP-1-1中网页缓存是否还是由Expires控制？"><a href="#Expires是HTTP-1-0的字段，但现在浏览器默认使用HTTP-1-1，那么HTTP-1-1中网页缓存是否还是由Expires控制？" class="headerlink" title="Expires是HTTP/1.0的字段，但现在浏览器默认使用HTTP/1.1，那么HTTP/1.1中网页缓存是否还是由Expires控制？"></a><strong><code>Expires</code>是HTTP/1.0的字段，但现在浏览器默认使用HTTP/1.1，那么HTTP/1.1中网页缓存是否还是由<code>Expires</code>控制？</strong></h3><p>到了HTTP/1.1，<code>Expires</code>已经被<code>Cache-Control</code>替代，原因在于<code>Expires</code>控制缓存的原理是使用客户端的时间和服务端返回的时间做对比，那么如果客户端与服务端的时间因为某些原因（例如时区）发送误差，那么强制缓存则会直接失效。</p><h3 id="Cache-Control"><a href="#Cache-Control" class="headerlink" title="Cache-Control"></a><strong>Cache-Control</strong></h3><p>在HTTP/1.1中，<code>Cache-Control</code>是最重要的规则，主要用于控制网页缓存，主要取值为：</p><ul><li><code>public</code>：所有内容都将被缓存（客户端/代理服务器/CDN等）</li><li><code>private</code>：只有客户端可以缓存，<code>Cache-Control</code>默认值</li><li><code>no-cache</code>：客户端缓存内容，但是是否使用缓存则需要经过协商缓存来验证决定</li><li><code>no-store</code>：所有内容都不会被缓存，即不使用强制缓存，也不使用协商缓存</li><li><code>max-age=xxx</code>：缓存将在xxx秒后失效</li></ul><blockquote><p> <code>Cache-Control/Expires</code>同时存在时，只有<code>Cache-Control</code>生效<br>”</p></blockquote><h2 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a><strong>协商缓存</strong></h2><p><code>协商缓存</code>就是强制缓存失效后，浏览器携带缓存标识向服务器发起请求，有服务器根据缓存标识决定是否使用缓存的过程，主要有以下两种情况：</p><ol><li>协商缓存生效，返回304，服务器告诉浏览器资源未更新，则再去浏览器缓存中访问资 源</li><li>协商缓存失效，返回200和请求结果</li></ol><p>同样，协商缓存的标识也是在响应报文的HTTP头和请求结果一起返回给浏览器的，控制协商缓存的字段分别有：</p><ul><li><code>Last-Modified/If-Modified-Since</code></li><li><code>Etag/If-None-Match</code></li></ul><p>其中<code>Etag/If-None-Match</code>优先级比<code>Last-Modified/If-Modified-Since</code>高</p><h3 id="Last-Modified-If-Modified-Since"><a href="#Last-Modified-If-Modified-Since" class="headerlink" title="Last-Modified/If-Modified-Since"></a><strong>Last-Modified/If-Modified-Since</strong></h3><p><code>Last-Modified</code>是服务器响应请求时，返回该资源文件在服务器最后被修改的时间。</p><p><code>If-Modified-Since</code>则是客户端再次发起该请求时，携带上次请求返回的<code>Last-Modified</code>值，通过此字段告诉服务器该资源上次请求返回的最后被修改时间。服务器收到该请求，发现请求头含有<code>If-Modified-Since</code>字段，则会根据<code>If-Modified-Since</code>的字段值与该资源在服务器的最后被修改时间做对比，若服务器的资源最后修改时间大于<code>If-Modified-Since</code>的字段值，则重新返回资源，状态码为200；否则返回304，代表资源无更新，可以继续使用缓存文件。</p><h3 id="Etag-If-None-Match"><a href="#Etag-If-None-Match" class="headerlink" title="Etag/If-None-Match"></a><strong>Etag/If-None-Match</strong></h3><p><code>Etag</code>是服务器响应请求时，返回当前资源文件的一个唯一标识（由服务器生成）。</p><p><code>If-None-Match</code>是客户端再次发起请求时，携带上次请求返回的唯一标识Etag值，服务端收到该请求后，发现该请求含有<code>If-None-Match</code>，则会根据<code>If-None-Match</code>的字段值与该资源在服务器的Etag值做对比，一致则返回304，代表资源无更新，继续使用缓存文件，否则重新返回资源，状态码为200.</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h2><p><code>强制缓存</code>优先于<code>协商缓存</code>，若强制缓存生效则直接使用缓存，若不生效则进行协商缓存，协商缓存由服务器决定是否使用缓存，若协商缓存失效，那么代表该请求的缓存失效，重新获取请求结果，再存入浏览器缓存中；生效则返回304，继续使用缓存。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;通常根据是否需要向服务器重新发起HTTP请求去确认缓存是否有效将缓存分为强制缓存和协商缓存&lt;/p&gt;
+&lt;h2 id=&quot;强制缓存&quot;&gt;&lt;a href=&quot;#强制缓存&quot; class=&quot;headerlink&quot; title=&quot;强制缓存&quot;&gt;&lt;/a&gt;&lt;strong&gt;强制缓存&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;强制缓存&lt;/code&gt;就是直接从浏览器缓存查找该结果，并根据结果的缓存规则来决定是否使用该缓存的过程。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="https://liyi-up.top/categories/Web/"/>
+    
+      <category term="前端开发" scheme="https://liyi-up.top/categories/Web/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="CSS" scheme="https://liyi-up.top/tags/CSS/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript-hash与history</title>
@@ -616,29 +642,6 @@
     
     
       <category term="操作系统" scheme="https://liyi-up.top/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu图形界面入门</title>
-    <link href="https://liyi-up.top/2021/09/10/Ubuntu%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E5%85%A5%E9%97%A8/"/>
-    <id>https://liyi-up.top/2021/09/10/Ubuntu%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E5%85%A5%E9%97%A8/</id>
-    <published>2021-09-10T06:08:08.000Z</published>
-    <updated>2021-09-10T06:09:26.914Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Ubuntu-的任务栏"><a href="#Ubuntu-的任务栏" class="headerlink" title="Ubuntu 的任务栏"></a>Ubuntu 的任务栏</h2><a id="more"></a><p>![](D:/01 Linux基础资料/课程讲义/linuxbasic/linux/media/14928321028755/14928329271228.jpg)</p><h2 id="窗口操作按钮"><a href="#窗口操作按钮" class="headerlink" title="窗口操作按钮"></a>窗口操作按钮</h2><p>![](D:/01 Linux基础资料/课程讲义/linuxbasic/linux/media/14928321028755/14928325424356.jpg)</p><h2 id="窗口菜单条"><a href="#窗口菜单条" class="headerlink" title="窗口菜单条"></a>窗口菜单条</h2><p>![](D:/01 Linux基础资料/课程讲义/linuxbasic/linux/media/14928321028755/14928327078409.jpg)</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Ubuntu-的任务栏&quot;&gt;&lt;a href=&quot;#Ubuntu-的任务栏&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu 的任务栏&quot;&gt;&lt;/a&gt;Ubuntu 的任务栏&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="编程基础" scheme="https://liyi-up.top/categories/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="基础概念" scheme="https://liyi-up.top/tags/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"/>
     
   </entry>
   
