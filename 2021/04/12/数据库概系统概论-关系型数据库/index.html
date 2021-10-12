@@ -346,7 +346,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>6.6k</span>
+              <span>6.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -373,16 +373,15 @@
 </blockquote>
 <p>◼ 之后，提出了关系代数和关系演算的概念</p>
 <a id="more"></a>
-
 <p>◼ 1972年提出了关系的第一、第二、第三范式</p>
 <p>◼ 1974年提出了关系的BC范式</p>
 </li>
 </ul>
 <h3 id="关系数据结构及形式化定义-1"><a href="#关系数据结构及形式化定义-1" class="headerlink" title="关系数据结构及形式化定义"></a>关系数据结构及形式化定义</h3><h4 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h4><ul>
-<li><p><strong>单一的数据结构—-关系</strong></p>
+<li><p><strong>单一的数据结构——关系</strong></p>
 <p>现实世界的实体以及实体间的各种联系均用关系来表示</p>
 </li>
-<li><p><strong>逻辑结构—-二维表</strong></p>
+<li><p><strong>逻辑结构——二维表</strong></p>
 <p>从用户角度，关系模型中数据的逻辑结构是一张二维表</p>
 </li>
 <li><p>建立在集合代数的基础上</p>
@@ -399,7 +398,13 @@
 </li>
 </ul>
 <h5 id="笛卡尔积（Cartesian-Product）"><a href="#笛卡尔积（Cartesian-Product）" class="headerlink" title="笛卡尔积（Cartesian Product）"></a>笛卡尔积（Cartesian Product）</h5><ul>
-<li><p>笛卡尔积<br>$$<br>给定一组域D1，D2，…，Dn，允许其中某些域是相同的。<br>D1，D2，…，Dn的笛卡尔积为：<br>D1×D2×…×Dn<br>＝<br>｛（d1，d2，…，dn）｜diDi，i＝1，2，…，n｝<br>$$<br>◼ 所有域的所有取值的一个组合</p>
+<li><p>笛卡尔积</p>
+<script type="math/tex; mode=display">
+给定一组域D1，D2，…，Dn，允许其中某些域是相同的。
+D1，D2，…，Dn的笛卡尔积为：
+D1×D2×…×Dn
+＝
+｛（d1，d2，…，dn）｜diDi，i＝1，2，…，n｝</script><p>◼ 所有域的所有取值的一个组合</p>
 <p>◼ 不能重复</p>
 </li>
 <li><p>元组（Tuple）</p>
@@ -438,7 +443,11 @@
 <h5 id="关系（Relation）"><a href="#关系（Relation）" class="headerlink" title="关系（Relation）"></a>关系（Relation）</h5></li>
 </ul>
 <ol>
-<li><p>关系<br>$$<br>D1×D2×…×Dn的子集叫作在域D1，D2，…，Dn上的<br>关系，表示为<br>R（D1，D2，…，Dn）<br>$$<br>◼ R：关系名</p>
+<li><p>关系</p>
+<script type="math/tex; mode=display">
+D1×D2×…×Dn的子集叫作在域D1，D2，…，Dn上的
+关系，表示为
+R（D1，D2，…，Dn）</script><p>◼ R：关系名</p>
 <p>◼ n：关系的目或度（Degree）</p>
 </li>
 <li><p>元组</p>
@@ -472,30 +481,7 @@
 <p>假设：导师与专业：n:1， 导师与研究生：1:n 主码：POSTGRADUATE（假设研究生不会重名）</p>
 </li>
 </ul>
-<table>
-<thead>
-<tr>
-<th align="center">SUPERVISOR</th>
-<th align="center">SPECIALITY</th>
-<th align="center">POSTGRADUATE</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">张清玫</td>
-<td align="center">计算机专业</td>
-<td align="center">李勇</td>
-</tr>
-<tr>
-<td align="center">张清玫</td>
-<td align="center">计算机专业</td>
-<td align="center">刘晨</td>
-</tr>
-<tr>
-<td align="center">刘逸</td>
-<td align="center">信息专业</td>
-<td align="center">王敏</td>
-</tr>
-</tbody></table>
+<p>| SUPERVISOR | SPECIALITY | POSTGRADUATE |<br>| :————: | :————: | :—————: |<br>|   张清玫   | 计算机专业 |     李勇     |<br>|   张清玫   | 计算机专业 |     刘晨     |<br>|    刘逸    |  信息专业  |     王敏     |</p>
 </li>
 <li><p>三类关系</p>
 <ul>
@@ -549,7 +535,10 @@
 <p>F          属性间数据的依赖关系的集合</p>
 </blockquote>
 <p>例: 导师和研究生出自同一个域——人， 取不同的属性名，并在模式中定义属性向域 的映象，即说明它们分别出自哪个域： DOM（SUPERVISOR-PERSON） = DOM（POSTGRADUATE-PERSON） = PERSON</p>
-<p>关系模式通常可以简记为<br>$$<br>R (U) 或 R (A1，A2，…，An<br>)<br>$$<br>◼ R: 关系名</p>
+<p>关系模式通常可以简记为</p>
+<script type="math/tex; mode=display">
+R (U) 或 R (A1，A2，…，An
+)</script><p>◼ R: 关系名</p>
 <p>◼ A1，A2，…，An : 属性名</p>
 <p>注：域名及属性向域的映象常常直接说明为 属性的类型、长度</p>
 <h4 id="关系模式与关系"><a href="#关系模式与关系" class="headerlink" title="关系模式与关系"></a>关系模式与关系</h4><ul>
@@ -652,8 +641,6 @@
 <p>学生（<strong>学号</strong>，姓名，性别，专业号，年龄）</p>
 <p>课程（<strong>课程号</strong>，课程名，学分）</p>
 <p>选修（<strong>学号</strong>，<strong>课程号</strong>，成绩）</p>
-</blockquote>
-<blockquote>
 <p>例3:学生实体及其内部的一对多联系</p>
 <p>学生（<strong>学号</strong>，姓名，性别，专业号，年龄，<strong>班长</strong>）</p>
 </blockquote>
@@ -1100,7 +1087,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">168</span>
+          <span class="site-state-item-count">169</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1223,7 +1210,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">23:58</span>
+    <span title="站点阅读时长">23:55</span>
 </div>
 
 <!--

@@ -215,6 +215,141 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://liyi-up.top/2020/06/08/2020%E5%B9%B46%E6%9C%888%E6%97%A5-SpringBoot-%E4%BB%BB%E5%8A%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="Liyi">
+      <meta itemprop="description" content="A Programmer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Liyi's personal blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/08/2020%E5%B9%B46%E6%9C%888%E6%97%A5-SpringBoot-%E4%BB%BB%E5%8A%A1/" class="post-title-link" itemprop="url">2020年6月8日-SpringBoot-任务</a>
+        </h1>
+
+        <div class="post-meta">
+                    
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-06-08 12:40:39" itemprop="dateCreated datePublished" datetime="2020-06-08T12:40:39+08:00">2020-06-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-02 16:01:41" itemprop="dateModified" datetime="2020-07-02T16:01:41+08:00">2020-07-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index">
+                    <span itemprop="name">Web</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
+                    <span itemprop="name">后端开发</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/SpringBoot/" itemprop="url" rel="index">
+                    <span itemprop="name">SpringBoot</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/SpringBoot/SpringBoot%E9%AB%98%E7%BA%A7/" itemprop="url" rel="index">
+                    <span itemprop="name">SpringBoot高级</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/06/08/2020%E5%B9%B46%E6%9C%888%E6%97%A5-SpringBoot-%E4%BB%BB%E5%8A%A1/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/08/2020%E5%B9%B46%E6%9C%888%E6%97%A5-SpringBoot-%E4%BB%BB%E5%8A%A1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="一、异步任务"><a href="#一、异步任务" class="headerlink" title="一、异步任务"></a>一、异步任务</h2><p>在实际开发中为了让一段程序执行的时候，不阻塞其他线程，其他方法能够异步调用时就需要用到异步处理。</p>
+<p>在SpringBoot中有专门的注解实现程序的异步处理:</p>
+<ul>
+<li>@EnableAsync:开启异步任务</li>
+<li>@Async :声明此方法为异步方法</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/06/08/2020%E5%B9%B46%E6%9C%888%E6%97%A5-SpringBoot-%E4%BB%BB%E5%8A%A1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://liyi-up.top/2020/06/05/2020%E5%B9%B46%E6%9C%885%E6%97%A5-SpringBoot-%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -560,7 +695,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.2k</span>
+              <span>5.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -942,14 +1077,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4k</span>
+              <span>9.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>9 分钟</span>
             </span>
 
         </div>
@@ -1201,14 +1336,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>42k</span>
+              <span>43k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>38 分钟</span>
+              <span>39 分钟</span>
             </span>
 
         </div>
@@ -1367,135 +1502,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://liyi-up.top/2020/05/20/2020%E5%B9%B45%E6%9C%8820%E6%97%A5-SpingBoot-%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="Liyi">
-      <meta itemprop="description" content="A Programmer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Liyi's personal blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/20/2020%E5%B9%B45%E6%9C%8820%E6%97%A5-SpingBoot-%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/" class="post-title-link" itemprop="url">2020年5月20日-SpingBoot-运行原理</a>
-        </h1>
-
-        <div class="post-meta">
-                    
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-20 15:53:51" itemprop="dateCreated datePublished" datetime="2020-05-20T15:53:51+08:00">2020-05-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-02 16:01:05" itemprop="dateModified" datetime="2020-07-02T16:01:05+08:00">2020-07-02</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index">
-                    <span itemprop="name">Web</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
-                    <span itemprop="name">后端开发</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/SpringBoot/" itemprop="url" rel="index">
-                    <span itemprop="name">SpringBoot</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/20/2020%E5%B9%B45%E6%9C%8820%E6%97%A5-SpingBoot-%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/20/2020%E5%B9%B45%E6%9C%8820%E6%97%A5-SpingBoot-%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>5.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="远行原理-SpringBoot1-5-x"><a href="#远行原理-SpringBoot1-5-x" class="headerlink" title="远行原理 SpringBoot1.5.x"></a>远行原理 SpringBoot1.5.x</h1><h3 id="1-几个重要的回调机制"><a href="#1-几个重要的回调机制" class="headerlink" title="1.几个重要的回调机制"></a>1.几个重要的回调机制</h3><ul>
-<li>ApplicationContextlnitializer</li>
-<li>SpringApplicationRunListener</li>
-<li>ApplicationRunner</li>
-<li>CommandLineRunner</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/20/2020%E5%B9%B45%E6%9C%8820%E6%97%A5-SpingBoot-%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1567,7 +1573,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">168</span>
+          <span class="site-state-item-count">169</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1690,7 +1696,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">23:58</span>
+    <span title="站点阅读时长">23:55</span>
 </div>
 
 <!--

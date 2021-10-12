@@ -215,6 +215,154 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://liyi-up.top/2020/04/28/SpringBoot%E7%AC%94%E8%AE%B0%20(2)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="Liyi">
+      <meta itemprop="description" content="A Programmer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Liyi's personal blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/28/SpringBoot%E7%AC%94%E8%AE%B0%20(2)/" class="post-title-link" itemprop="url">2020年4月27日-2020年4月28日-SpringBoot-配置文件</a>
+        </h1>
+
+        <div class="post-meta">
+                    
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-28 20:49:09" itemprop="dateCreated datePublished" datetime="2020-04-28T20:49:09+08:00">2020-04-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-02 16:02:09" itemprop="dateModified" datetime="2020-07-02T16:02:09+08:00">2020-07-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index">
+                    <span itemprop="name">Web</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
+                    <span itemprop="name">后端开发</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/SpringBoot/" itemprop="url" rel="index">
+                    <span itemprop="name">SpringBoot</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/SpringBoot/SpringBoot-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">SpringBoot-配置文件</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/04/28/SpringBoot%E7%AC%94%E8%AE%B0%20(2)/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/28/SpringBoot%E7%AC%94%E8%AE%B0%20(2)/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>17k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>15 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Spring-Boot"><a href="#Spring-Boot" class="headerlink" title="Spring Boot"></a>Spring Boot</h2><h4 id="一、resources文件目录结构"><a href="#一、resources文件目录结构" class="headerlink" title="一、resources文件目录结构"></a>一、resources文件目录结构</h4><ul>
+<li>​      static：</li>
+</ul>
+<blockquote>
+<p>保存所有的静态资源:js css images</p>
+</blockquote>
+<ul>
+<li>​     templates:</li>
+</ul>
+<blockquote>
+<p>保存所有的模板页面，(Spring Boot包使用嵌入式的Tomacat，默认事不支持JSP页面,d但是我们可以使用模板引擎)<br>列如freemarker，thymeleaf</p>
+</blockquote>
+<ul>
+<li>​    application.properties：</li>
+</ul>
+<blockquote>
+<p>Spring Boot应用配置文件，可在此修改默认配置</p>
+</blockquote>
+<p>​</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/28/SpringBoot%E7%AC%94%E8%AE%B0%20(2)/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://liyi-up.top/2020/04/28/2020%E5%B9%B44%E6%9C%8826%E6%97%A5-SpringBoot-%E4%BB%8B%E7%BB%8D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -293,7 +441,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.3k</span>
+              <span>5.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -427,7 +575,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.3k</span>
+              <span>5.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -1151,14 +1299,14 @@
 
       
           <h4 id="一、约定的项目结构"><a href="#一、约定的项目结构" class="headerlink" title="一、约定的项目结构"></a>一、约定的项目结构</h4><p>Hello</p>
-<p>| —src</p>
-<p>|— |—main</p>
-<p>|— |— |—java</p>
-<p>|— |— |—resources</p>
-<p>|— |—test</p>
-<p>|— |— |—java</p>
-<p>|— |— |—resources</p>
-<p>|—pom.xml<br>pom.xml配置如下</p>
+<p>| —-src</p>
+<p>|—- |—-main</p>
+<p>|—- |—- |—-java</p>
+<p>|—- |—- |—-resources</p>
+<p>|—- |—-test</p>
+<p>|—- |—- |—-java</p>
+<p>|—- |—- |—-resources</p>
+<p>|—-pom.xml<br>pom.xml配置如下</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/01/20/Maven%E7%9A%84%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/#more" rel="contents">
@@ -1251,7 +1399,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>868</span>
+              <span>869</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -1276,137 +1424,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/01/18/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7-Maven/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://liyi-up.top/2020/01/18/Mysql%E8%A7%A6%E5%8F%91%E5%99%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="Liyi">
-      <meta itemprop="description" content="A Programmer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Liyi's personal blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/18/Mysql%E8%A7%A6%E5%8F%91%E5%99%A8/" class="post-title-link" itemprop="url">Mysql触发器</a>
-        </h1>
-
-        <div class="post-meta">
-                    
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-01-18 11:12:19" itemprop="dateCreated datePublished" datetime="2020-01-18T11:12:19+08:00">2020-01-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-28 12:54:00" itemprop="dateModified" datetime="2021-04-28T12:54:00+08:00">2021-04-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index">
-                    <span itemprop="name">Web</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
-                    <span itemprop="name">后端开发</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index">
-                    <span itemprop="name">MySQL数据库</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/01/18/Mysql%E8%A7%A6%E5%8F%91%E5%99%A8/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/01/18/Mysql%E8%A7%A6%E5%8F%91%E5%99%A8/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h4><p><strong>触发器</strong>是一种特殊类型的存储过程，它不同于存储过程，主要是通过事件触发而被执行的，即不是主动调用而执行的；而存储过程则需要主动调用其名字执行</p>
-<p>触发器：trigger，是指事先为某张表绑定一段代码，当表中的某些内容发生改变（增、删、改）的时候，系统会自动触发代码并执行。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/18/Mysql%E8%A7%A6%E5%8F%91%E5%99%A8/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1497,7 +1514,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">168</span>
+          <span class="site-state-item-count">169</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1620,7 +1637,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">23:58</span>
+    <span title="站点阅读时长">23:55</span>
 </div>
 
 <!--
