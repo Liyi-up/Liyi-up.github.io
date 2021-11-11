@@ -58,7 +58,7 @@
 <meta property="og:description" content="触屏事件触屏事件概述移动端浏览器兼容性较好，我们不需要考虑以前 JS 的兼容性问题，可以放心的使用原生 JS 书写效果，但是移动端也有自己独特的地方。比如触屏事件 touch（也称触摸事件），Android 和 IOS 都有。 touch 对象代表一个触摸点。触摸点可能是一根手指，也可能是一根触摸笔。触屏事件可相应用户手指（或触控笔）对屏幕或者触控板操作。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-07T12:55:58.000Z">
-<meta property="article:modified_time" content="2021-07-08T12:57:18.201Z">
+<meta property="article:modified_time" content="2021-07-08T12:57:20.000Z">
 <meta property="article:author" content="Liyi">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
@@ -248,7 +248,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-08 20:57:18" itemprop="dateModified" datetime="2021-07-08T20:57:18+08:00">2021-07-08</time>
+                <time title="修改时间：2021-07-08 20:57:20" itemprop="dateModified" datetime="2021-07-08T20:57:20+08:00">2021-07-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -323,8 +323,8 @@
         <h2 id="触屏事件"><a href="#触屏事件" class="headerlink" title="触屏事件"></a>触屏事件</h2><h3 id="触屏事件概述"><a href="#触屏事件概述" class="headerlink" title="触屏事件概述"></a>触屏事件概述</h3><p>移动端浏览器兼容性较好，我们不需要考虑以前 JS 的兼容性问题，可以放心的使用原生 JS 书写效果，但是移动端也有自己独特的地方。比如<font color="red">触屏事件 touch（也称触摸事件），</font>Android 和 IOS 都有。</p>
 <p><code>touch</code> 对象代表一个触摸点。触摸点可能是一根手指，也可能是一根触摸笔。触屏事件可相应用户手指（或触控笔）对屏幕或者触控板操作。</p>
 <a id="more"></a>
+
 <p>常见触屏事件如下：</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -332,8 +332,7 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>touchstart</td>
 <td>手指触摸一个 DOM 元素时触发</td>
 </tr>
@@ -345,13 +344,10 @@
 <td>touchhedn</td>
 <td>手指从一个 DOM 元素上移开时触发</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h3 id="触摸事件对象（TouchEvent）"><a href="#触摸事件对象（TouchEvent）" class="headerlink" title="触摸事件对象（TouchEvent）"></a>触摸事件对象（TouchEvent）</h3><p><code>TouchEvent</code>是一类描述手指在触摸平板（触摸屏、触摸板等）的状态变化的事件。该事件用于描述一个或多个触点，使开发者可以检测触点的移动，触点的增加和减少。等等</p>
 <p><code>touchstart、touchmove、tpuchend</code>三个事件都会各自有事件对象</p>
 <p>触摸事件对象重点看三个常见对象列表</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -359,8 +355,7 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>touches</td>
 <td>正在触摸屏幕的所有手指的一个列表</td>
 </tr>
@@ -372,11 +367,8 @@
 <td>changedTouches</td>
 <td>手指状态发生了改变的列表。从无到有，从有到无变化</td>
 </tr>
-</tbody>
-</table>
-</div>
-<font color="red">因为实际开发中我们都是给元素注册触摸事件，所以常用targetTouches</font>
-
+</tbody></table>
+<p><font color="red">因为实际开发中我们都是给元素注册触摸事件，所以常用targetTouches</font></p>
 <h3 id="移动元素"><a href="#移动元素" class="headerlink" title="移动元素"></a>移动元素</h3><p>1.<code>touchstart、touchmove、touchend</code>可以实现拖动元素</p>
 <p>2.但是拖动元素需要当前手指的坐标值 我们可以用 <code>targetTouches[0]</code> 里面的pageX 和 pageY</p>
 <p>3.移动端拖动原理：手指移动中，计算手指移动的距离。然后用盒子原来的位置+手指移动的距离</p>
@@ -385,9 +377,9 @@
 <p>（1）触摸元素 <code>touchstart</code>: 获取手指初始坐标，同时获得盒子原来位置</p>
 <p>（2）移动手指 <code>touchmove</code>: 计算手指的滑动距离，并且移动盒子</p>
 <p>（3）离开手指 <code>touchend;</code></p>
-<font color="red">注意：手指移动也会触发滚动屏幕所以这里要阻止默认屏幕滚动 e.preventDefault();</font>
-
+<p><font color="red">注意：手指移动也会触发滚动屏幕所以这里要阻止默认屏幕滚动 e.preventDefault();</font></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>移动端移动元素<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        div &#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            left: 0;</span><br><span class="line">            width: 100px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            background-color: pink;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">    /**</span><br><span class="line"><span class="javascript">     * （<span class="number">1</span>）触摸元素 <span class="string">`touchstart`</span>: 获取手指初始坐标，同时获得盒子原来位置</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">     （<span class="number">2</span>）移动手指 <span class="string">`touchmove`</span>: 计算手指的滑动距离，并且移动盒子</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">     （<span class="number">3</span>）离开手指 <span class="string">`touchend;`</span></span></span><br><span class="line">     * @type &#123;HTMLDivElement&#125;</span><br><span class="line">     */</span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> div = <span class="built_in">document</span>.querySelector(<span class="string">'div'</span>);</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> startX = <span class="number">0</span>;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> startY = <span class="number">0</span>;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> x = <span class="number">0</span>;  <span class="comment">// 盒子原来的距离</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> y = <span class="number">0</span>;</span></span><br><span class="line"><span class="actionscript">    div.addEventListener(<span class="string">'touchstart'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="comment">// 获取手指初始位置</span></span></span><br><span class="line">        startX = e.targetTouches[0].pageX;</span><br><span class="line">        startY = e.targetTouches[0].pageY;</span><br><span class="line"><span class="actionscript">        <span class="comment">// 获取元素初始位置</span></span></span><br><span class="line"><span class="actionscript">        x = <span class="keyword">this</span>.offsetLeft;</span></span><br><span class="line"><span class="actionscript">        y = <span class="keyword">this</span>.offsetTop;</span></span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line"><span class="actionscript">    div.addEventListener(<span class="string">'touchmove'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="comment">// 计算手指移动距离 ：移动后的坐标 减去 手指初始坐标</span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> moveX = e.targetTouches[<span class="number">0</span>].pageX - startX;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> moveY = e.targetTouches[<span class="number">0</span>].pageY - startY;</span></span><br><span class="line"><span class="actionscript">        <span class="comment">// 移动盒子</span></span></span><br><span class="line"><span class="actionscript">        div.style.left = x + moveX + <span class="string">'px'</span>;</span></span><br><span class="line"><span class="actionscript">        div.style.top = y + moveY + <span class="string">'px'</span>;</span></span><br><span class="line"><span class="actionscript">        e.preventDefault();  <span class="comment">// 阻止手指滑动触发的窗口滚动行为</span></span></span><br><span class="line">    &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="移动端常见特效"><a href="#移动端常见特效" class="headerlink" title="移动端常见特效"></a>移动端常见特效</h2><h3 id="移动端轮播图"><a href="#移动端轮播图" class="headerlink" title="移动端轮播图"></a>移动端轮播图</h3><p>移动端轮播图和基本PC端一致</p>
 <p>1.可以自动播放图片</p>
 <p>2.手指可以拖动播放轮播</p>
@@ -401,12 +393,14 @@
 <p>解决方案：</p>
 <p>1.禁用缩放。浏览器禁用默认的双击缩放行为并且去掉300ms的点击延迟</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"user-scalable=no"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>2.利用touch事件自己封装解决这个事件300ms延迟</p>
 <p>原理就是：</p>
 <p>1.当我们手指触摸屏幕，记录当前触摸事件</p>
 <p>2.当我们手指离开屏幕，用离开的时间减去触摸的时间</p>
 <p>3.如果时间小于150ms，并且没有滑动过屏幕。那么我们就定义为点击</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 封装tap,解决click 300ms 延时</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">tap</span>(<span class="params">obj,callback</span>)</span>&#123;</span><br><span class="line">     <span class="keyword">var</span> isMove = <span class="literal">false</span>;</span><br><span class="line">     <span class="keyword">var</span> startTime = <span class="number">0</span>; <span class="comment">// 记录触摸时的的时间</span></span><br><span class="line">     obj.addEventListener(<span class="string">'touchmove'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">      startTime = <span class="built_in">Date</span>.now(); <span class="comment">//记录触摸时间</span></span><br><span class="line">     &#125;)</span><br><span class="line">     obj.addEventListener(<span class="string">'touchmove'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">       isMOve = <span class="literal">true</span>;  <span class="comment">// 看看是否有滑动，有滑动算拖动，不算点击</span></span><br><span class="line">     &#125;);</span><br><span class="line">     obj.addEventListenr(<span class="string">'touchend'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!isMove &amp;&amp; (<span class="built_in">Date</span>.now)-startTime&lt;<span class="number">150</span>)&#123; <span class="comment">// 如果手指触摸和离开时间小于150ms 算点击</span></span><br><span class="line">           callback &amp;&amp; callback(); <span class="comment">// 执行回调函数</span></span><br><span class="line">        &#125;</span><br><span class="line">         isMOve = <span class="literal">false</span>;</span><br><span class="line">         startTime = <span class="number">0</span>;</span><br><span class="line">     &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line">tap(div,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">// 执行代码&#125;)；</span></span><br></pre></td></tr></table></figure>
+
 <p>3.使用插件，<code>fastclick</code>插件解决 300ms 延迟</p>
 <h2 id="移动端常用开发插件"><a href="#移动端常用开发插件" class="headerlink" title="移动端常用开发插件"></a>移动端常用开发插件</h2><p>移动端要求的是快速开发，所以我们经常回借助于一些插件来帮我完成操作，那么什么是插件呢？</p>
 <p><font color="red">JS 插件时js文件</font>,它遵循一定规范编写，方便程序展示效果，拥有特定功能且方便调用。如轮播图和瀑布流插件。</p>
@@ -429,6 +423,7 @@
 <h3 id="移动端视频插件-zy-nedia-js"><a href="#移动端视频插件-zy-nedia-js" class="headerlink" title="移动端视频插件 zy.nedia.js"></a>移动端视频插件 zy.nedia.js</h3><p>H5 给我们提供了video标签，但是浏览器的支持情况不同。不同的视频格式文件，我们可以通过source解决。但是外观样式，还有暂停，播放，全屏功能我们只能自己写代码解决。这个时候我们可以使用插件方式来制作。</p>
 <p>github地址：<a href="https://github.com/ireaderlab/zyMedia" target="_blank" rel="noopener">ireaderlab/zyMedia: zyMedia是掌阅科技开源的一款基于HTML5的、轻量级的、实现移动端全平台统一UI的多媒体播放器，该播放器已经在千万级设备上适配使用 (github.com)</a></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>移动端视频插件 zy.nedia.js<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./styles/zy.media.min.css"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/zy.media.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        video&#123;</span><br><span class="line">            width: 400px;</span><br><span class="line">            height: 200px;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"zy_media"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">video</span> <span class="attr">poster</span>=<span class="string">""</span> <span class="attr">data-config</span>=<span class="string">'&#123;"mediaTitle": "《小米旗舰版》--腾讯视频"&#125;'</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"https://cdn.cnbj1.fds.api.mi-img.com/product-images/redminote10pro/v1.mp4"</span> <span class="attr">type</span>=<span class="string">"video/mp4"</span>&gt;</span></span><br><span class="line">        您的浏览器不支持HTML5视频</span><br><span class="line">    <span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    zymedia(<span class="string">'video'</span>)</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="移动端常用开发框架"><a href="#移动端常用开发框架" class="headerlink" title="移动端常用开发框架"></a>移动端常用开发框架</h2><h3 id="框架概述"><a href="#框架概述" class="headerlink" title="框架概述"></a>框架概述</h3><p>框架，顾名思义就是一套架构，它会基于自身的特点向用户提供<font color="red">一套</font>完整的解决方案。框架的控制权在框架本身，使用者要按照框架所规定的某种规范进行开发。</p>
 <p>插件一般是为了解决某个问题而专门存在，，其功能单一，并且比较小。</p>
 <p>前端常用框架有 <font color="red">Bootstrap、Vue、Angular、React</font>等。机能开发PC端，也能开发移动端</p>
@@ -684,7 +679,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">23:55</span>
+    <span title="站点阅读时长">24:01</span>
 </div>
 
 <!--
