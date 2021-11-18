@@ -318,7 +318,6 @@
 <p>先写个例子目录为E:\web\test\abc.js，其中abc.js为我们写的测试代码，在Node中./和process.cwd()效果相同，./有特殊情况<br>./就是执行node命令的路径，也就是工作路径，在哪运行的node index.js或者说在哪运行npm run build的路径 （特殊情况：在 require() 中使用 ./ 时，这时的路径就会是含有 require() 的脚本文件的相对路径。）</p>
 </blockquote>
 <a id="more"></a>
-
 <h3 id="dirname"><a href="#dirname" class="headerlink" title="__dirname"></a>__dirname</h3><p><strong>dirname 总是指向被执行 js 文件的绝对路径,也就是说你在E:\web\test\abc.js中写</strong>dirname那么路径就是E:\web\test</p>
 <h3 id="filename"><a href="#filename" class="headerlink" title="__filename"></a>__filename</h3><p>返回当前模块文件被解析过后的绝对路径，使用<strong>filename变量获取当前模块文件的带有完整绝对路径的文件名，返回E:\web\test\abc.js（</strong>dirname等同于path.dirname(__filename)）</p>
 <h3 id="path-join-和path-resolve-区别"><a href="#path-join-和path-resolve-区别" class="headerlink" title="path.join()和path.resolve()区别"></a>path.join()和path.resolve()区别</h3><p>就是两个路径的拼接的API，废话不多说直接上代码,</p>
@@ -446,7 +445,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">172</span>
+          <span class="site-state-item-count">173</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -459,7 +458,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">67</span>
+        <span class="site-state-item-count">68</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
