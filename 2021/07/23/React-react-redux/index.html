@@ -325,6 +325,7 @@
         <h2 id="React-redux-概述"><a href="#React-redux-概述" class="headerlink" title="React-redux 概述"></a>React-redux 概述</h2><h3 id="Redux-与-React的关系"><a href="#Redux-与-React的关系" class="headerlink" title="Redux 与 React的关系"></a>Redux 与 React的关系</h3><p><font color="red">Redux</font>与<font color="red">React</font>之间没有关系的，Redux支持React、Angular、JQuery甚至是JavaScript</p>
 <p><font color="red">Redux</font>与<font color="red">React</font>这类库搭配起来更好用</p>
 <a id="more"></a>
+
 <h3 id="React-redux"><a href="#React-redux" class="headerlink" title="React-redux"></a>React-redux</h3><p><font color="red">react-redux</font>就是Redux官方出的 用于配合React的绑定库</p>
 <p><font color="red">react-redux</font>能够使你的<font color="red">React</font>组件从<font color="red">Redux store</font>中更方便读取数据，并且向store中<font color="red">分发actions</font>以此来更新数据</p>
 <h3 id="React-Redux中两个总要的成员"><a href="#React-Redux中两个总要的成员" class="headerlink" title="React-Redux中两个总要的成员"></a>React-Redux中两个总要的成员</h3><p>React UI 的框架是以 <font color="red">组件来进行驱动的</font>，所以react-redux中有<font color="red">两个重要的部分</font>。</p>
@@ -339,13 +340,16 @@
 </ul>
 <h2 id="React-redux-基础使用"><a href="#React-redux-基础使用" class="headerlink" title="React-redux 基础使用"></a>React-redux 基础使用</h2><h3 id="安装-react-redux"><a href="#安装-react-redux" class="headerlink" title="安装 react-redux"></a>安装 react-redux</h3><p>react-redux 不是官方所提供，所以在构建react项目之后，需要自行安装</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add react-redux</span><br><span class="line">npm install react-redux --save</span><br></pre></td></tr></table></figure>
+
 <h3 id="安装-redux"><a href="#安装-redux" class="headerlink" title="安装 redux"></a>安装 redux</h3><p>react-redux 还需要依赖于 Redux 中的store，所以我们还需要安装 redux</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add react</span><br><span class="line">npm insatll redux --save</span><br></pre></td></tr></table></figure>
+
 <h3 id="利用redux来构建-store"><a href="#利用redux来构建-store" class="headerlink" title="利用redux来构建 store"></a>利用redux来构建 store</h3><ul>
 <li>创建reducer/index.js 文件，构建reducer 来响应 actions</li>
 <li>创建store/index.js 文件，通过 createStore方法，把我们的reducer传入进来</li>
 </ul>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;createStore&#125; <span class="keyword">from</span> <span class="string">'redux'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;reducer&#125; <span class="keyword">from</span> <span class="string">'../reducer'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createStore(reducer);</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>app.js 中引入 store</li>
 </ul>
@@ -360,6 +364,7 @@
 </li>
 <li><p>利用 Provider 组件将我们整个结构包裹起来，并传递给store</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="keyword">return</span> &#123;&lt;Provider store=&#123;store&#125;&gt;...&lt;<span class="regexp">/Provider&gt;&#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 <h3 id="connect-使用"><a href="#connect-使用" class="headerlink" title="connect-使用"></a>connect-使用</h3><ul>
@@ -372,8 +377,7 @@
 <li><p>coonect 方法会有一个返回值，而这个返回值就是加强后的组件</p>
 </li>
 </ul>
-<h3 id="connect-参数说明"><a href="#connect-参数说明" class="headerlink" title="connect-参数说明"></a>connect-参数说明</h3><div class="table-container">
-<table>
+<h3 id="connect-参数说明"><a href="#connect-参数说明" class="headerlink" title="connect-参数说明"></a>connect-参数说明</h3><table>
 <thead>
 <tr>
 <th>参数名</th>
@@ -381,8 +385,7 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><strong>mapStateToPtops(state,ownProps)</strong></td>
 <td>Function</td>
 <td>此函数允许我们将store中的数据作为props绑定到组件上。<br><code>state</code>:redux中的 store<br><code>ownProps</code>:自己的props</td>
@@ -402,21 +405,21 @@
 <td>Object</td>
 <td>可以定制 connector的行为</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h3 id="利用-connect-方法让我们组件与-store-关联"><a href="#利用-connect-方法让我们组件与-store-关联" class="headerlink" title="利用 connect 方法让我们组件与 store 关联"></a>利用 connect 方法让我们组件与 store 关联</h3><ul>
 <li><p>在组件ComA和ComB，分别导入 connect 方法</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;connect&#125; <span class="keyword">from</span> <span class="string">'react-redux'</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>利用 connect 方法来对我们组件进行加强，并且导出</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect (mapStateTopProps,mapDispatchToProps)(Home)</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><p>组件ComA属于的是发送方，所以要实现第二个参数</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"><span class="comment">// 导入 connect</span></span><br><span class="line"><span class="keyword">import</span> &#123; connect &#125; <span class="keyword">from</span> <span class="string">"react-redux"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; sendAction &#125; <span class="keyword">from</span> <span class="string">'../store/actions'</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ComA</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    sendClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.props);</span><br><span class="line">        <span class="comment">// 发送 aciton</span></span><br><span class="line">        <span class="keyword">this</span>.props.sendAction();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            &lt;button onClick=&#123;<span class="keyword">this</span>.sendClick&#125; &gt;+<span class="number">1</span>&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">        )</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span>**</span><br><span class="line"> * 需要返回值</span><br><span class="line"> *<span class="regexp">/</span></span><br><span class="line"><span class="regexp">const mapDispatchToProps = (dispatch) =&gt; &#123;</span></span><br><span class="line"><span class="regexp">    return &#123;</span></span><br><span class="line"><span class="regexp">        sendAction: () =&gt; &#123;</span></span><br><span class="line"><span class="regexp">            /</span><span class="regexp">/ 利用 dispatch发送一个action</span></span><br><span class="line"><span class="regexp">            /</span><span class="regexp">/ 传递一个action对象需要定义type属性</span></span><br><span class="line"><span class="regexp">            dispatch(sendAction('111'))</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 组件A为发送方 所以要实现 第二个参数</span></span><br><span class="line"><span class="regexp">export default connect(null, mapDispatchToProps)(ComA);</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>组件ComB属于的是接收方，所以要实现第一个参数</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; connect &#125; <span class="keyword">from</span> <span class="string">'react-redux'</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ComB</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            &lt;div&gt;&#123;<span class="keyword">this</span>.props.count&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        )</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span>**</span><br><span class="line"> * 接收两个参数</span><br><span class="line"> * @param &#123;*&#125; state </span><br><span class="line"> * @returns </span><br><span class="line"> *<span class="regexp">/</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const mapStateToPtops = (state) =&gt; &#123;</span></span><br><span class="line"><span class="regexp">    console.log('ComB', state);</span></span><br><span class="line"><span class="regexp">    return state;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ B组件属于接收方，要实现connect第一个参数m第二个参数没有实现默认会维护一个dispatch方法</span></span><br><span class="line"><span class="regexp">export default connect(mapStateToPtops)(ComB)</span></span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 </li>
@@ -664,7 +667,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24:04</span>
+    <span title="站点阅读时长">24:09</span>
 </div>
 
 <!--

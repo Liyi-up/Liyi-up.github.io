@@ -333,6 +333,7 @@
 <li>同一个元素的同一个事件只能设置一个处理函数，最后注册的处理函数将会覆盖前面注册的处理函数</li>
 </ul>
 <a id="more"></a>
+
 <h4 id="方法监听注册方式"><a href="#方法监听注册方式" class="headerlink" title="方法监听注册方式"></a>方法监听注册方式</h4><ul>
 <li>W3C标准 推荐方法</li>
 <li><code>addEventListener()</code>它是一个方法</li>
@@ -340,6 +341,7 @@
 <li>特点：同一个元素同一个事件注册多个监听器</li>
 </ul>
 <h3 id="addEventListener-事件监听方式"><a href="#addEventListener-事件监听方式" class="headerlink" title="addEventListener 事件监听方式"></a>addEventListener 事件监听方式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eventTarget.addEventListener(type,listenrr[,useCapture])</span><br></pre></td></tr></table></figure>
+
 <p><code>eventTarget.addEventListener()</code>方法将指定的监听器注册到<code>eventTarget</code>（目标对象）上，当该对象触发指定的事件时，就会执行事件处理函数</p>
 <p>该方法接收三个参数:</p>
 <ul>
@@ -348,6 +350,7 @@
 <li><code>useCapture</code>：可选参数，是一个布尔值，默认时<code>false</code>。和DOM事件流有关</li>
 </ul>
 <h3 id="attachEvent-事件监听方式"><a href="#attachEvent-事件监听方式" class="headerlink" title="attachEvent 事件监听方式"></a>attachEvent 事件监听方式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eventTarget.attachEvent(eventNameWithOn,callback)</span><br></pre></td></tr></table></figure>
+
 <p><code>eventTarget.attachEvent()</code> 方法将指定的监听器注册到<code>eventTargt</code>(目标对象)上，当该对象触发指定的事件时，指定的回调函数就会被执行</p>
 <p>该方法几首两个参数：</p>
 <ul>
@@ -355,8 +358,8 @@
 <li><code>callback</code>：事件处理函数，当目标触发事件时回调函数被调用</li>
 </ul>
 <h3 id="注册事件兼容性解决方案"><a href="#注册事件兼容性解决方案" class="headerlink" title="注册事件兼容性解决方案"></a>注册事件兼容性解决方案</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function addEventListener(element,eventName,fn)&#123;</span><br><span class="line">    &#x2F;&#x2F; 判断当前浏览器是否支持 addEventListener 方法</span><br><span class="line">    if(element.addEventListener)&#123;</span><br><span class="line">     element.addEventListener(eventName,fn);   &#x2F;&#x2F; 第三个参数 默认是 false </span><br><span class="line">   &#125;else if(element.attachEvent)&#123;</span><br><span class="line">      element.attachEvent(&#39;on&#39;+eventName,fn);</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">     &#x2F;&#x2F; 相当于 element.onclick &#x3D;fn;</span><br><span class="line">     element[&#39;on&#39;+eventName] &#x3D; fn;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<font color="red">兼容性处理的原则：首先照顾大多数浏览器，在处理特殊浏览器</font>
 
+<p><font color="red">兼容性处理的原则：首先照顾大多数浏览器，在处理特殊浏览器</font></p>
 <h2 id="删除事件（解绑事件）"><a href="#删除事件（解绑事件）" class="headerlink" title="删除事件（解绑事件）"></a>删除事件（解绑事件）</h2><h3 id="删除事件的方式"><a href="#删除事件的方式" class="headerlink" title="删除事件的方式"></a>删除事件的方式</h3><ol>
 <li><p>传统注册方式</p>
 <p><code>eventTraget.onclick = null;</code></p>
@@ -369,12 +372,12 @@
 </li>
 </ol>
 <h3 id="删除事件兼容性解决方案"><a href="#删除事件兼容性解决方案" class="headerlink" title="删除事件兼容性解决方案"></a>删除事件兼容性解决方案</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeEventListener</span>(<span class="params">element,eventName,fn</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 判断当前浏览器是否支持removeEventListener 方法</span></span><br><span class="line">    <span class="keyword">if</span>(element.removeEventListener)&#123;</span><br><span class="line">      element.removeEventListener(eventName,fn);   <span class="comment">// 第三个参数 默认是false</span></span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(element.detachEvent)&#123;</span><br><span class="line">       element.detachEvent(<span class="string">'on'</span>+eventName,fn);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">       element[<span class="string">'on'</span>+eventName] = <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="DOM事件流"><a href="#DOM事件流" class="headerlink" title="DOM事件流"></a>DOM事件流</h2><font color="red">事件流</font>描述的是从页面中接收事件的顺序
 
-<font color="red">事件</font>发生时会在元素点之间按照特定的顺序传播，这个<font color="red">传播过程即DOM事件流</font>
-
+<h2 id="DOM事件流"><a href="#DOM事件流" class="headerlink" title="DOM事件流"></a>DOM事件流</h2><p><font color="red">事件流</font>描述的是从页面中接收事件的顺序</p>
+<p><font color="red">事件</font>发生时会在元素点之间按照特定的顺序传播，这个<font color="red">传播过程即DOM事件流</font></p>
 <p>比如我们给div注册了点击事件：</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/07/05/RhmW6J.png" alt="DOM事件流" style="zoom:80%;"></p>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/07/05/RhmW6J.png" alt="DOM事件流" style="zoom:80%;">
+
 <p>DOM事件分为3个阶段：</p>
 <ol>
 <li>捕获阶段</li>
@@ -386,18 +389,18 @@
 <li>事件捕获：网景最早提出，由DOM最顶层节点开始，然后逐级向下传播到最具体的元素接的过程</li>
 </ul>
 <p>我们向水里面仍一块石头，首先它会有一个下降过程，这个过程可以理解为最顶层向事件发生的最具体元素（目标点）的捕获过程；之后会产生泡泡，会在最低点（最具体元素）之后漂浮到水面上，这个过程相当于事件冒泡</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/07/05/Rhmx0I.png" alt="事件冒泡" style="zoom:80%;"></p>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/07/05/Rhmx0I.png" alt="事件冒泡" style="zoom:80%;">
+
 <p>注意：</p>
 <ol>
 <li>JS代码只能执行捕获或者冒泡其中的一个阶段</li>
 <li><code>onclick</code>和 <code>attachEvent</code>只能得到冒泡阶段</li>
 <li><code>addEventListener(type,listener[,useCapture])</code>第三个参数如果是true，表示事件捕获阶段调用事件处理程序；如果是false（不写默认就是false），表示在事件冒泡阶段调用事件处理程序</li>
 <li><font color="red">实际开发中我们很少使用事件捕获，我们更关注事件冒泡</font></li>
-<li><font color="red">有些事件是没有冒泡的，比如onblur、onfocus、onmouseenter、onmouseleave</font>
-
-</li>
+<li><font color="red">有些事件是没有冒泡的，比如onblur、onfocus、onmouseenter、onmouseleave</font></li>
 </ol>
 <h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><h3 id="什么是事件对象"><a href="#什么是事件对象" class="headerlink" title="什么是事件对象"></a>什么是事件对象</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eventTarget.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;&#125;</span><br><span class="line">eventTarget.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span></span>&#123;&#125;)</span><br><span class="line"><span class="comment">// 这个 event 就是事件对象 ，我们还喜欢写成 e 或者 evt</span></span><br></pre></td></tr></table></figure>
+
 <p>官方解释：event对象代表事件的状态，比如键盘按键的状态、鼠标位置、鼠标按钮的状态</p>
 <p>简单理解：事件发生后，<font color="red">跟事件相关的一些列信息数据的集合</font>都放到这个对象里面，这个对象就是<font color="red">事件对象event</font>，它有很多属性和方法。</p>
 <p>比如：</p>
@@ -406,31 +409,26 @@
 <li>鼠标触发事件的话，会得到鼠标的相关信息，如鼠标位置</li>
 </ol>
 <h3 id="事件对象的使用语法"><a href="#事件对象的使用语法" class="headerlink" title="事件对象的使用语法"></a>事件对象的使用语法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">eventTarget.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">   <span class="comment">// 这个event 就是事件对象，我们还喜欢改写成 e 或者 evt</span></span><br><span class="line">&#125;</span><br><span class="line">eventTarget.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>))</span>&#123;</span><br><span class="line">   <span class="comment">// 这个event 就是事件对象，我们还喜欢改写成 e 或者 evt</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>这个event 是形参，系统帮我们设定为事件对象，不需要我们手动传参</p>
 <p>当我们注册事件时，event对象就会被系统自动创建，并一次传递给事件监听器（事件处理函数）</p>
-<font color="red">解决</font>
-
-<font color="red">e = e || window.event;</font>
-
+<p><font color="red">解决</font></p>
+<p><font color="red">e = e || window.event;</font></p>
 <h3 id="事件对象的兼容性方案"><a href="#事件对象的兼容性方案" class="headerlink" title="事件对象的兼容性方案"></a>事件对象的兼容性方案</h3><p>事件对象本身的获取存在兼容性问题：</p>
 <ol>
 <li>标准浏览器中是浏览器给方法传递参数，只要定义形参e就可以获取到</li>
 <li>在IE6~8中，浏览器不会给方法传递参数，如果需要的话，需要到window.event中获取查找。</li>
 </ol>
-<font color="red">解决</font>
-
-<font color="red">e = e || window.event;</font>
-
-<h3 id="事件对象常见属性和方法"><a href="#事件对象常见属性和方法" class="headerlink" title="事件对象常见属性和方法"></a>事件对象常见属性和方法</h3><div class="table-container">
-<table>
+<p><font color="red">解决</font></p>
+<p><font color="red">e = e || window.event;</font></p>
+<h3 id="事件对象常见属性和方法"><a href="#事件对象常见属性和方法" class="headerlink" title="事件对象常见属性和方法"></a>事件对象常见属性和方法</h3><table>
 <thead>
 <tr>
 <th>事件对象属性方法</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>e.target</td>
 <td>返回触发事件的对象   标准</td>
 </tr>
@@ -458,9 +456,7 @@
 <td>e.stopPropagation()</td>
 <td>阻止冒泡 标准</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h2 id="阻止事件冒泡"><a href="#阻止事件冒泡" class="headerlink" title="阻止事件冒泡"></a>阻止事件冒泡</h2><h3 id="阻止事件冒泡的两种方式"><a href="#阻止事件冒泡的两种方式" class="headerlink" title="阻止事件冒泡的两种方式"></a>阻止事件冒泡的两种方式</h3><p>事件冒泡：开始由最具体的元素接收，然后逐级向上传播到DOM最顶层节点</p>
 <p>事件冒泡本身的特性，会带来的坏处，也会带来好处，需要在实际开发中能够灵活掌握。</p>
 <p><strong>阻止事件冒泡</strong></p>
@@ -472,27 +468,26 @@
 </li>
 </ul>
 <h3 id="阻止事件冒泡的兼容性解决方案"><a href="#阻止事件冒泡的兼容性解决方案" class="headerlink" title="阻止事件冒泡的兼容性解决方案"></a>阻止事件冒泡的兼容性解决方案</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (e &amp;&amp; e.stopPropagation)&#123;</span><br><span class="line">   e.stopPropagation();</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.event.cacelBubble = <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="事件委托（代理，委派）"><a href="#事件委托（代理，委派）" class="headerlink" title="事件委托（代理，委派）"></a>事件委托（代理，委派）</h2><p>事件冒泡本身的特效，会带来的坏处，也会<font color="red">带来好处</font>，需要我们灵活掌握。生活中有如下场景：</p>
 <p>咱们班100个学生，快递员有100个快递，如果一个个的送花费时间较长。同时每个学生领取的时候，也需要排队领取，也花费时间较长，何如？</p>
 <p><strong>解决方案：</strong>快递员把100个快递，<font color="red">委托</font>给班主任，班主任把这些快递放到办公室，同学们下课自行领取即可</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;知否知否&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">    &lt;li&gt;知否知否&lt;/</span>li&gt;</span><br><span class="line">    &lt;li&gt;知否知否&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">    &lt;li&gt;知否知否&lt;/</span>li&gt;</span><br><span class="line">    &lt;li&gt;知否知否&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">&lt;/u</span>l&gt;</span><br></pre></td></tr></table></figure>
+
 <p>点击每个li都会弹出对话框，以前需要给每个li注册事件，是非常幸苦的，而且访问DOM次数越多，这就会延长整个页面的交互就绪时间。</p>
 <h3 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h3><p>事件委托也称为事件代理，在JQuery里面称为事件委派。</p>
-<h3 id="事件委托的原理"><a href="#事件委托的原理" class="headerlink" title="事件委托的原理"></a>事件委托的原理</h3><font color="red">不是每个子节点单独设置监听器，而是给父节点设置事件监听器，然后利用冒泡原理影响设置每个子节点</font>
-
+<h3 id="事件委托的原理"><a href="#事件委托的原理" class="headerlink" title="事件委托的原理"></a>事件委托的原理</h3><p><font color="red">不是每个子节点单独设置监听器，而是给父节点设置事件监听器，然后利用冒泡原理影响设置每个子节点</font></p>
 <p>以上案例：给<code>&lt;ul&gt;</code>注册点击事件，然后利用事件对象 target来找到当前点击的<code>&lt;li&gt;</code>,因为点击li，事件会冒泡到<code>ul</code></p>
 <p>上，<code>ul</code>有注册事件，就会触发事件监听器。</p>
 <h3 id="事件委托的作用"><a href="#事件委托的作用" class="headerlink" title="事件委托的作用"></a>事件委托的作用</h3><p>我们只操作了一次DOM，提高程序的性能</p>
-<h2 id="常见的鼠标事件"><a href="#常见的鼠标事件" class="headerlink" title="常见的鼠标事件"></a>常见的鼠标事件</h2><div class="table-container">
-<table>
+<h2 id="常见的鼠标事件"><a href="#常见的鼠标事件" class="headerlink" title="常见的鼠标事件"></a>常见的鼠标事件</h2><table>
 <thead>
 <tr>
 <th>鼠标事件</th>
 <th>触发条件</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>onclick</td>
 <td>鼠标点击左键触发</td>
 </tr>
@@ -524,9 +519,7 @@
 <td>onmousedown</td>
 <td>鼠标按下触发</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h3 id="常见鼠标事件"><a href="#常见鼠标事件" class="headerlink" title="常见鼠标事件"></a>常见鼠标事件</h3><ol>
 <li><p>禁止鼠标右键菜单</p>
 <p><code>ontextmenu</code>主要控制应该如何显示上下文菜单，主要用于程序员取消默认的上下文菜单</p>
@@ -534,12 +527,11 @@
 </li>
 <li><p>禁止鼠标选中（selectstart 开始选中）</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'selectstart'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">   e.preventDefault();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
-<h3 id="鼠标事件对象"><a href="#鼠标事件对象" class="headerlink" title="鼠标事件对象"></a>鼠标事件对象</h3><font color="red">event</font>对象代表事件的状态，跟事件相关的一些列信息的集合。现阶段我们主要是用鼠标事件对象<font color="red">MouseEvent</font>
-
+<h3 id="鼠标事件对象"><a href="#鼠标事件对象" class="headerlink" title="鼠标事件对象"></a>鼠标事件对象</h3><p><font color="red">event</font>对象代表事件的状态，跟事件相关的一些列信息的集合。现阶段我们主要是用鼠标事件对象<font color="red">MouseEvent</font></p>
 <p>和键盘事件对象<font color="red">keyboardEvent</font></p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -547,8 +539,7 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>e.clientX</td>
 <td>返回鼠标相对于浏览器窗口可视区的X坐标</td>
 </tr>
@@ -572,12 +563,10 @@
 <td>e.screenY</td>
 <td>返回鼠标相对于电脑屏幕的Y坐标</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h4 id="案例：跟随鼠标的图片"><a href="#案例：跟随鼠标的图片" class="headerlink" title="案例：跟随鼠标的图片"></a>案例：跟随鼠标的图片</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>跟随鼠标的图片<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        body &#123;</span><br><span class="line">            height: 3000px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        img &#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            width: 50px;</span><br><span class="line">            height: 50px;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"../images/bg1.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> img = <span class="built_in">document</span>.querySelector(<span class="string">'img'</span>);</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.addEventListener(<span class="string">'mousemove'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="comment">// mousemove只要我们的鼠标移动1px 就会触发这个事件</span></span></span><br><span class="line"><span class="actionscript">        img.style.top = e.pageY <span class="number">-25</span> + <span class="string">'px'</span>;</span></span><br><span class="line"><span class="actionscript">        img.style.left = e.pageX<span class="number">-25</span> + <span class="string">'px'</span>;</span></span><br><span class="line">    &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="常用的键盘事件"><a href="#常用的键盘事件" class="headerlink" title="常用的键盘事件"></a>常用的键盘事件</h2><h3 id="常用的键盘事件-1"><a href="#常用的键盘事件-1" class="headerlink" title="常用的键盘事件"></a>常用的键盘事件</h3><p>事件除了使用鼠标触发，还可以使用键盘触发</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -585,8 +574,7 @@
 <th>触发条件</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>onkeyup</td>
 <td>某个键盘按键被松开时触发</td>
 </tr>
@@ -598,37 +586,27 @@
 <td>onkeypress</td>
 <td>某个键盘被按下时 触发 <font color="red">但是它不识别功能键 比如 ctrl shift 箭头等</font></td>
 </tr>
-</tbody>
-</table>
-</div>
-<font color="red">注意：</font>
-
-<font color="red">1.如果使用addEventListener不需要加on</font>
-
-<font color="red">2.onkeypress和前面2个的区别是，它不识别功能键，比如左右箭头，shift等</font>
-
-<font color="red">3.三个事件的执行顺序是：keydown--keypress--keyup</font>
-
-<h3 id="键盘事件对象"><a href="#键盘事件对象" class="headerlink" title="键盘事件对象"></a>键盘事件对象</h3><div class="table-container">
-<table>
+</tbody></table>
+<p><font color="red">注意：</font></p>
+<p><font color="red">1.如果使用addEventListener不需要加on</font></p>
+<p><font color="red">2.onkeypress和前面2个的区别是，它不识别功能键，比如左右箭头，shift等</font></p>
+<p><font color="red">3.三个事件的执行顺序是：keydown–keypress–keyup</font></p>
+<h3 id="键盘事件对象"><a href="#键盘事件对象" class="headerlink" title="键盘事件对象"></a>键盘事件对象</h3><table>
 <thead>
 <tr>
 <th>键盘事件对象 属性</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>keyCode</td>
 <td>返回改建的ASCII值</td>
 </tr>
-</tbody>
-</table>
-</div>
-<font color="red">注意：onkeydown 和 onkeyup 不区分大小写，onkeypress区分字母大小写。在我们实际开发中，我们更多使用keydown和keyup，它能识别所有键（包括功能键）keypress不识别功能键，但是keyCode属性能区分大小写，返回不同的ASCII值</font>
-
+</tbody></table>
+<p><font color="red">注意：onkeydown 和 onkeyup 不区分大小写，onkeypress区分字母大小写。在我们实际开发中，我们更多使用keydown和keyup，它能识别所有键（包括功能键）keypress不识别功能键，但是keyCode属性能区分大小写，返回不同的ASCII值</font></p>
 <h3 id="ASCII表"><a href="#ASCII表" class="headerlink" title="ASCII表"></a>ASCII表</h3><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://img.mianfeiwendang.com/pic/ad4484b20cf2d744353a48c59383e867e7ac4e54/1-678-png_6_0_0_0_0_959_678_959_678-959-0-0-959.jpg" alt="ASCII"></p>
 <h3 id="案例：模拟京东快递单号查询"><a href="#案例：模拟京东快递单号查询" class="headerlink" title="案例：模拟京东快递单号查询"></a>案例：模拟京东快递单号查询</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>案例：模拟京东快递单号查询<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        body &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">            box-sizing: border-box;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        input &#123;</span><br><span class="line">            outline: none;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-class">.box-wrap</span> &#123;</span></span><br><span class="line">            height: 100px;</span><br><span class="line">            width: 300px;</span><br><span class="line">            margin: 100px auto;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-class">.box-wrap</span> <span class="selector-class">.con</span> &#123;</span></span><br><span class="line">            visibility: hidden;</span><br><span class="line"><span class="css">            <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#c4bdbd</span>;</span></span><br><span class="line">            width: 100%;</span><br><span class="line">            height: 50px;</span><br><span class="line">            line-height: 50px;</span><br><span class="line">            position: relative;</span><br><span class="line">            box-shadow: 0 0 12px;</span><br><span class="line">            font-size: 20px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-class">.box-wrap</span> <span class="selector-class">.con</span><span class="selector-pseudo">::before</span> &#123;</span></span><br><span class="line">            content: '';</span><br><span class="line">            position: absolute;</span><br><span class="line">            width: 0;</span><br><span class="line">            height: 0;</span><br><span class="line">            top: 40px;</span><br><span class="line">            left: 60px;</span><br><span class="line">            border-left: 10px solid white;</span><br><span class="line">            border-top: 10px solid transparent;</span><br><span class="line">            border-bottom: 10px solid white;</span><br><span class="line">            border-right: 10px solid transparent;</span><br><span class="line">            transform: rotate(-45deg);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-class">.box-wrap</span> <span class="selector-tag">input</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#c4bdbd</span>;</span></span><br><span class="line">            margin: 20px 0;</span><br><span class="line">            width: 100%;</span><br><span class="line">            height: 30px;</span><br><span class="line">            line-height: 40px;</span><br><span class="line">            font-size: 14px;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-wrap"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"con"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> con = <span class="built_in">document</span>.querySelector(<span class="string">'.con'</span>);</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(con);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> input = <span class="built_in">document</span>.querySelector(<span class="string">'input'</span>);</span></span><br><span class="line"><span class="actionscript">    input.addEventListener(<span class="string">'keyup'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">if</span> (<span class="keyword">this</span>.value.length &gt; <span class="number">0</span>) &#123;</span></span><br><span class="line"><span class="actionscript">            con.style.visibility = <span class="string">'visible'</span>;</span></span><br><span class="line"><span class="actionscript">            con.innerHTML = <span class="keyword">this</span>.value;</span></span><br><span class="line"><span class="actionscript">        &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="actionscript">            con.style.visibility = <span class="string">'hidden'</span>;</span></span><br><span class="line"><span class="actionscript">            con.innerHTML = <span class="string">''</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"><span class="actionscript">    input.addEventListener(<span class="string">'blur'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        con.style.visibility = <span class="string">'hidden'</span>;</span></span><br><span class="line">    &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -872,7 +850,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24:04</span>
+    <span title="站点阅读时长">24:09</span>
 </div>
 
 <!--

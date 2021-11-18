@@ -329,16 +329,22 @@
 <li>使用React路由简单来说：就是配置<font color="red">路径</font>和<font color="red">组件</font>（配对）</li>
 </ul>
 <a id="more"></a>
+
 <h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><p>1.安装：<code>yarn add react-router-dom</code></p>
 <p>2.导入路由的三个核心组件：<font color="red">Router/Route/Link</font></p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;BrowserRouter <span class="keyword">as</span> Router,Route,Link&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></span><br></pre></td></tr></table></figure>
+
 <p>3.使用 <font color="red">Router组件</font>包裹整个应用（重要）</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">render(</span><br><span class="line">  &lt;Router&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1&gt;React路由基础&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">  &lt;<span class="regexp">/Router&gt;</span></span><br><span class="line"><span class="regexp">)</span></span><br></pre></td></tr></table></figure>
+
 <p>4.使用<font color="red">Link 组件</font>作为导航菜单（路由入口）</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Link to=<span class="string">"/first"</span>&gt;页面一&lt;<span class="regexp">/Link&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>5.使用<font color="red">Route 组件</font>配置路由规则和要展示的组件（路由出口）</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> First = <span class="function"><span class="params">()</span>=&gt;</span><span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>页面一的内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">&lt;Router&gt;</span><br><span class="line">  &lt;div className=<span class="string">"App"</span>&gt;</span><br><span class="line">      &lt;Link to=<span class="string">"/first"</span>&gt;页面一&lt;Link&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/first"</span> component=&#123;First&#125;&gt;<span class="xml"><span class="tag">&lt;/<span class="name">Route</span>&gt;</span></span></span><br><span class="line">   &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>Router&gt;</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> ReactDOM, &#123; render &#125; <span class="keyword">from</span> <span class="string">'react-dom'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'./index.css'</span>;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * react-router-dom 的基本使用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">// 导入核心组件</span></span><br><span class="line"><span class="keyword">import</span> &#123; BrowserRouter <span class="keyword">as</span> Router, Route, Link &#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> First = <span class="function"><span class="params">()</span> =&gt;</span> <span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我是页面一<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span>;</span><br><span class="line"><span class="comment">// 用Ruoter包括整个应用</span></span><br><span class="line"><span class="keyword">const</span> App = <span class="function"><span class="params">()</span> =&gt;</span></span><br><span class="line">(</span><br><span class="line">  &lt;Router&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1&gt;React路由基础&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">      &#123;/</span>* 指定路由入口 *<span class="regexp">/&#125;</span></span><br><span class="line"><span class="regexp">      &lt;Link to="/</span>first<span class="string">"&gt;页面一&lt;/Link&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">      &#123;/* 指定路由出口 */&#125;</span></span><br><span class="line"><span class="string">      &lt;Route path="</span>/first<span class="string">" component=&#123;First&#125; /&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  &lt;/Router&gt;</span></span><br><span class="line"><span class="string">)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="常用组件的说明"><a href="#常用组件的说明" class="headerlink" title="常用组件的说明"></a>常用组件的说明</h2><h3 id="Router-组件"><a href="#Router-组件" class="headerlink" title="Router 组件"></a>Router 组件</h3><ul>
 <li>Router 组件：包裹整个应用，一个React 应用只需要<font color="red">使用一次</font></li>
 <li>两种常用React：<code>HashRouter</code>和 <font color="red">BrowserRouter</font></li>
@@ -347,8 +353,10 @@
 </ul>
 <h3 id="Link-组件"><a href="#Link-组件" class="headerlink" title="Link 组件"></a>Link 组件</h3><p>Link组件：用于指定导航链接（a标签）</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// to属性：浏览器地址栏中的 pathname （location.pathname）</span></span><br><span class="line">&lt;Link to=<span class="string">"/first"</span>&gt;页面一&lt;<span class="regexp">/Link&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="Route-组件"><a href="#Route-组件" class="headerlink" title="Route 组件"></a>Route 组件</h3><p>Route组件：指定路由展示组件相关信息</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// path 属性：路由规则</span></span><br><span class="line"><span class="comment">// component 属性：展示的组件</span></span><br><span class="line"><span class="comment">// Route 组件写在哪，渲染出来的组件就展示在哪</span></span><br><span class="line">&lt;Route path=<span class="string">"/first"</span> component=&#123;First&#125;&gt;<span class="xml"><span class="tag">&lt;/<span class="name">Route</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
 <h2 id="路由的执行过程"><a href="#路由的执行过程" class="headerlink" title="路由的执行过程"></a>路由的执行过程</h2><p>1.点击 Link组件（a标签），修改了浏览器地址中的url。</p>
 <p>2.React 路由监听地址栏url的变化</p>
 <p>3.React 路由内部遍历所有的Route组件，使用路由规则（path）与pathname进行匹配</p>
@@ -362,45 +370,46 @@
 <li><font color="red">go(n)</font>：前进或者后退到某个页面，参数n表示前进或后退页面数量（比如：-1 表示后退到上一页）</li>
 </ul>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Login</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Componet</span></span>&#123;</span><br><span class="line">   handleLogin=<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">     <span class="comment">//...</span></span><br><span class="line">     <span class="keyword">this</span>.props.history.push(<span class="string">'home'</span>)</span><br><span class="line">   &#125;</span><br><span class="line">   render()&#123;...省略其他代码&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="默认路由"><a href="#默认路由" class="headerlink" title="默认路由"></a>默认路由</h2><ul>
 <li>问题：现在的路由都是通过点击导航菜单后展示，如何在进入页面的时候就展示呢？</li>
 <li>默认路由：表示<font color="red">进入页面时就会匹配的路由</font></li>
 <li>默认路由path为：/</li>
 </ul>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Route path=<span class="string">"/"</span> componetn=&#123;Home&#125;/&gt;</span><br></pre></td></tr></table></figure>
+
 <h2 id="匹配模式"><a href="#匹配模式" class="headerlink" title="匹配模式"></a>匹配模式</h2><h3 id="模糊匹配模式"><a href="#模糊匹配模式" class="headerlink" title="模糊匹配模式"></a>模糊匹配模式</h3><ul>
 <li>问题：当 Link组件中的to属性为 ”/Login“ 时，为什么默认路由 也会被匹配成功？</li>
 <li>默认情况下：React路由是<font color="red">模糊匹配模式</font></li>
 <li>模糊匹配规则：只要 pathname <font color="red">以path开头</font>就会匹配成功</li>
 </ul>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;Link to=<span class="string">"/login"</span>&gt;登录页面&lt;<span class="regexp">/Link&gt;</span></span><br><span class="line"><span class="regexp">&lt;Route path="/</span><span class="string">" component=&#123;Home&#125;/&gt; 匹配成功</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// path 代表 Route组件的path属性</span></span><br><span class="line"><span class="comment">// pathname 代表 Link组件的to属性（也就是 location.pathname)</span></span><br></pre></td></tr></table></figure>
-<div class="table-container">
+
 <table>
 <thead>
 <tr>
-<th style="text-align:center">path</th>
-<th style="text-align:center">能够匹配的pathname</th>
+<th align="center">path</th>
+<th align="center">能够匹配的pathname</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">/</td>
-<td style="text-align:center">所有pathname</td>
+<tbody><tr>
+<td align="center">/</td>
+<td align="center">所有pathname</td>
 </tr>
 <tr>
-<td style="text-align:center">/first</td>
-<td style="text-align:center">/first 或 /first/a 或 /first/a/b/…</td>
+<td align="center">/first</td>
+<td align="center">/first 或 /first/a 或 /first/a/b/…</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h3 id="精确匹配"><a href="#精确匹配" class="headerlink" title="精确匹配"></a>精确匹配</h3><ul>
 <li>问题：默认路由任何情况下都会展示，如何避免这种问题？</li>
 <li>给Route 组件添加 <font color="red">exact</font>，让其变为<font color="red">精确匹配模式</font></li>
 <li>精确匹配：：只有当<font color="red">path</font>和<font color="red">pathname</font>完全匹配时才会展示该路由</li>
 </ul>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 此时，该组件只能匹配 pathname="/" 这一种情况</span></span><br><span class="line">&lt;Route exact path=<span class="string">"/"</span> component=..../&gt;</span><br></pre></td></tr></table></figure>
+
 <p>推荐：给默认路由添加 <font color="red">exact</font>属性</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>1.React 路由可以有效管理多个视图（组件）实现SPA</p>
 <p>2.Router组件包裹整个应用，只需要使用一次</p>
@@ -413,6 +422,7 @@
 <p>实际上就是把add函数的x，y两个参数变成了先用一个函数接收x然后返回一个函数去处理y参数。现在思路应该就比较清晰了，就是只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数。</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普通的add函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Currying后</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">curryingAdd</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">y</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x + y</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add(<span class="number">1</span>, <span class="number">2</span>)           <span class="comment">// 3</span></span><br><span class="line">curryingAdd(<span class="number">1</span>)(<span class="number">2</span>)   <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -656,7 +666,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24:04</span>
+    <span title="站点阅读时长">24:09</span>
 </div>
 
 <!--

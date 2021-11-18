@@ -50,12 +50,12 @@
   };
 </script>
 
-  <meta name="description" content="时间和日期    序号 命令 作用     01 date 查看系统时间   02 cal calendar 查看日历，-y 选项可以查看一年的日历">
+  <meta name="description" content="时间和日期   序号 命令 作用    01 date 查看系统时间   02 cal calendar 查看日历，-y 选项可以查看一年的日历">
 <meta property="og:type" content="article">
 <meta property="og:title" content="系统相关命令">
 <meta property="og:url" content="https://liyi-up.top/2021/09/14/%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Liyi&#39;s personal blog">
-<meta property="og:description" content="时间和日期    序号 命令 作用     01 date 查看系统时间   02 cal calendar 查看日历，-y 选项可以查看一年的日历">
+<meta property="og:description" content="时间和日期   序号 命令 作用    01 date 查看系统时间   02 cal calendar 查看日历，-y 选项可以查看一年的日历">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-09-14T03:08:44.000Z">
 <meta property="article:modified_time" content="2021-09-14T03:19:18.000Z">
@@ -308,8 +308,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="时间和日期"><a href="#时间和日期" class="headerlink" title="时间和日期"></a>时间和日期</h2><div class="table-container">
-<table>
+        <h2 id="时间和日期"><a href="#时间和日期" class="headerlink" title="时间和日期"></a>时间和日期</h2><table>
 <thead>
 <tr>
 <th>序号</th>
@@ -317,8 +316,7 @@
 <th>作用</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>01</td>
 <td>date</td>
 <td>查看系统时间</td>
@@ -328,12 +326,10 @@
 <td>cal</td>
 <td><code>calendar</code> 查看日历，<code>-y</code> 选项可以查看一年的日历</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <a id="more"></a>
-<h2 id="磁盘信息"><a href="#磁盘信息" class="headerlink" title="磁盘信息"></a>磁盘信息</h2><div class="table-container">
-<table>
+
+<h2 id="磁盘信息"><a href="#磁盘信息" class="headerlink" title="磁盘信息"></a>磁盘信息</h2><table>
 <thead>
 <tr>
 <th>序号</th>
@@ -341,8 +337,7 @@
 <th>作用</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>01</td>
 <td>df -h</td>
 <td><code>disk free</code> 显示磁盘剩余空间</td>
@@ -352,13 +347,10 @@
 <td>du -h [目录名]</td>
 <td><code>disk usage</code> 显示目录下的文件大小</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <ul>
 <li>选项说明</li>
 </ul>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -366,18 +358,14 @@
 <th>含义</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>-h</td>
 <td>以人性化的方式显示文件大小</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h2 id="进程信息"><a href="#进程信息" class="headerlink" title="进程信息"></a>进程信息</h2><ul>
 <li>所谓 <strong>进程</strong>，通俗地说就是 <strong>当前正在执行的一个程序</strong></li>
 </ul>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -386,8 +374,7 @@
 <th>作用</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>01</td>
 <td>ps aux</td>
 <td><code>process status</code> 查看进程的详细状况</td>
@@ -402,16 +389,13 @@
 <td>kill [-9] 进程代号</td>
 <td>终止指定代号的进程，<code>-9</code> 表示强行终止</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <blockquote>
 <p><code>ps</code> 默认只会显示当前用户通过终端启动的应用程序</p>
 </blockquote>
 <ul>
 <li><code>ps</code> 选项说明</li>
 </ul>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -419,8 +403,7 @@
 <th>含义</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>a</td>
 <td>显示终端上的所有进程，包括其他用户的进程</td>
 </tr>
@@ -432,11 +415,11 @@
 <td>x</td>
 <td>显示没有控制终端的进程</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <blockquote>
 <p>提示：使用 <code>kill</code> 命令时，最好只终止由当前用户开启的进程，而不要终止 <code>root</code> 身份开启的进程，否则可能导致系统崩溃</p>
+</blockquote>
+<blockquote>
 <ul>
 <li>要退出 <code>top</code> 可以直接输入 <code>q</code></li>
 </ul>
@@ -684,7 +667,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24:04</span>
+    <span title="站点阅读时长">24:09</span>
 </div>
 
 <!--

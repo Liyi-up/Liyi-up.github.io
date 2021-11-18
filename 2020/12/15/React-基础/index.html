@@ -50,13 +50,14 @@
   };
 </script>
 
-  <meta name="description" content="React概述React是一个用于构建用户界面的JavaScript库，React主要来写HTML页面，或构建Web应用，如果从MVC的角度来看，React仅仅是试图层（V），也就是只负责试图的渲染，而并非提供了完整的M和C的功能。  React 起源于 Facebook 的内部项目，后又用来架设 instagram 的网站，并于2013年5月开源  [React官网](https:&#x2F;&#x2F;react">
+  <meta name="description" content="React概述React是一个用于构建用户界面的JavaScript库，React主要来写HTML页面，或构建Web应用，如果从MVC的角度来看，React仅仅是试图层（V），也就是只负责试图的渲染，而并非提供了完整的M和C的功能。 React 起源于 Facebook 的内部项目，后又用来架设 instagram 的网站，并于2013年5月开源 React官网">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React-基础">
 <meta property="og:url" content="https://liyi-up.top/2020/12/15/React-%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="Liyi&#39;s personal blog">
-<meta property="og:description" content="React概述React是一个用于构建用户界面的JavaScript库，React主要来写HTML页面，或构建Web应用，如果从MVC的角度来看，React仅仅是试图层（V），也就是只负责试图的渲染，而并非提供了完整的M和C的功能。  React 起源于 Facebook 的内部项目，后又用来架设 instagram 的网站，并于2013年5月开源  [React官网](https:&#x2F;&#x2F;react">
+<meta property="og:description" content="React概述React是一个用于构建用户界面的JavaScript库，React主要来写HTML页面，或构建Web应用，如果从MVC的角度来看，React仅仅是试图层（V），也就是只负责试图的渲染，而并非提供了完整的M和C的功能。 React 起源于 Facebook 的内部项目，后又用来架设 instagram 的网站，并于2013年5月开源 React官网">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==">
 <meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==">
 <meta property="article:published_time" content="2020-12-15T01:09:31.000Z">
 <meta property="article:modified_time" content="2021-11-17T08:22:46.361Z">
@@ -303,14 +304,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.9k</span>
+              <span>3.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -322,141 +323,96 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="React概述"><a href="#React概述" class="headerlink" title="React概述"></a>React概述</h2><font color="red">React</font>是一个用于<font color="red">构建用户界面的JavaScript库</font>，React主要来写HTML页面，或<font color="red">构建Web应用</font>，如果从MVC的角度来看，React仅仅是试图层（V），也就是只负责试图的渲染，而并非提供了完整的M和C的功能。
-
-React 起源于 Facebook 的内部项目，后又用来架设 instagram 的网站，并于2013年5月开源
-
-[React官网](https://react.docschina.org/)
-
+        <h2 id="React概述"><a href="#React概述" class="headerlink" title="React概述"></a>React概述</h2><p><font color="red">React</font>是一个用于<font color="red">构建用户界面的JavaScript库</font>，React主要来写HTML页面，或<font color="red">构建Web应用</font>，如果从MVC的角度来看，React仅仅是试图层（V），也就是只负责试图的渲染，而并非提供了完整的M和C的功能。</p>
+<p>React 起源于 Facebook 的内部项目，后又用来架设 instagram 的网站，并于2013年5月开源</p>
+<p><a href="https://react.docschina.org/" target="_blank" rel="noopener">React官网</a></p>
 <a id="more"></a>
 
-###  React的特点
-
-1. Declarative(声明式编程)
-2. Component-Based(组件化编码)
-3. Learn Once，Write Anywhrer(支持客户与服务器渲染)
-4. 高效
-5. 单向数据流
-
-#### 声明式
-
-你只要描述 UI(HTML) 看起来是什么样，就跟HTML一样
-
+<h3 id="React的特点"><a href="#React的特点" class="headerlink" title="React的特点"></a>React的特点</h3><ol>
+<li>Declarative(声明式编程)</li>
+<li>Component-Based(组件化编码)</li>
+<li>Learn Once，Write Anywhrer(支持客户与服务器渲染)</li>
+<li>高效</li>
+<li>单向数据流</li>
+</ol>
+<h4 id="声明式"><a href="#声明式" class="headerlink" title="声明式"></a>声明式</h4><p>你只要描述 UI(HTML) 看起来是什么样，就跟HTML一样</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> jsx = <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">"app"</span>&gt;</span></span></span><br><span class="line"><span class="xml">     <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello React! 动态变化数据:&#123;count&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
-#### 组件化编程
-
-- 组件 React <font color="red">最重要</font>的内容
-- 组件表示页面中的部分内容
-- 组件、复用多个组件，可以实现完整的页面功能
-
+<h4 id="组件化编程"><a href="#组件化编程" class="headerlink" title="组件化编程"></a>组件化编程</h4><ul>
+<li>组件 React <font color="red">最重要</font>的内容</li>
+<li>组件表示页面中的部分内容</li>
+<li>组件、复用多个组件，可以实现完整的页面功能</li>
+</ul>
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/07/17/Wld2FJ.png" alt="组件化编程" style="zoom:80%">
 
-#### Learn Once，Write Anywhrer
-
-- 使用 React 可以开发Web应用
-- 使用 React 可以开发移动端原生应用（react-native)
-- 使用 React 可以开发 VR（虚拟实现）应用（react 360）
-
-![跨平台](https://z3.ax1x.com/2021/07/17/Wld7wD.png)
-
-####  React高效的原因
-
-1. 虚拟(virtual)DOM，不总是直接操作DOM
-2. DOM Diff算法，最小化页面重绘
-
-### 前端三大主流框架
-
-> 三大框架一大抄 vue.js抄袭Angular.js，Angular2反过来抄vue组件化
-
-- Angular.js：出来**较早**的前端的框架，学习曲线比较陡，NG1学习起来比较麻烦，NG2~NG5开始，进行了一些列的改革，也提供了组件化开发的概念；从NG2开始，也支持使用TS(TypeScript)进行编程
-- Vue.js：最火(关注的人比较多)的一门前端框架，它是中国人开发的，对我们来说，文档友好一些；
-- React.js：最流行(用的人比较多)的一门框架，因为它的设计很优秀
-
-## React与Vue对比
-
-### 组件化方面
-
-1. 什么是模块化: 从**代码**的角度进 行分析的；把一些可复用的代码，抽离为单个模块；便于项目的维护和开发；
-2. 什么是组件化: 从UI界面的角度 来进行分析的；把一些可复用的UI元素，抽离为单独的组件；
-3. 组件化的好处: 随着项目规模的增大，手里的组件就越来越多；节省开发成本，便于把现有组件，拼接为一个完整的页面。
-4. Vue是如何实现组件化的:  通过 `.vue`文件，来创建对应的组件；
-   - template 结构
-   - script       行为
-   - style         样式
-5. React是如何让实现组件化的: React中有组件化概念，但是没有像vue这样的组件模板文件；React中，一切都是以js表现的；因此要学习React，JS要合格；ES6和ES7(async和await)要会用。
-
-### 开发团队方面
-
-- React是由FaceBook前端官方团队进行维护和更新的；因此，React的维护开发团队，技术实力比较雄厚；
-- Vue:第一版。主要是作者尤雨溪专门进行维护的，当Vue更新到2.x版版本后，也有了一个以尤雨溪为主的开源小团队，进行相关维护；
-
-### 社区方面
-
-- 在社区方面，React由于诞生的较早，所以社区比较强大，一些常见的问题、坑、最优解决方案，文档、博客在社区中都是可以很方便就能找到的
-- Vue是近两年才获取来的，所以，在社区方面相对React来说，要小一些，可能有一些坑，还没人踩过。
-
-### 移动APP开发体验方面
-
-- Vue，结合Weex这门技术，提供了迁移到移动端App开发的体验(Weex,目前指示一个小玩具，并没有很大的成功案例)
-- React，结合ReactNative，也提供了迁移到移动App的开发体验(RN用到最多，也是最火最流行的)
-
-##  React的基本使用
-
-### React 的安装
-
-`npm i react react-dom`
-
-- `react ` 包是核心，提供创建元素，组件等功能
-- `react-dom` 包提供 DOM 相关功能等
-
-### React 的使用
-
-1.引入 react 和 react-dom 两个js文件
-
-2.创建 React 元素
-
-3.渲染 React 元素到页面中
-
+<h4 id="Learn-Once，Write-Anywhrer"><a href="#Learn-Once，Write-Anywhrer" class="headerlink" title="Learn Once，Write Anywhrer"></a>Learn Once，Write Anywhrer</h4><ul>
+<li>使用 React 可以开发Web应用</li>
+<li>使用 React 可以开发移动端原生应用（react-native)</li>
+<li>使用 React 可以开发 VR（虚拟实现）应用（react 360）</li>
+</ul>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/07/17/Wld7wD.png" alt="跨平台"></p>
+<h4 id="React高效的原因"><a href="#React高效的原因" class="headerlink" title="React高效的原因"></a>React高效的原因</h4><ol>
+<li>虚拟(virtual)DOM，不总是直接操作DOM</li>
+<li>DOM Diff算法，最小化页面重绘</li>
+</ol>
+<h3 id="前端三大主流框架"><a href="#前端三大主流框架" class="headerlink" title="前端三大主流框架"></a>前端三大主流框架</h3><blockquote>
+<p>三大框架一大抄 vue.js抄袭Angular.js，Angular2反过来抄vue组件化</p>
+</blockquote>
+<ul>
+<li>Angular.js：出来<strong>较早</strong>的前端的框架，学习曲线比较陡，NG1学习起来比较麻烦，NG2~NG5开始，进行了一些列的改革，也提供了组件化开发的概念；从NG2开始，也支持使用TS(TypeScript)进行编程</li>
+<li>Vue.js：最火(关注的人比较多)的一门前端框架，它是中国人开发的，对我们来说，文档友好一些；</li>
+<li>React.js：最流行(用的人比较多)的一门框架，因为它的设计很优秀</li>
+</ul>
+<h2 id="React与Vue对比"><a href="#React与Vue对比" class="headerlink" title="React与Vue对比"></a>React与Vue对比</h2><h3 id="组件化方面"><a href="#组件化方面" class="headerlink" title="组件化方面"></a>组件化方面</h3><ol>
+<li>什么是模块化: 从<strong>代码</strong>的角度进 行分析的；把一些可复用的代码，抽离为单个模块；便于项目的维护和开发；</li>
+<li>什么是组件化: 从UI界面的角度 来进行分析的；把一些可复用的UI元素，抽离为单独的组件；</li>
+<li>组件化的好处: 随着项目规模的增大，手里的组件就越来越多；节省开发成本，便于把现有组件，拼接为一个完整的页面。</li>
+<li>Vue是如何实现组件化的:  通过 <code>.vue</code>文件，来创建对应的组件；<ul>
+<li>template 结构</li>
+<li>script       行为</li>
+<li>style         样式</li>
+</ul>
+</li>
+<li>React是如何让实现组件化的: React中有组件化概念，但是没有像vue这样的组件模板文件；React中，一切都是以js表现的；因此要学习React，JS要合格；ES6和ES7(async和await)要会用。</li>
+</ol>
+<h3 id="开发团队方面"><a href="#开发团队方面" class="headerlink" title="开发团队方面"></a>开发团队方面</h3><ul>
+<li>React是由FaceBook前端官方团队进行维护和更新的；因此，React的维护开发团队，技术实力比较雄厚；</li>
+<li>Vue:第一版。主要是作者尤雨溪专门进行维护的，当Vue更新到2.x版版本后，也有了一个以尤雨溪为主的开源小团队，进行相关维护；</li>
+</ul>
+<h3 id="社区方面"><a href="#社区方面" class="headerlink" title="社区方面"></a>社区方面</h3><ul>
+<li>在社区方面，React由于诞生的较早，所以社区比较强大，一些常见的问题、坑、最优解决方案，文档、博客在社区中都是可以很方便就能找到的</li>
+<li>Vue是近两年才获取来的，所以，在社区方面相对React来说，要小一些，可能有一些坑，还没人踩过。</li>
+</ul>
+<h3 id="移动APP开发体验方面"><a href="#移动APP开发体验方面" class="headerlink" title="移动APP开发体验方面"></a>移动APP开发体验方面</h3><ul>
+<li>Vue，结合Weex这门技术，提供了迁移到移动端App开发的体验(Weex,目前指示一个小玩具，并没有很大的成功案例)</li>
+<li>React，结合ReactNative，也提供了迁移到移动App的开发体验(RN用到最多，也是最火最流行的)</li>
+</ul>
+<h2 id="React的基本使用"><a href="#React的基本使用" class="headerlink" title="React的基本使用"></a>React的基本使用</h2><h3 id="React-的安装"><a href="#React-的安装" class="headerlink" title="React 的安装"></a>React 的安装</h3><p><code>npm i react react-dom</code></p>
+<ul>
+<li><code>react</code> 包是核心，提供创建元素，组件等功能</li>
+<li><code>react-dom</code> 包提供 DOM 相关功能等</li>
+</ul>
+<h3 id="React-的使用"><a href="#React-的使用" class="headerlink" title="React 的使用"></a>React 的使用</h3><p>1.引入 react 和 react-dom 两个js文件</p>
+<p>2.创建 React 元素</p>
+<p>3.渲染 React 元素到页面中</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 兼容低版本浏览器 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"root"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/babel"</span>&gt;</span><span class="actionscript"> <span class="comment">//告诉babel解析代码</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// createElement() 创建Dom节点</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// 参数1：元素名称</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// 参数2：元素属性</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// 第三个及其以后的参数：元素子节点（dom/text)</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">const</span> span = React.createElement(<span class="string">'span'</span>,<span class="literal">null</span>,<span class="string">'我是span'</span>)</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">const</span> title = React.createElement(<span class="string">'h1'</span>, &#123;title:<span class="string">'我是标题'</span>,id:<span class="string">'box'</span>&#125;, <span class="string">'hello React!'</span>,span);</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="comment">// ReactDOM.render()渲染到页面某个Dom 节点中</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// 参数1：要渲染的react元素</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// 参数2：挂载点</span></span></span><br><span class="line"><span class="javascript">    ReactDOM.render(title, <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>))</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-#### 相关库
-
-react.js：React核心库
-
-react-dom.js：供操作DOM的react扩展库
-
-babel.min.js：解析JSX语法代码转为纯JS语法代码库
-
-## React 脚手架
-
-### React 脚手架意义
-
-1.脚手架开发 现代 Web 应用必备
-
-2.充分利用`Webpack、Babel、ESlint`等工具辅助项目开发
-
-3.零配置，无需手动配置繁琐的工具即可使用
-
-4.关注业务，而不是工具配置
-
-### 使用 React 脚手架初始化项目
-
-1.初始化项目，命令：`npx create-react-app my-app`（建议使用npm阿里的镜像库)
-
-2.启动项目，在项目的根目录执行命令：`npm start`
-
-#### npx命令介绍
-
-- `npm v5.2.0`引入的一条命令
-- 目的：提升包内提供的命令行工具的使用体验
-- 原来：先安装脚手架包，再使用这个包中提供的命令
-- 现在：<font color="red">无需安装脚手架包</font>，就可以直接使用这个包提供的命令
-
-#### 补充
-
-1.推荐使用：<font color="red">npx create-react-app my-app</font>
-
+<h4 id="相关库"><a href="#相关库" class="headerlink" title="相关库"></a>相关库</h4><p>react.js：React核心库</p>
+<p>react-dom.js：供操作DOM的react扩展库</p>
+<p>babel.min.js：解析JSX语法代码转为纯JS语法代码库</p>
+<h2 id="React-脚手架"><a href="#React-脚手架" class="headerlink" title="React 脚手架"></a>React 脚手架</h2><h3 id="React-脚手架意义"><a href="#React-脚手架意义" class="headerlink" title="React 脚手架意义"></a>React 脚手架意义</h3><p>1.脚手架开发 现代 Web 应用必备</p>
+<p>2.充分利用<code>Webpack、Babel、ESlint</code>等工具辅助项目开发</p>
+<p>3.零配置，无需手动配置繁琐的工具即可使用</p>
+<p>4.关注业务，而不是工具配置</p>
+<h3 id="使用-React-脚手架初始化项目"><a href="#使用-React-脚手架初始化项目" class="headerlink" title="使用 React 脚手架初始化项目"></a>使用 React 脚手架初始化项目</h3><p>1.初始化项目，命令：<code>npx create-react-app my-app</code>（建议使用npm阿里的镜像库)</p>
+<p>2.启动项目，在项目的根目录执行命令：<code>npm start</code></p>
+<h4 id="npx命令介绍"><a href="#npx命令介绍" class="headerlink" title="npx命令介绍"></a>npx命令介绍</h4><ul>
+<li><code>npm v5.2.0</code>引入的一条命令</li>
+<li>目的：提升包内提供的命令行工具的使用体验</li>
+<li>原来：先安装脚手架包，再使用这个包中提供的命令</li>
+<li>现在：<font color="red">无需安装脚手架包</font>，就可以直接使用这个包提供的命令</li>
+</ul>
+<h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p>1.推荐使用：<font color="red">npx create-react-app my-app</font></p>
 <p>2.<code>npm init creat-app my-app</code></p>
 <p>3.<code>yarn create react-app my-app</code></p>
 <ul>
@@ -469,6 +425,7 @@ babel.min.js：解析JSX语法代码转为纯JS语法代码库
 </ul>
 <h3 id="在脚手架中使用-React"><a href="#在脚手架中使用-React" class="headerlink" title="在脚手架中使用 React"></a>在脚手架中使用 React</h3><p>1.导入 react 和 react-dom 两个包。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;</span><br></pre></td></tr></table></figure>
+
 <p>2.调用 <font color="blue">React.createElement()</font>方法创建react 元素</p>
 <p>3.调用 <font color="red">ReactDOM.render()</font>方法渲染 react 元素到页面中</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入 react</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建 react 元素</span></span><br><span class="line"><span class="keyword">const</span> title = React.createElement(<span class="string">'h1'</span>, <span class="literal">null</span>, <span class="string">'hello react'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 渲染 react 元素</span></span><br><span class="line">ReactDOM.render(title, <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>))</span><br></pre></td></tr></table></figure>
@@ -576,7 +533,7 @@ babel.min.js：解析JSX语法代码转为纯JS语法代码库
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#React概述"><span class="nav-number">1.</span> <span class="nav-text">React概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在脚手架中使用-React"><span class="nav-number">1.1.</span> <span class="nav-text">在脚手架中使用 React</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#React概述"><span class="nav-number">1.</span> <span class="nav-text">React概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#React的特点"><span class="nav-number">1.1.</span> <span class="nav-text">React的特点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#声明式"><span class="nav-number">1.1.1.</span> <span class="nav-text">声明式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件化编程"><span class="nav-number">1.1.2.</span> <span class="nav-text">组件化编程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Learn-Once，Write-Anywhrer"><span class="nav-number">1.1.3.</span> <span class="nav-text">Learn Once，Write Anywhrer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#React高效的原因"><span class="nav-number">1.1.4.</span> <span class="nav-text">React高效的原因</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端三大主流框架"><span class="nav-number">1.2.</span> <span class="nav-text">前端三大主流框架</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React与Vue对比"><span class="nav-number">2.</span> <span class="nav-text">React与Vue对比</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#组件化方面"><span class="nav-number">2.1.</span> <span class="nav-text">组件化方面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发团队方面"><span class="nav-number">2.2.</span> <span class="nav-text">开发团队方面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#社区方面"><span class="nav-number">2.3.</span> <span class="nav-text">社区方面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动APP开发体验方面"><span class="nav-number">2.4.</span> <span class="nav-text">移动APP开发体验方面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React的基本使用"><span class="nav-number">3.</span> <span class="nav-text">React的基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#React-的安装"><span class="nav-number">3.1.</span> <span class="nav-text">React 的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#React-的使用"><span class="nav-number">3.2.</span> <span class="nav-text">React 的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#相关库"><span class="nav-number">3.2.1.</span> <span class="nav-text">相关库</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React-脚手架"><span class="nav-number">4.</span> <span class="nav-text">React 脚手架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#React-脚手架意义"><span class="nav-number">4.1.</span> <span class="nav-text">React 脚手架意义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-React-脚手架初始化项目"><span class="nav-number">4.2.</span> <span class="nav-text">使用 React 脚手架初始化项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#npx命令介绍"><span class="nav-number">4.2.1.</span> <span class="nav-text">npx命令介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#补充"><span class="nav-number">4.2.2.</span> <span class="nav-text">补充</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在脚手架中使用-React"><span class="nav-number">4.3.</span> <span class="nav-text">在脚手架中使用 React</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
       <div class="site-overview-wrap sidebar-panel">
@@ -714,7 +671,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24:04</span>
+    <span title="站点阅读时长">24:09</span>
 </div>
 
 <!--
