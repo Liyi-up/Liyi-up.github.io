@@ -312,7 +312,6 @@
 <li>while 循环嵌套</li>
 </ul>
 <a id="more"></a>
-
 <h2 id="程序的三大流程"><a href="#程序的三大流程" class="headerlink" title="程序的三大流程"></a>程序的三大流程</h2><ul>
 <li><p>在程序开发中，一共有三种流程方式：</p>
 <ul>
@@ -324,17 +323,14 @@
 </li>
 </ul>
 <h2 id="while-循环基本使用"><a href="#while-循环基本使用" class="headerlink" title="while 循环基本使用"></a><code>while</code> 循环基本使用</h2><ul>
-<li><p>循环的作用就是让 <strong>指定的代码</strong> 重复的执行</p>
-</li>
+<li>循环的作用就是让 <strong>指定的代码</strong> 重复的执行</li>
 <li><p><code>while</code> 循环最常用的应用场景就是 <strong>让执行的代码</strong> 按照 <strong>指定的次数</strong> <strong>重复</strong> 执行</p>
 </li>
 <li><p>需求 —— 打印 5 遍 <code>Hello Python</code></p>
 </li>
-<li><p>思考 —— 如果要求打印 100 遍怎么办？</p>
-</li>
+<li>思考 —— 如果要求打印 100 遍怎么办？</li>
 </ul>
 <h3 id="while-语句基本语法"><a href="#while-语句基本语法" class="headerlink" title="while 语句基本语法"></a><code>while</code> 语句基本语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">初始条件设置 —— 通常是重复执行的 计数器</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> 条件(判断 计数器 是否达到 目标次数):</span><br><span class="line">    条件满足时，做的事情<span class="number">1</span></span><br><span class="line">    条件满足时，做的事情<span class="number">2</span></span><br><span class="line">    条件满足时，做的事情<span class="number">3</span></span><br><span class="line">    ...(省略)...</span><br><span class="line">    </span><br><span class="line">    处理条件(计数器 + <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
 <p><strong>注意</strong>：</p>
 <ul>
 <li><code>while</code> 语句以及缩进部分是一个 <strong>完整的代码块</strong></li>
@@ -344,7 +340,6 @@
 <li>打印 5 遍 Hello Python</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 1. 定义重复次数计数器</span><br><span class="line">i &#x3D; 1</span><br><span class="line"></span><br><span class="line"># 2. 使用 while 判断条件</span><br><span class="line">while i &lt;&#x3D; 5:</span><br><span class="line">    # 要重复执行的代码</span><br><span class="line">    print(&quot;Hello Python&quot;)</span><br><span class="line"></span><br><span class="line">    # 处理计数器 i</span><br><span class="line">    i &#x3D; i + 1</span><br><span class="line"></span><br><span class="line">print(&quot;循环结束后的 i &#x3D; %d&quot; % i)</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>注意：循环结束后，之前定义的计数器条件的数值是依旧存在的</p>
 </blockquote>
@@ -356,6 +351,7 @@
 <li>在算术运算时，为了简化代码的编写，<code>Python</code> 还提供了一系列的 与 <strong>算术运算符</strong> 对应的 <strong>赋值运算符</strong></li>
 <li>注意：<strong>赋值运算符中间不能使用空格</strong></li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -364,7 +360,8 @@
 <th>实例</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>=</td>
 <td>简单的赋值运算符</td>
 <td>c = a + b 将 a + b 的运算结果赋值为 c</td>
@@ -382,7 +379,7 @@
 <tr>
 <td>*=</td>
 <td>乘法赋值运算符</td>
-<td>c *= a 等效于 c = c * a</td>
+<td>c <em>= a 等效于 c = c </em> a</td>
 </tr>
 <tr>
 <td>/=</td>
@@ -402,9 +399,11 @@
 <tr>
 <td>**=</td>
 <td>幂赋值运算符</td>
-<td>c *<em>= a 等效于 c = c *</em> a</td>
+<td>c <strong>= a 等效于 c = c </strong> a</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="Python-中的计数方法"><a href="#Python-中的计数方法" class="headerlink" title="Python 中的计数方法"></a>Python 中的计数方法</h3><p>常见的计数方法有两种，可以分别称为：</p>
 <ul>
 <li><strong>自然计数法</strong>（从 <code>1</code> 开始）—— 更符合人类的习惯</li>
@@ -424,7 +423,6 @@
 <li>计算 0 ~ 100 之间所有数字的累计求和结果</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 计算 0 ~ 100 之间所有数字的累计求和结果</span></span><br><span class="line"><span class="comment"># 0. 定义最终结果的变量</span></span><br><span class="line">result = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 定义一个整数的变量记录循环的次数</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 开始循环</span></span><br><span class="line"><span class="keyword">while</span> i &lt;= <span class="number">100</span>:</span><br><span class="line">    print(i)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 每一次循环，都让 result 这个变量和 i 这个计数器相加</span></span><br><span class="line">    result += i</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 处理计数器</span></span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">"0~100之间的数字求和结果 = %d"</span> % result)</span><br></pre></td></tr></table></figure>
-
 <h4 id="需求进阶"><a href="#需求进阶" class="headerlink" title="需求进阶"></a>需求进阶</h4><ul>
 <li>计算 0 ~ 100 之间 所有 <strong>偶数</strong> 的累计求和结果</li>
 </ul>
@@ -434,7 +432,6 @@
 <li>添加 <strong>结果</strong> 变量，在循环内部 <strong>处理计算结果</strong></li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 0. 最终结果</span></span><br><span class="line">result = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 计数器</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 开始循环</span></span><br><span class="line"><span class="keyword">while</span> i &lt;= <span class="number">100</span>:</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 判断偶数</span></span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        print(i)</span><br><span class="line">        result += i</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 处理计数器</span></span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">"0~100之间偶数求和结果 = %d"</span> % result)</span><br></pre></td></tr></table></figure>
-
 <h2 id="break-和-continue"><a href="#break-和-continue" class="headerlink" title="break 和 continue"></a>break 和 continue</h2><blockquote>
 <p><code>break</code> 和 <code>continue</code> 是专门在循环中使用的关键字</p>
 </blockquote>
@@ -450,7 +447,6 @@
 <li><strong>在循环过程中</strong>，如果 <strong>某一个条件满足后</strong>，<strong>不</strong> 再希望 <strong>循环继续执行</strong>，可以使用 <code>break</code> 退出循环</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">10</span>:</span><br><span class="line"></span><br><span class="line">    <span class="comment"># break 某一条件满足时，退出循环，不再执行后续重复的代码</span></span><br><span class="line">    <span class="comment"># i == 3</span></span><br><span class="line">    <span class="keyword">if</span> i == <span class="number">3</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    print(i)</span><br><span class="line"></span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">"over"</span>)</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p><code>break</code> 只针对当前所在循环有效</p>
 </blockquote>
@@ -459,7 +455,6 @@
 <li>也就是：在整个循环中，<strong>只有某些条件</strong>，不需要执行循环代码，而其他条件都需要执行</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">10</span>:</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 当 i == 7 时，不希望执行需要重复执行的代码</span></span><br><span class="line">    <span class="keyword">if</span> i == <span class="number">7</span>:</span><br><span class="line">        <span class="comment"># 在使用 continue 之前，同样应该修改计数器</span></span><br><span class="line">        <span class="comment"># 否则会出现死循环</span></span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 重复执行的代码</span></span><br><span class="line">    print(i)</span><br><span class="line"></span><br><span class="line">    i += <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>需要注意：使用 <code>continue</code> 时，<strong>条件处理部分的代码，需要特别注意</strong>，不小心会出现 <strong>死循环</strong></li>
 </ul>
@@ -470,31 +465,25 @@
 <li><code>while</code> 嵌套就是：<code>while</code> 里面还有 <code>while</code></li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> 条件 <span class="number">1</span>:</span><br><span class="line">    条件满足时，做的事情<span class="number">1</span></span><br><span class="line">    条件满足时，做的事情<span class="number">2</span></span><br><span class="line">    条件满足时，做的事情<span class="number">3</span></span><br><span class="line">    ...(省略)...</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> 条件 <span class="number">2</span>:</span><br><span class="line">        条件满足时，做的事情<span class="number">1</span></span><br><span class="line">        条件满足时，做的事情<span class="number">2</span></span><br><span class="line">        条件满足时，做的事情<span class="number">3</span></span><br><span class="line">        ...(省略)...</span><br><span class="line">    </span><br><span class="line">        处理条件 <span class="number">2</span></span><br><span class="line">    </span><br><span class="line">    处理条件 <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="循环嵌套演练-——-九九乘法表"><a href="#循环嵌套演练-——-九九乘法表" class="headerlink" title="循环嵌套演练 —— 九九乘法表"></a>循环嵌套演练 —— 九九乘法表</h3><h4 id="第-1-步：用嵌套打印小星星"><a href="#第-1-步：用嵌套打印小星星" class="headerlink" title="第 1 步：用嵌套打印小星星"></a>第 1 步：用嵌套打印小星星</h4><p><strong>需求</strong></p>
 <ul>
 <li>在控制台连续输出五行 <code>*</code>，每一行星号的数量依次递增</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">**</span><br><span class="line">***</span><br><span class="line">****</span><br><span class="line">*****</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>使用字符串 * 打印</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 定义一个计数器变量，从数字1开始，循环会比较方便</span></span><br><span class="line">row = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> row &lt;= <span class="number">5</span>:</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"*"</span> * row)</span><br><span class="line"></span><br><span class="line">    row += <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="第-2-步：使用循环嵌套打印小星星"><a href="#第-2-步：使用循环嵌套打印小星星" class="headerlink" title="第 2 步：使用循环嵌套打印小星星"></a>第 2 步：使用循环嵌套打印小星星</h4><p><strong>知识点</strong> 对 <code>print</code> 函数的使用做一个增强</p>
 <ul>
-<li><p>在默认情况下，<code>print</code> 函数输出内容之后，会自动在内容末尾增加换行</p>
-</li>
-<li><p>如果不希望末尾增加换行，可以在 <code>print</code> 函数输出内容的后面增加 <code>, end=&quot;&quot;</code></p>
-</li>
+<li>在默认情况下，<code>print</code> 函数输出内容之后，会自动在内容末尾增加换行</li>
+<li>如果不希望末尾增加换行，可以在 <code>print</code> 函数输出内容的后面增加 <code>, end=&quot;&quot;</code></li>
 <li><p>其中 <code>&quot;&quot;</code> 中间可以指定 <code>print</code> 函数输出内容之后，继续希望显示的内容</p>
 </li>
 <li><p>语法格式如下：</p>
 </li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 向控制台输出内容结束之后，不会换行</span></span><br><span class="line">print(<span class="string">"*"</span>, end=<span class="string">""</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单纯的换行</span></span><br><span class="line">print(<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p><code>end=&quot;&quot;</code> 表示向控制台输出内容结束之后，不会换行</p>
 </blockquote>
@@ -504,7 +493,6 @@
 <li>在控制台连续输出五行 <code>*</code>，每一行星号的数量依次递增</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">**</span><br><span class="line">***</span><br><span class="line">****</span><br><span class="line">*****</span><br></pre></td></tr></table></figure>
-
 <p><strong>开发步骤</strong></p>
 <ul>
 <li>1&gt; 完成 5 行内容的简单输出</li>
@@ -515,10 +503,8 @@
 </li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">row = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> row &lt;= <span class="number">5</span>:</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 假设 python 没有提供字符串 * 操作</span></span><br><span class="line">    <span class="comment"># 在循环内部，再增加一个循环，实现每一行的 星星 打印</span></span><br><span class="line">    col = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> col &lt;= row:</span><br><span class="line">        print(<span class="string">"*"</span>, end=<span class="string">""</span>)</span><br><span class="line"></span><br><span class="line">        col += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 每一行星号输出完成后，再增加一个换行</span></span><br><span class="line">    print(<span class="string">""</span>)</span><br><span class="line"></span><br><span class="line">    row += <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="第-3-步：-九九乘法表"><a href="#第-3-步：-九九乘法表" class="headerlink" title="第 3 步： 九九乘法表"></a>第 3 步： 九九乘法表</h4><p><strong>需求</strong> 输出 九九乘法表，格式如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1 * 1 &#x3D; 1	</span><br><span class="line">1 * 2 &#x3D; 2	2 * 2 &#x3D; 4	</span><br><span class="line">1 * 3 &#x3D; 3	2 * 3 &#x3D; 6	3 * 3 &#x3D; 9	</span><br><span class="line">1 * 4 &#x3D; 4	2 * 4 &#x3D; 8	3 * 4 &#x3D; 12	4 * 4 &#x3D; 16	</span><br><span class="line">1 * 5 &#x3D; 5	2 * 5 &#x3D; 10	3 * 5 &#x3D; 15	4 * 5 &#x3D; 20	5 * 5 &#x3D; 25	</span><br><span class="line">1 * 6 &#x3D; 6	2 * 6 &#x3D; 12	3 * 6 &#x3D; 18	4 * 6 &#x3D; 24	5 * 6 &#x3D; 30	6 * 6 &#x3D; 36	</span><br><span class="line">1 * 7 &#x3D; 7	2 * 7 &#x3D; 14	3 * 7 &#x3D; 21	4 * 7 &#x3D; 28	5 * 7 &#x3D; 35	6 * 7 &#x3D; 42	7 * 7 &#x3D; 49	</span><br><span class="line">1 * 8 &#x3D; 8	2 * 8 &#x3D; 16	3 * 8 &#x3D; 24	4 * 8 &#x3D; 32	5 * 8 &#x3D; 40	6 * 8 &#x3D; 48	7 * 8 &#x3D; 56	8 * 8 &#x3D; 64	</span><br><span class="line">1 * 9 &#x3D; 9	2 * 9 &#x3D; 18	3 * 9 &#x3D; 27	4 * 9 &#x3D; 36	5 * 9 &#x3D; 45	6 * 9 &#x3D; 54	7 * 9 &#x3D; 63	8 * 9 &#x3D; 72	9 * 9 &#x3D; 81</span><br></pre></td></tr></table></figure>
-
 <p><strong>开发步骤</strong></p>
 <ul>
 <li><ol>
@@ -527,15 +513,13 @@
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">**</span><br><span class="line">***</span><br><span class="line">****</span><br><span class="line">*****</span><br><span class="line">******</span><br><span class="line">*******</span><br><span class="line">********</span><br><span class="line">*********</span><br></pre></td></tr></table></figure>
-
 <ul>
-<li><ol start="2">
+<li><ol>
 <li>将每一个 <code>*</code> 替换成对应的行与列相乘</li>
 </ol>
 </li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义起始行</span></span><br><span class="line">row = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 最大打印 9 行</span></span><br><span class="line"><span class="keyword">while</span> row &lt;= <span class="number">9</span>:</span><br><span class="line">    <span class="comment"># 定义起始列</span></span><br><span class="line">    col = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 最大打印 row 列</span></span><br><span class="line">    <span class="keyword">while</span> col &lt;= row:</span><br><span class="line"></span><br><span class="line">        <span class="comment"># end = ""，表示输出结束后，不换行</span></span><br><span class="line">        <span class="comment"># "\t" 可以在控制台输出一个制表符，协助在输出文本时对齐</span></span><br><span class="line">        print(<span class="string">"%d * %d = %d"</span> % (col, row, row * col), end=<span class="string">"\t"</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 列数 + 1</span></span><br><span class="line">        col += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 一行打印完成的换行</span></span><br><span class="line">    print(<span class="string">""</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 行数 + 1</span></span><br><span class="line">    row += <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>字符串中的转义字符</strong></p>
 <ul>
 <li><code>\t</code> 在控制台输出一个 <strong>制表符</strong>，协助在输出文本时 <strong>垂直方向</strong> 保持对齐</li>
@@ -544,6 +528,7 @@
 <blockquote>
 <p><strong>制表符</strong> 的功能是在不使用表格的情况下在 <strong>垂直方向</strong> 按列对齐文本</p>
 </blockquote>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -551,7 +536,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>\\</td>
 <td>反斜杠符号</td>
 </tr>
@@ -575,7 +561,9 @@
 <td>\r</td>
 <td>回车</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
     </div>
 
@@ -819,7 +807,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24:16</span>
+    <span title="站点阅读时长">24:11</span>
 </div>
 
 <!--

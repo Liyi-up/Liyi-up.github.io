@@ -328,7 +328,6 @@
 </li>
 </ul>
 <a id="more"></a>
-
 <ul>
 <li>数据库是否具备完整性关系到数据库系统能否真实地反映现实世界，因此<strong>维护数据库的完整性是非常重要</strong>的</li>
 </ul>
@@ -603,7 +602,6 @@
 </li>
 </ul>
 <h5 id="例1：建立表EMP表"><a href="#例1：建立表EMP表" class="headerlink" title="例1：建立表EMP表"></a>例1：建立表EMP表</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> EMP</span><br><span class="line">(Empno <span class="built_in">CHAR</span>(<span class="number">4</span>) PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">Ename <span class="built_in">VARCHAR</span>(<span class="number">10</span>),</span><br><span class="line">Job <span class="built_in">VARCHAR</span>(<span class="number">9</span>),</span><br><span class="line">Mgr <span class="built_in">CHAR</span>(<span class="number">4</span>),</span><br><span class="line">Sal MONEY,</span><br><span class="line">Deptno <span class="built_in">CHAR</span>(<span class="number">2</span>),</span><br><span class="line"><span class="keyword">CONSTRAINT</span> FK_DEPTNO <span class="keyword">FOREIGN</span> <span class="keyword">KEY</span> (Deptno)</span><br><span class="line"><span class="keyword">REFERENCES</span> DEPT(Deptno) </span><br><span class="line"><span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span></span><br><span class="line"><span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CASCADE</span> ;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>这时EMP表中外码为Deptno，它对应 于DEPT表中的主码Deptno。</li>
 <li>当要修改DEPT表中的Deptno值时， 先要检查EMP表中有无元组的Deptno 值与之对应<ul>
@@ -613,7 +611,6 @@
 </li>
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> EMP</span><br><span class="line">(Empno <span class="built_in">CHAR</span>(<span class="number">4</span>) PRIMARY,</span><br><span class="line">Ename <span class="built_in">VARCHAR</span>(<span class="number">10</span>),</span><br><span class="line">Job <span class="built_in">VARCHAR</span>(<span class="number">9</span>),</span><br><span class="line">Mgr <span class="built_in">CHAR</span>(<span class="number">4</span>),</span><br><span class="line">Sal MONDY,</span><br><span class="line">Deptno <span class="built_in">CHAR</span>(<span class="number">2</span>) <span class="keyword">CONSTRAINT</span> FK_DEPTNO</span><br><span class="line"><span class="keyword">FOREIGN</span> <span class="keyword">KEY</span> <span class="keyword">REFERENCES</span> DEPT(Deptno) </span><br><span class="line"><span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span></span><br><span class="line"><span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CASCADE</span>);</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>当要删除或修改DEPT表中某个元组 时，系统要检查EMP表，若找到相应 元组即将其随之删除或修改。</li>
 <li>当要插入EMP表中某个元组时，系统 要检查DEPT表，先要检查DEPT表中 有无元组的Deptno值与之对应<ul>
@@ -637,17 +634,13 @@
 </ul>
 <p>例1：建立部门表DEPT，要求部门名称Dname列 取值唯一，部门编号Deptno列为主码</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> DEPT</span><br><span class="line">(Deptno <span class="built_in">CHAR</span>(<span class="number">2</span>),</span><br><span class="line">Dname <span class="built_in">VARCHAR</span>(<span class="number">9</span>) <span class="keyword">CONSTRAINT</span> U1 <span class="keyword">UNIQUE</span>,</span><br><span class="line">Loc <span class="built_in">VARCHAR</span>(<span class="number">10</span>),</span><br><span class="line"><span class="keyword">CONSTRAINT</span> PK_DEPT PRIMARY <span class="keyword">KEY</span> (Deptno));</span><br></pre></td></tr></table></figure>
-
 <p>其中 CONSTRAINT U1 UNIQUE 表示约束名为U1， 该约束要求Dname列值唯一。</p>
 <p>例2： 建立学生登记表Student，要求学号在900000至999999之间， 性别只能是‘男’或‘女’，姓名非空</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Student</span><br><span class="line">(Sno <span class="built_in">INT</span> <span class="keyword">CONSTRAINT</span> C1 <span class="keyword">CHECK</span> </span><br><span class="line">(Sno <span class="keyword">BETWEEN</span> <span class="number">10000</span> <span class="keyword">AND</span> <span class="number">99999</span>),</span><br><span class="line">Sname <span class="built_in">VARCHAR</span>(<span class="number">20</span>) <span class="keyword">CONSTRAINT</span> C2 <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">Sage <span class="built_in">INT</span>,</span><br><span class="line">Ssex <span class="built_in">VARCHAR</span>(<span class="number">2</span>)</span><br><span class="line"><span class="keyword">CONSTRAINT</span> C4 <span class="keyword">CHECK</span> (Ssex <span class="keyword">IN</span> (<span class="string">'男'</span>, <span class="string">'女'</span>));</span><br></pre></td></tr></table></figure>
-
 <p>例3 ：建立职工表EMP，要求每个职工的应发工资不得超过3000元。应发 工资实际上就是实发工资列Sal与扣除项Deduct之和。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> EMP</span><br><span class="line">(Eno <span class="built_in">CHAR</span>(<span class="number">4</span>)</span><br><span class="line">Ename <span class="built_in">VARCHAR</span>(<span class="number">10</span>),</span><br><span class="line">Job <span class="built_in">VARCHAR</span>(<span class="number">8</span>),</span><br><span class="line">Sal MONEY,</span><br><span class="line">Deduct MONEY,</span><br><span class="line">Deptno <span class="built_in">CHAR</span>(<span class="number">2</span>),</span><br><span class="line"><span class="keyword">CONSTRAINTS</span> C1 <span class="keyword">CHECK</span> (Sal + Deduct &lt;=<span class="number">3000</span>));</span><br></pre></td></tr></table></figure>
-
 <p>例4： 为学生登记表Student，添加约束，年龄在14到40之间 ALTER TABLE Student ADD CONSTRAINT c_age CHECK(Sage between 14 AND 40);</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Student(Sno,Sname,Sage,Ssex) </span><br><span class="line"><span class="keyword">VALUES</span>(<span class="string">'16001'</span>,</span><br><span class="line"><span class="string">'刘小'</span></span><br><span class="line">,<span class="number">56</span>,<span class="string">'IS'</span>);</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>通过触发器来定义用户的完整性规则<ul>
 <li>定义其它的完整性约束时，需要用数据库触发器（Trigger） 来实现。</li>
@@ -903,7 +896,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24:16</span>
+    <span title="站点阅读时长">24:11</span>
 </div>
 
 <!--

@@ -317,7 +317,6 @@
 <li>变量的命名规则</li>
 </ul>
 <a id="more"></a>
-
 <h2 id="变量定义"><a href="#变量定义" class="headerlink" title="变量定义"></a>变量定义</h2><ul>
 <li>在 Python 中，每个变量 <strong>在使用前都必须赋值</strong>，变量 <strong>赋值以后</strong> 该变量 <strong>才会被创建</strong></li>
 <li>等号（=）用来给变量赋值<ul>
@@ -327,17 +326,14 @@
 </li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">变量名 = 值</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>变量定义之后，后续就可以直接使用了</p>
 </blockquote>
 <h3 id="变量演练1-——-iPython"><a href="#变量演练1-——-iPython" class="headerlink" title="变量演练1 —— iPython"></a>变量演练1 —— iPython</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义 qq_number 的变量用来保存 qq 号码</span></span><br><span class="line">In [<span class="number">1</span>]: qq_number = <span class="string">"1234567"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出 qq_number 中保存的内容</span></span><br><span class="line">In [<span class="number">2</span>]: qq_number</span><br><span class="line">Out[<span class="number">2</span>]: <span class="string">'1234567'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义 qq_password 的变量用来保存 qq 密码</span></span><br><span class="line">In [<span class="number">3</span>]: qq_password = <span class="string">"123"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出 qq_password 中保存的内容</span></span><br><span class="line">In [<span class="number">4</span>]: qq_password</span><br><span class="line">Out[<span class="number">4</span>]: <span class="string">'123'</span></span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>使用交互式方式，如果要查看变量内容，直接输入变量名即可，不需要使用 <code>print</code> 函数</p>
 </blockquote>
 <h3 id="变量演练-2-——-PyCharm"><a href="#变量演练-2-——-PyCharm" class="headerlink" title="变量演练 2 —— PyCharm"></a>变量演练 2 —— PyCharm</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义 qq 号码变量</span></span><br><span class="line">qq_number = <span class="string">"1234567"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义 qq 密码变量</span></span><br><span class="line">qq_password = <span class="string">"123"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在程序中，如果要输出变量的内容，需要使用 print 函数</span></span><br><span class="line">print(qq_number)</span><br><span class="line">print(qq_password)</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>使用解释器执行，如果要输出变量的内容，必须要要使用 <code>print</code> 函数</p>
 </blockquote>
@@ -354,13 +350,11 @@
 <li>计算付款金额</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义苹果价格变量</span></span><br><span class="line">price = <span class="number">8.5</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义购买重量</span></span><br><span class="line">weight = <span class="number">7.5</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算金额</span></span><br><span class="line">money = price * weight</span><br><span class="line"></span><br><span class="line">print(money)</span><br></pre></td></tr></table></figure>
-
 <h4 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h4><ul>
 <li>如果 <strong>只要买苹果，就返 5 块钱</strong></li>
 <li>请重新计算购买金额</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义苹果价格变量</span></span><br><span class="line">price = <span class="number">8.5</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义购买重量</span></span><br><span class="line">weight = <span class="number">7.5</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算金额</span></span><br><span class="line">money = price * weight</span><br><span class="line"></span><br><span class="line"><span class="comment"># 只要买苹果就返 5 元</span></span><br><span class="line">money = money - <span class="number">5</span></span><br><span class="line">print(money)</span><br></pre></td></tr></table></figure>
-
 <p><strong>提问</strong></p>
 <ul>
 <li>上述代码中，一共定义有几个变量？<ul>
@@ -452,7 +446,6 @@
 <li>使用 <code>type</code> 函数可以查看一个变量的类型</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]: type(name)</span><br></pre></td></tr></table></figure>
-
 <h3 id="不同类型变量之间的计算"><a href="#不同类型变量之间的计算" class="headerlink" title="不同类型变量之间的计算"></a>不同类型变量之间的计算</h3><h4 id="1-数字型变量-之间可以直接计算"><a href="#1-数字型变量-之间可以直接计算" class="headerlink" title="1) 数字型变量 之间可以直接计算"></a>1) <strong>数字型变量</strong> 之间可以直接计算</h4><ul>
 <li>在 Python 中，两个数字型变量是可以直接进行 算数运算的</li>
 <li>如果变量是 <code>bool</code> 型，在计算时<ul>
@@ -474,11 +467,8 @@
 <li>在 Python 中，字符串之间可以使用 <code>+</code> 拼接生成新的字符串</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]: first_name = <span class="string">"三"</span></span><br><span class="line"></span><br><span class="line">In [<span class="number">2</span>]: last_name = <span class="string">"张"</span></span><br><span class="line"></span><br><span class="line">In [<span class="number">3</span>]: first_name + last_name</span><br><span class="line">Out[<span class="number">3</span>]: <span class="string">'三张'</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="字符串变量-可以和-整数-使用-重复拼接相同的字符串"><a href="#字符串变量-可以和-整数-使用-重复拼接相同的字符串" class="headerlink" title="字符串变量 可以和 整数 使用 * 重复拼接相同的字符串"></a><strong>字符串变量</strong> 可以和 <strong>整数</strong> 使用 <code>*</code> 重复拼接相同的字符串</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]: <span class="string">"-"</span> * <span class="number">50</span></span><br><span class="line">Out[<span class="number">1</span>]: <span class="string">'--------------------------------------------------'</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="数字型变量-和-字符串-之间-不能进行其他计算"><a href="#数字型变量-和-字符串-之间-不能进行其他计算" class="headerlink" title="数字型变量 和 字符串 之间 不能进行其他计算"></a><strong>数字型变量</strong> 和 <strong>字符串</strong> 之间 <strong>不能进行其他计算</strong></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]: first_name = <span class="string">"zhang"</span></span><br><span class="line"></span><br><span class="line">In [<span class="number">2</span>]: x = <span class="number">10</span></span><br><span class="line"></span><br><span class="line">In [<span class="number">3</span>]: x + first_name</span><br><span class="line">---------------------------------------------------------------------------</span><br><span class="line">TypeError: unsupported operand type(s) <span class="keyword">for</span> +: <span class="string">'int'</span> <span class="keyword">and</span> <span class="string">'str'</span></span><br><span class="line">类型错误：`+` 不支持的操作类型：`int` 和 `str`</span><br></pre></td></tr></table></figure>
-
 <h3 id="变量的输入"><a href="#变量的输入" class="headerlink" title="变量的输入"></a>变量的输入</h3><ul>
 <li>所谓 <strong>输入</strong>，就是 <strong>用代码</strong> <strong>获取</strong> 用户通过 <strong>键盘</strong> 输入的信息</li>
 <li>例如：去银行取钱，在 ATM 上输入密码</li>
@@ -488,6 +478,7 @@
 <li>一个 <strong>提前准备好的功能</strong>(别人或者自己写的代码)，<strong>可以直接使用</strong>，而 <strong>不用关心内部的细节</strong></li>
 <li>目前已经学习过的函数</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -495,7 +486,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>print(x)</td>
 <td>将 x 输出到控制台</td>
 </tr>
@@ -503,22 +495,25 @@
 <td>type(x)</td>
 <td>查看 x 的变量类型</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h4 id="input-函数实现键盘输入"><a href="#input-函数实现键盘输入" class="headerlink" title="input 函数实现键盘输入"></a>input 函数实现键盘输入</h4><ul>
 <li>在 Python 中可以使用 <code>input</code> 函数从键盘等待用户的输入</li>
 <li>用户输入的 <strong>任何内容</strong> Python 都认为是一个 <strong>字符串</strong></li>
 <li>语法如下：</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字符串变量 = input(<span class="string">"提示信息："</span>)</span><br></pre></td></tr></table></figure>
-
-<h4 id="类型转换函数"><a href="#类型转换函数" class="headerlink" title="类型转换函数"></a>类型转换函数</h4><table>
+<h4 id="类型转换函数"><a href="#类型转换函数" class="headerlink" title="类型转换函数"></a>类型转换函数</h4><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>函数</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>int(x)</td>
 <td>将 x 转换为一个整数</td>
 </tr>
@@ -526,7 +521,9 @@
 <td>float(x)</td>
 <td>将 x 转换到一个浮点数</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h4 id="变量输入演练-——-超市买苹果增强版"><a href="#变量输入演练-——-超市买苹果增强版" class="headerlink" title="变量输入演练 —— 超市买苹果增强版"></a>变量输入演练 —— 超市买苹果增强版</h4><p><strong>需求</strong></p>
 <ul>
 <li><strong>收银员输入</strong> 苹果的价格，单位：<strong>元／斤</strong></li>
@@ -534,7 +531,6 @@
 <li>计算并且 <strong>输出</strong> 付款金额</li>
 </ul>
 <h5 id="演练方式-1"><a href="#演练方式-1" class="headerlink" title="演练方式 1"></a>演练方式 1</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 输入苹果单价</span></span><br><span class="line">price_str = input(<span class="string">"请输入苹果价格："</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 要求苹果重量</span></span><br><span class="line">weight_str = input(<span class="string">"请输入苹果重量："</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 计算金额</span></span><br><span class="line"><span class="comment"># 1&gt; 将苹果单价转换成小数</span></span><br><span class="line">price = float(price_str)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2&gt; 将苹果重量转换成小数</span></span><br><span class="line">weight = float(weight_str)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3&gt; 计算付款金额</span></span><br><span class="line">money = price * weight</span><br><span class="line"></span><br><span class="line">print(money)</span><br></pre></td></tr></table></figure>
-
 <p><strong>提问</strong></p>
 <ol>
 <li>演练中，针对 <strong>价格</strong> 定义了几个变量？<ul>
@@ -549,7 +545,6 @@
 <li><strong>定义</strong> 一个 <strong>浮点变量</strong> 接收用户输入的同时，就使用 <code>float</code> 函数进行转换</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">price = float(input(<span class="string">"请输入价格:"</span>))</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>改进后的好处：</li>
 </ul>
@@ -579,6 +574,7 @@
 </ul>
 </li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -586,7 +582,8 @@
 <th>含义</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>%s</td>
 <td>字符串</td>
 </tr>
@@ -602,12 +599,13 @@
 <td>%%</td>
 <td>输出 <code>%</code></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>语法格式如下：</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"格式化字符串"</span> % 变量<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"格式化字符串"</span> % (变量<span class="number">1</span>, 变量<span class="number">2.</span>..))</span><br></pre></td></tr></table></figure>
-
 <h4 id="格式化输出演练-——-基本练习"><a href="#格式化输出演练-——-基本练习" class="headerlink" title="格式化输出演练 —— 基本练习"></a>格式化输出演练 —— 基本练习</h4><p><strong>需求</strong></p>
 <ol>
 <li>定义字符串变量 <code>name</code>，输出 <strong>我的名字叫 小明，请多多关照！</strong></li>
@@ -616,17 +614,14 @@
 <li>定义一个小数 <code>scale</code>，输出 <strong>数据比例是 10.00%</strong></li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"我的名字叫 %s，请多多关照！"</span> % name)</span><br><span class="line">print(<span class="string">"我的学号是 %06d"</span> % student_no)</span><br><span class="line">print(<span class="string">"苹果单价 %.02f 元／斤，购买 %.02f 斤，需要支付 %.02f 元"</span> % (price, weight, money))</span><br><span class="line">print(<span class="string">"数据比例是 %.02f%%"</span> % (scale * <span class="number">100</span>))</span><br></pre></td></tr></table></figure>
-
 <h4 id="练习-——-个人名片"><a href="#练习-——-个人名片" class="headerlink" title="练习 —— 个人名片"></a>练习 —— 个人名片</h4><p><strong>需求</strong></p>
 <ul>
 <li>在控制台依次提示用户输入：<strong>姓名</strong>、<strong>公司</strong>、<strong>职位</strong>、<strong>电话</strong>、<strong>邮箱</strong></li>
 <li>按照以下格式输出：</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">**************************************************</span><br><span class="line">公司名称</span><br><span class="line"></span><br><span class="line">姓名 (职位)</span><br><span class="line"></span><br><span class="line">电话：电话</span><br><span class="line">邮箱：邮箱</span><br><span class="line">**************************************************</span><br></pre></td></tr></table></figure>
-
 <p>实现代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">在控制台依次提示用户输入：姓名、公司、职位、电话、电子邮箱</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">name = input(<span class="string">"请输入姓名："</span>)</span><br><span class="line">company = input(<span class="string">"请输入公司："</span>)</span><br><span class="line">title = input(<span class="string">"请输入职位："</span>)</span><br><span class="line">phone = input(<span class="string">"请输入电话："</span>)</span><br><span class="line">email = input(<span class="string">"请输入邮箱："</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"*"</span> * <span class="number">50</span>)</span><br><span class="line">print(company)</span><br><span class="line">print()</span><br><span class="line">print(<span class="string">"%s (%s)"</span> % (name, title))</span><br><span class="line">print()</span><br><span class="line">print(<span class="string">"电话：%s"</span> % phone)</span><br><span class="line">print(<span class="string">"邮箱：%s"</span> % email)</span><br><span class="line">print(<span class="string">"*"</span> * <span class="number">50</span>)</span><br></pre></td></tr></table></figure>
-
 <h1 id="标识符和关键字"><a href="#标识符和关键字" class="headerlink" title="标识符和关键字"></a>标识符和关键字</h1><h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><blockquote>
 <p>标示符就是程序员定义的 <strong>变量名</strong>、<strong>函数名</strong></p>
 <p><strong>名字</strong> 需要有 <strong>见名知义</strong> 的效果，见下图：</p>
@@ -639,7 +634,6 @@
 </ul>
 <p>思考：下面的标示符哪些是正确的，哪些不正确为什么？</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">fromNo12</span><br><span class="line">from#12</span><br><span class="line">my_Boolean</span><br><span class="line">my-Boolean</span><br><span class="line">Obj2</span><br><span class="line">2ndObj</span><br><span class="line">myInt</span><br><span class="line">My_tExt</span><br><span class="line">_test</span><br><span class="line">test!32</span><br><span class="line">haha(da)tt</span><br><span class="line">jack_rose</span><br><span class="line">jack&amp;rose</span><br><span class="line">GUI</span><br><span class="line">G.U.I</span><br></pre></td></tr></table></figure>
-
 <h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><ul>
 <li><strong>关键字</strong> 就是在 <code>Python</code> 内部已经使用的标识符</li>
 <li><strong>关键字</strong> 具有特殊的功能和含义</li>
@@ -647,7 +641,6 @@
 </ul>
 <p>通过以下命令可以查看 <code>Python</code> 中的关键字</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]: <span class="keyword">import</span> keyword</span><br><span class="line">In [<span class="number">2</span>]: print(keyword.kwlist)</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>提示：<strong>关键字的学习及使用</strong>，会在后面的课程中不断介绍</p>
 <ul>
@@ -932,7 +925,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24:16</span>
+    <span title="站点阅读时长">24:11</span>
 </div>
 
 <!--
