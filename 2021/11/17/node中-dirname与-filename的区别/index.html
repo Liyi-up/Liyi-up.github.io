@@ -324,13 +324,16 @@
 <p>先写个例子目录为E:\web\test\abc.js，其中abc.js为我们写的测试代码，在Node中./和process.cwd()效果相同，./有特殊情况<br>./就是执行node命令的路径，也就是工作路径，在哪运行的node index.js或者说在哪运行npm run build的路径 （特殊情况：在 require() 中使用 ./ 时，这时的路径就会是含有 require() 的脚本文件的相对路径。）</p>
 </blockquote>
 <a id="more"></a>
+
 <h3 id="dirname"><a href="#dirname" class="headerlink" title="__dirname"></a>__dirname</h3><p><strong>dirname 总是指向被执行 js 文件的绝对路径,也就是说你在E:\web\test\abc.js中写</strong>dirname那么路径就是E:\web\test</p>
 <h3 id="filename"><a href="#filename" class="headerlink" title="__filename"></a>__filename</h3><p>返回当前模块文件被解析过后的绝对路径，使用<strong>filename变量获取当前模块文件的带有完整绝对路径的文件名，返回E:\web\test\abc.js（</strong>dirname等同于path.dirname(__filename)）</p>
 <h3 id="process-cwd"><a href="#process-cwd" class="headerlink" title="process.cwd()"></a>process.cwd()</h3><p>返回的是当前Node.js进程执行时的工作目录，保证了文件在不同的目录下执行时，路径始终不变，<strong>返回E:\web\test</strong></p>
 <h3 id="path-join"><a href="#path-join" class="headerlink" title="path.join()"></a>path.join()</h3><p>使用特定于平台的分隔符作为定界符将所有给定的 <code>path</code> 片段连接在一起，然后规范化生成的路径。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">path.join(<span class="string">'/foo'</span>, <span class="string">'bar'</span>, <span class="string">'baz/asdf'</span>, <span class="string">'quux'</span>, <span class="string">'..'</span>);</span><br><span class="line"><span class="comment">// 返回: '/foo/bar/baz/asdf'</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="path-resolve"><a href="#path-resolve" class="headerlink" title="path.resolve()"></a>path.resolve()</h3><p>若字符以 / 开头，不会拼接到前面的路径；若以 ../ 开头，拼接前面的路径，且不含最后一节路径；若以 ./ 开头 或者没有符号 则拼接前面路径；</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">path.resolve(<span class="string">'/foo/bar'</span>, <span class="string">'./baz'</span>);</span><br><span class="line"><span class="comment">// 返回: '/foo/bar/baz'</span></span><br><span class="line"></span><br><span class="line">path.resolve(<span class="string">'/foo/bar'</span>, <span class="string">'/tmp/file/'</span>);</span><br><span class="line"><span class="comment">// 返回: '/tmp/file'</span></span><br><span class="line"></span><br><span class="line">path.resolve(<span class="string">'wwwroot'</span>, <span class="string">'static_files/png/'</span>, <span class="string">'../gif/image.gif'</span>);</span><br><span class="line"><span class="comment">// 如果当前工作目录是 /home/myself/node，</span></span><br><span class="line"><span class="comment">// 则返回 '/home/myself/node/wwwroot/static_files/gif/image.gif'</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="path-join-和path-resolve-区别"><a href="#path-join-和path-resolve-区别" class="headerlink" title="path.join()和path.resolve()区别"></a>path.join()和path.resolve()区别</h3><p>就是两个路径的拼接的API，废话不多说直接上代码,</p>
 <p>示例E:\web\test\abc.js里面写：</p>
 <p>path.join(__dirname,’/static/js’) 输出 E:\web\test\static\js</p>
@@ -458,7 +461,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">175</span>
+          <span class="site-state-item-count">176</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -581,7 +584,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24:11</span>
+    <span title="站点阅读时长">24:42</span>
 </div>
 
 <!--

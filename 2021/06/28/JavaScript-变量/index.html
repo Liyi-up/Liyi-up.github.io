@@ -322,28 +322,33 @@
         <h2 id="变量概述"><a href="#变量概述" class="headerlink" title="变量概述"></a>变量概述</h2><h3 id="什么是变量"><a href="#什么是变量" class="headerlink" title="什么是变量"></a>什么是变量</h3><p>白话：变量就是一个装东西的盒子</p>
 <p>通俗：变量是用于存放数据的<strong>容器</strong>。我们通过 <strong>变量名</strong> 获取数据，甚至数据可以修改</p>
 <a id="more"></a>
+
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/06/28/RN2LDA.png" alt="什么是变量"></p>
 <h3 id="变量在内存中的存储"><a href="#变量在内存中的存储" class="headerlink" title="变量在内存中的存储"></a>变量在内存中的存储</h3><p>本质：变量是程序在内存中申请的一块用来存放数据的空间，类似我们酒店的房间，一个房间就可以看作一个变量</p>
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/06/28/RNRGUx.png" alt="变量"></p>
 <h2 id="变量的使用"><a href="#变量的使用" class="headerlink" title="变量的使用"></a>变量的使用</h2><p>变量在使用时分为两步：1.声明变量 2.赋值</p>
 <h3 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明变量</span></span><br><span class="line"><span class="keyword">var</span> age; <span class="comment">//声明一个名称age的变量</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><strong>var</strong> 是一个 JS关键字，用来声明变量（variable变量的意思）。使用该关键字声明变量后，计算机会自动为变量分配内存空间，不需要程序员管</li>
 <li>age是程序员定义的变量名，我们要通过变量名来访问内存中分配的空间。</li>
 </ul>
 <h3 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">age =<span class="number">10</span>; <span class="comment">//给age变量赋值为10</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><strong>=</strong> 用来吧右边的值赋给左边的变量空间中，此处代表赋值的意思</li>
 <li>变量值是程序猿保存到变量空间的值</li>
 </ul>
 <h3 id="变量的初始化"><a href="#变量的初始化" class="headerlink" title="变量的初始化"></a>变量的初始化</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">19</span>; <span class="comment">// 声明变量的同时给其赋值19</span></span><br></pre></td></tr></table></figure>
+
 <p>声明一个变量并赋值，我们称为<strong>变量的初始化</strong></p>
 <h2 id="变量的语法扩展"><a href="#变量的语法扩展" class="headerlink" title="变量的语法扩展"></a>变量的语法扩展</h2><h3 id="更新变量"><a href="#更新变量" class="headerlink" title="更新变量"></a>更新变量</h3><p>一个变量被重新赋值后，它须有的值就会被覆盖，变量值将以最后后一次赋的值为准</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age =<span class="number">10</span>;</span><br><span class="line">age = <span class="number">81</span>;   <span class="comment">// 最后的结果就是81 因为81被覆盖掉了</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="同时声明多个变量"><a href="#同时声明多个变量" class="headerlink" title="同时声明多个变量"></a>同时声明多个变量</h3><p>同时声明多个变量时，共用一个var ，多个变量名之间用英文逗号隔开</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">19</span>, address= <span class="string">'湖南'</span>, sex=<span class="string">'男'</span></span><br></pre></td></tr></table></figure>
-<h3 id="声明变量的特殊情况"><a href="#声明变量的特殊情况" class="headerlink" title="声明变量的特殊情况"></a>声明变量的特殊情况</h3><div class="table-container">
-<table>
+
+<h3 id="声明变量的特殊情况"><a href="#声明变量的特殊情况" class="headerlink" title="声明变量的特殊情况"></a>声明变量的特殊情况</h3><table>
 <thead>
 <tr>
 <th>情况</th>
@@ -351,8 +356,7 @@
 <th>结果</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>var age; console.log(age);</td>
 <td>只声明 不赋值</td>
 <td>undefined</td>
@@ -367,32 +371,32 @@
 <td>不声明 只赋值</td>
 <td>10</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h2 id="变量命名规范"><a href="#变量命名规范" class="headerlink" title="变量命名规范"></a>变量命名规范</h2><ul>
 <li>由字母(A-Za-z)、数字(0-9)、下划线(_)、美元符号($)组成，如：usrAge、num01、_name</li>
 <li>严格区分大小写。var app; 和 var App；是两个变量</li>
 <li>不能以数字开头。18age 是错误的</li>
 <li>不能是关键字、保留字、如：var、for、while</li>
-<li>变量名必须有意义、MMD BBD nl —&gt; age</li>
+<li>变量名必须有意义、MMD BBD nl –&gt; age</li>
 <li>遵守驼峰命名。首字母小写，后面的单词的首字母都要大写, myFirstName</li>
 </ul>
 <h3 id="小练习：变量交换值"><a href="#小练习：变量交换值" class="headerlink" title="小练习：变量交换值"></a>小练习：变量交换值</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a =<span class="number">18</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">20</span>;</span><br><span class="line"><span class="comment">// 中间变量</span></span><br><span class="line"><span class="keyword">var</span> c;</span><br><span class="line">c=b;</span><br><span class="line">b=a;</span><br><span class="line">a=c;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"a="</span> + a);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"b="</span> + b);</span><br></pre></td></tr></table></figure>
+
 <h2 id="数据类型简介"><a href="#数据类型简介" class="headerlink" title="数据类型简介"></a>数据类型简介</h2><h3 id="为什么需要数据类型"><a href="#为什么需要数据类型" class="headerlink" title="为什么需要数据类型"></a>为什么需要数据类型</h3><p>在计算机中，不同的数据类型占用的存储空间是不同的，为了便于把数据分成所需内存大小不同的数据，充分利用存储空间，于是定义了不同数据类型。</p>
 <p>简单来说，数据类型就是数据的类别型号，比如姓名”张三”,年龄18，这些数据类类型是不一样的。</p>
 <h3 id="变量的数据类型"><a href="#变量的数据类型" class="headerlink" title="变量的数据类型"></a>变量的数据类型</h3><p>变量是用来存储值的所在处，它们有名字和数据类型。变量的数据类型决定了如何代表这些值的位存储到计算机的内存中<strong>，JavaScript是一种弱类型或者动态语言</strong>。这意味着不用提前声明变量类型，在程序运行中，类型会被自动确定。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age =<span class="number">10</span>;    <span class="comment">//这是一个数字型</span></span><br><span class="line"><span class="keyword">var</span> areYouOk = <span class="string">'是的'</span>; <span class="comment">// 这是一个字符串</span></span><br></pre></td></tr></table></figure>
+
 <p>在代码运行时，变量的数据类型由JS引擎 <strong>根据 = 右边变量值的数据类型来判断的</strong>。运行完毕后，变量就确定了数据类型。</p>
 <p><strong>JavaScript拥有动态类型，同时也意为着相同的变量可用作不同的类型：</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">6</span>;        <span class="comment">//x为数字</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="string">"Bill"</span>;   <span class="comment">//x为字符串</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="数据类型的分类"><a href="#数据类型的分类" class="headerlink" title="数据类型的分类"></a>数据类型的分类</h3><p>JS把数据类型分为两类：</p>
 <ul>
 <li>简单数据类型 （Number,String,Boolean,Undefined,Null）</li>
 <li>复杂数据类型 （objec</li>
 </ul>
 <h2 id="简单数据类型"><a href="#简单数据类型" class="headerlink" title="简单数据类型"></a>简单数据类型</h2><h3 id="简单数据类型（基本数据类型）"><a href="#简单数据类型（基本数据类型）" class="headerlink" title="简单数据类型（基本数据类型）"></a>简单数据类型（基本数据类型）</h3><p>JavaScript 中的简单数据类型及其说明如下：</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -401,8 +405,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Number</td>
 <td>数字型，包含了 整数值和浮点性值，如21、0.21</td>
 <td>0</td>
@@ -427,21 +430,23 @@
 <td>var a =null；声明了变量 a 为空值</td>
 <td>null</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h3 id="数字型-Numb"><a href="#数字型-Numb" class="headerlink" title="数字型 Numb"></a>数字型 Numb</h3><p>JavaScript 数字类型既可以用来保存整数值，也可以保存小数(浮点数）。 </p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">21</span>; <span class="comment">// 整数</span></span><br><span class="line"><span class="keyword">var</span> Age = <span class="number">21.3747</span>; <span class="comment">// 小数</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="数字型进制"><a href="#数字型进制" class="headerlink" title="数字型进制"></a>数字型进制</h4><p>最常见的进制有二进制、八进制、十进制、十六进制</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 1.八进制数字序列范围：0~7</span></span><br><span class="line"><span class="keyword">var</span> num1 = <span class="number">07</span>; <span class="comment">// 对应十进制的7</span></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">019</span>; <span class="comment">// 对应十进制的19</span></span><br><span class="line"><span class="keyword">var</span> num3 = <span class="number">08</span>; <span class="comment">// 对应十进制的8</span></span><br><span class="line"> <span class="comment">// 2.十六进制数字序列范围：0~9以及A~F</span></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">0xA</span>;</span><br></pre></td></tr></table></figure>
+
 <p><strong>在JS中八进制前面加0，十六进制前面加 0</strong></p>
 <h4 id="数字型范围"><a href="#数字型范围" class="headerlink" title="数字型范围"></a>数字型范围</h4><p>JavaScript中数值的最大和最小值</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="built_in">Number</span>.MAX_VALUE); <span class="comment">// 1.7976931348623157e+308</span></span><br><span class="line">alert(<span class="built_in">Number</span>.MIN_VALUE); <span class="comment">// 5e-324</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>最大值：Number.MAX_VALUE，这个值为： 1.7976931348623157e+308</li>
 <li>最小值：Number.MIN_VALUE，这个值为：5e-32</li>
 </ul>
 <h4 id="数字型三个特殊值"><a href="#数字型三个特殊值" class="headerlink" title="数字型三个特殊值"></a>数字型三个特殊值</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="literal">Infinity</span>); <span class="comment">// Infinity</span></span><br><span class="line">alert(-<span class="literal">Infinity</span>); <span class="comment">// -Infinity</span></span><br><span class="line">alert(<span class="literal">NaN</span>); <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>Infinity ，代表无穷大，大于任何数值</li>
 <li>-Infinity ，代表无穷小，小于任何数值</li>
@@ -450,13 +455,15 @@
 <h4 id="isNaN"><a href="#isNaN" class="headerlink" title="isNaN()"></a>isNaN()</h4><p>用来判断一个变量是否为非数字的类型，返回 true 或者 fals</p>
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/06/28/RN7EVg.png" alt="isNaN"></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> usrAge = <span class="number">21</span>;</span><br><span class="line"><span class="keyword">var</span> isOk = <span class="built_in">isNaN</span>(userAge);</span><br><span class="line"><span class="built_in">console</span>.log(isNum); <span class="comment">// false ，21 不是一个非数字</span></span><br><span class="line"><span class="keyword">var</span> usrName = <span class="string">"andy"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isNaN</span>(userName)); <span class="comment">// true ，"andy"是一个非数字</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="字符串型-String"><a href="#字符串型-String" class="headerlink" title="字符串型 String"></a>字符串型 String</h3><p>字符串型可以是引号中的任意文本，其语法为 双引号 “” 和 单引号’’</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> strMsg = <span class="string">"我爱北京天安门~"</span>; <span class="comment">// 使用双引号表示字符串</span></span><br><span class="line"><span class="keyword">var</span> strMsg2 = <span class="string">'我爱吃猪蹄~'</span>; <span class="comment">// 使用单引号表示字符串</span></span><br><span class="line"><span class="comment">// 常见错误</span></span><br><span class="line"><span class="keyword">var</span> strMsg3 = 我爱大肘子; <span class="comment">// 报错，没使用引号，会被认为是js代码，但js没有这些语法</span></span><br></pre></td></tr></table></figure>
+
 <p>因为 HTML 标签里面的属性使用的是双引号，<strong>JS 这里我们更推荐使用单引号</strong></p>
 <h4 id="字符串引号嵌套"><a href="#字符串引号嵌套" class="headerlink" title="字符串引号嵌套"></a>字符串引号嵌套</h4><p>JS 可以用<strong>单引号嵌套双引号</strong> ，或者用<strong>双引号嵌套单引号 (外双内单，外单内双)</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> strMsg = <span class="string">'我是"高帅富"程序猿'</span>; <span class="comment">// 可以用''包含""</span></span><br><span class="line"><span class="keyword">var</span> strMsg2 = <span class="string">"我是'高帅富'程序猿"</span>; <span class="comment">// 也可以用"" 包含'' // 常见错误</span></span><br><span class="line"><span class="keyword">var</span> badQuotes = <span class="string">'What on earth?"; // 报错，不能 单双引号搭</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="字符串转义符"><a href="#字符串转义符" class="headerlink" title="字符串转义符"></a>字符串转义符</h4><p>类似HTML里面的特殊字符，字符串中也有特殊字符，我们称之为转义符。 转义符都是 \ 开头的，常用的转义符及其说明如下</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -464,8 +471,7 @@
 <th>解释说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>\n</td>
 <td>换行符，n 是 newline 的意思</td>
 </tr>
@@ -489,18 +495,19 @@
 <td>\b</td>
 <td>空格 ，b 是 blank 的意</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h4 id="字符串长度"><a href="#字符串长度" class="headerlink" title="字符串长度"></a>字符串长度</h4><p>字符串是由若干字符组成的，这些字符的数量就是字符串的长度。通过字符串的 length 属性可以获取整个字符 串的长度。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> strMsg = <span class="string">"我是帅气多金的程序猿！"</span>;</span><br><span class="line">alert(strMsg.length); <span class="comment">// 显示 1</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h4><ul>
 <li>多个字符串之间可以使用 + 进行拼接，其拼接方式为 <strong>字符串 + 任何类型 = 拼接之后的新字</strong></li>
 <li>拼接前会把与字符串相加的任何类型转成字符串，再拼接成一个新的字符串</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.1 字符串 "相加" alert('hello' + ' ' + 'world'); // hello world</span></span><br><span class="line"><span class="comment">//1.2 数值字符串 "相加" alert('100' + '100'); // 100100</span></span><br><span class="line"><span class="comment">//1.3 数值字符串 + 数值</span></span><br><span class="line">alert(<span class="string">'11'</span> + <span class="number">12</span>); <span class="comment">// 1112</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>+ 号总结口诀：数值相加 ，字符相</strong></p>
 <h4 id="字符串拼接加强"><a href="#字符串拼接加强" class="headerlink" title="字符串拼接加强"></a>字符串拼接加强</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'张三'</span> + <span class="number">18</span>); <span class="comment">// 只要有字符就会相连</span></span><br><span class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</span><br><span class="line"><span class="comment">// console.log('pink老师age岁啦'); // 这样不行哦</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'张三'</span> + age); <span class="comment">// 张三18</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'张三'</span> + age + <span class="string">'岁啦'</span>); <span class="comment">// 张三18岁啦</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>我们经常会将字符串和变量来拼接，因为变量可以很方便地修改里面的值</li>
 <li>变量是不能添加引号的，因为加引号的变量会变成字符串</li>
@@ -508,14 +515,17 @@
 </ul>
 <h3 id="布尔型-Boolean"><a href="#布尔型-Boolean" class="headerlink" title="布尔型 Boolean"></a>布尔型 Boolean</h3><p>布尔类型有两个值：true 和 false ，其中 true 表示真（对），而 false 表示假（错）。 布尔型和数字型相加的时候， true 的值为 1 ，false 的值为 0。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span> + <span class="number">1</span>); <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span> + <span class="number">1</span>); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="Undefined-和-Null"><a href="#Undefined-和-Null" class="headerlink" title="Undefined 和 Null"></a>Undefined 和 Null</h3><p>一个声明后没有被赋值的变量会有一个默认值 undefined ( 如果进行相连或者相加时，注意结果）</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> variable;</span><br><span class="line"><span class="built_in">console</span>.log(variable); <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'你好'</span> + variable); <span class="comment">// 你好undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">11</span> + variable); <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span> + variable); <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+
 <p>一个声明变量给 null 值，里面存的值为空（学习对象时，我们继续研究null)</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vari = <span class="literal">null</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'你好'</span> + vari); <span class="comment">// 你好null</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">11</span> + vari); <span class="comment">// 11</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span> + vari); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="获取变量数据类型"><a href="#获取变量数据类型" class="headerlink" title="获取变量数据类型"></a>获取变量数据类型</h2><h3 id="获取检测变量的数据类型"><a href="#获取检测变量的数据类型" class="headerlink" title="获取检测变量的数据类型"></a>获取检测变量的数据类型</h3><p>typeof 可用来获取检测变量的数据类型</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">18</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> num) <span class="comment">// 结果 num</span></span><br></pre></td></tr></table></figure>
+
 <p>不同类型的返回值</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -524,8 +534,7 @@
 <th>结果</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>String</td>
 <td>typeof ”小白“</td>
 <td>“string”</td>
@@ -550,9 +559,7 @@
 <td>typeof null</td>
 <td>“object”</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h3 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h3><p>字面量是在源代码中一个固定值的表示法，通俗来说，就是字面量表示如何表达这个值。</p>
 <ul>
 <li>数字字面量：8, 9, 10</li>
@@ -566,8 +573,7 @@
 <li>转换为数字型</li>
 <li>转换为布尔型</li>
 </ul>
-<h3 id="转换为字符"><a href="#转换为字符" class="headerlink" title="转换为字符"></a>转换为字符</h3><div class="table-container">
-<table>
+<h3 id="转换为字符"><a href="#转换为字符" class="headerlink" title="转换为字符"></a>转换为字符</h3><table>
 <thead>
 <tr>
 <th>方式</th>
@@ -575,8 +581,7 @@
 <th>案例</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>toString()</td>
 <td>转成字符串</td>
 <td>var num = 1; alert(num.toString());</td>
@@ -591,15 +596,12 @@
 <td>和字符串拼接的结果就是字符串</td>
 <td>var num = 1; alert(num+”我是字符串“);</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <ul>
 <li>toString() 和 String() 使用方式不一样。</li>
 <li>三种转换方式，我们更喜欢用第三种加号拼接字符串转换方式， 这一种方式也称之为隐式转换</li>
 </ul>
-<h3 id="转换为数字型（重点）"><a href="#转换为数字型（重点）" class="headerlink" title="转换为数字型（重点）"></a>转换为数字型（重点）</h3><div class="table-container">
-<table>
+<h3 id="转换为数字型（重点）"><a href="#转换为数字型（重点）" class="headerlink" title="转换为数字型（重点）"></a>转换为数字型（重点）</h3><table>
 <thead>
 <tr>
 <th>方式</th>
@@ -607,8 +609,7 @@
 <th>案例</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>parseInt(string)函数</td>
 <td>将string类型转成整数数值型</td>
 <td>paresInt(‘78’)</td>
@@ -628,15 +629,12 @@
 <td>利用算术运算符转换为数值型</td>
 <td>‘12’ - 0</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <ul>
 <li>注意 parseInt 和 parseFloat <strong>单词的大小写</strong>，这2个是重点</li>
 <li>隐式转换是我们在进行算数运算的时候，JS 自动转换了数据类型</li>
 </ul>
-<h3 id="转换为布尔型"><a href="#转换为布尔型" class="headerlink" title="转换为布尔型"></a>转换为布尔型</h3><div class="table-container">
-<table>
+<h3 id="转换为布尔型"><a href="#转换为布尔型" class="headerlink" title="转换为布尔型"></a>转换为布尔型</h3><table>
 <thead>
 <tr>
 <th>方式</th>
@@ -644,20 +642,18 @@
 <th>案例</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Boolean()函数</td>
 <td>其他类型转换成布尔值</td>
 <td>Boolean(‘true’)</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <ul>
 <li>代表空、否定的值会被转换为 false ，如 ‘’、0、NaN、null、undefi</li>
 <li>其余值都会被转换为 true</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(<span class="string">''</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(<span class="number">0</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(<span class="literal">NaN</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(<span class="literal">null</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(<span class="literal">undefined</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(<span class="string">'小白'</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(<span class="number">12</span>)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h2><h3 id="解释型语言和编译型语言"><a href="#解释型语言和编译型语言" class="headerlink" title="解释型语言和编译型语言"></a>解释型语言和编译型语言</h3><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>计算机不能直接理解任何除机器语言以外的语言，所以必须要把程序员所写的程序语言翻译成机器语言才能执行 程序。程序语言翻译成机器语言的工具，被称为翻译器。</p>
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/06/28/RUp1Ld.png" alt="编译器"></p>
 <ul>
@@ -784,7 +780,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">175</span>
+          <span class="site-state-item-count">176</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -907,7 +903,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24:11</span>
+    <span title="站点阅读时长">24:42</span>
 </div>
 
 <!--

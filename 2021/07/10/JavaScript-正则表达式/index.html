@@ -50,12 +50,12 @@
   };
 </script>
 
-  <meta name="description" content="正则表达式概述什么是正则表达式正则表达式（Regular Expression）是用于匹配字符串中字符组合的模式。在JavaScript中，正则表达式也是对象。  正则表达式用来检索】替换那些符号某个模式（规则）的文本，例如验证表单：用户表单只能输入英文字母、数字或者下划线。昵称输入框中可以输入中文（匹配）。此外，正则表达式还常用于过滤掉页面内容中的一些敏感词（替换）。或从字符串中获取我们想要的特">
+  <meta name="description" content="正则表达式概述什么是正则表达式正则表达式（Regular Expression）是用于匹配字符串中字符组合的模式。在JavaScript中，正则表达式也是对象。 正则表达式用来检索】替换那些符号某个模式（规则）的文本，例如验证表单：用户表单只能输入英文字母、数字或者下划线。昵称输入框中可以输入中文（匹配）。此外，正则表达式还常用于过滤掉页面内容中的一些敏感词（替换）。或从字符串中获取我们想要的特定">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript-正则表达式">
 <meta property="og:url" content="https://liyi-up.top/2021/07/10/JavaScript-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Liyi&#39;s personal blog">
-<meta property="og:description" content="正则表达式概述什么是正则表达式正则表达式（Regular Expression）是用于匹配字符串中字符组合的模式。在JavaScript中，正则表达式也是对象。  正则表达式用来检索】替换那些符号某个模式（规则）的文本，例如验证表单：用户表单只能输入英文字母、数字或者下划线。昵称输入框中可以输入中文（匹配）。此外，正则表达式还常用于过滤掉页面内容中的一些敏感词（替换）。或从字符串中获取我们想要的特">
+<meta property="og:description" content="正则表达式概述什么是正则表达式正则表达式（Regular Expression）是用于匹配字符串中字符组合的模式。在JavaScript中，正则表达式也是对象。 正则表达式用来检索】替换那些符号某个模式（规则）的文本，例如验证表单：用户表单只能输入英文字母、数字或者下划线。昵称输入框中可以输入中文（匹配）。此外，正则表达式还常用于过滤掉页面内容中的一些敏感词（替换）。或从字符串中获取我们想要的特定">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-10T08:24:21.000Z">
 <meta property="article:modified_time" content="2021-10-27T07:08:24.000Z">
@@ -301,7 +301,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.3k</span>
+              <span>5.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -320,85 +320,65 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="正则表达式概述"><a href="#正则表达式概述" class="headerlink" title="正则表达式概述"></a>正则表达式概述</h2><h3 id="什么是正则表达式"><a href="#什么是正则表达式" class="headerlink" title="什么是正则表达式"></a>什么是正则表达式</h3><font color="red">正则表达式（Regular Expression）</font>是用于匹配字符串中字符组合的模式。在JavaScript中，正则表达式也是对象。
-
-正则表达式用来检索】替换那些符号某个模式（<font color="red">规则</font>）的文本，例如验证表单：用户表单只能输入英文字母、数字或者下划线。昵称输入框中可以输入中文（<font color="red">匹配</font>）。此外，正则表达式还常用于过滤掉页面内容中的一些敏感词（<font color="red">替换</font>）。或从字符串中获取我们想要的特定部分（<font color="red">提取</font>）等。
-
-其他语言也会使用正则表达式，在目前JavaScript中常用正则表达式作为表单验证
-
+        <h2 id="正则表达式概述"><a href="#正则表达式概述" class="headerlink" title="正则表达式概述"></a>正则表达式概述</h2><h3 id="什么是正则表达式"><a href="#什么是正则表达式" class="headerlink" title="什么是正则表达式"></a>什么是正则表达式</h3><p><font color="red">正则表达式（Regular Expression）</font>是用于匹配字符串中字符组合的模式。在JavaScript中，正则表达式也是对象。</p>
+<p>正则表达式用来检索】替换那些符号某个模式（<font color="red">规则</font>）的文本，例如验证表单：用户表单只能输入英文字母、数字或者下划线。昵称输入框中可以输入中文（<font color="red">匹配</font>）。此外，正则表达式还常用于过滤掉页面内容中的一些敏感词（<font color="red">替换</font>）。或从字符串中获取我们想要的特定部分（<font color="red">提取</font>）等。</p>
+<p>其他语言也会使用正则表达式，在目前JavaScript中常用正则表达式作为表单验证</p>
 <a id="more"></a>
 
-### 正则表达式的特点
-
-1.灵活性、逻辑性和功能性非常强
-
-2.可以迅速地用极简单的方式达到字符串的复杂控制
-
-3.对于刚接触的人来说，比较晦涩难懂。比如：`^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$`
-
-4.实际开发，一般都是直接复制写好的正则表达式，但是要求会使用正则表达式并且更具实际情况修改正则表达式
-
-。比如用户名：`/^[a-z0-9_-][3,16]$/`
-
-## 正则表达式在 JavaScript 中的使用
-
-### 创建正则表达式
-
-在 JavaScript中，可以通过两种方式创建一个正则表达式。
-
-1.通过调用 `RegExp `对象的构造函数创建
-
+<h3 id="正则表达式的特点"><a href="#正则表达式的特点" class="headerlink" title="正则表达式的特点"></a>正则表达式的特点</h3><p>1.灵活性、逻辑性和功能性非常强</p>
+<p>2.可以迅速地用极简单的方式达到字符串的复杂控制</p>
+<p>3.对于刚接触的人来说，比较晦涩难懂。比如：<code>^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$</code></p>
+<p>4.实际开发，一般都是直接复制写好的正则表达式，但是要求会使用正则表达式并且更具实际情况修改正则表达式</p>
+<p>。比如用户名：<code>/^[a-z0-9_-][3,16]$/</code></p>
+<h2 id="正则表达式在-JavaScript-中的使用"><a href="#正则表达式在-JavaScript-中的使用" class="headerlink" title="正则表达式在 JavaScript 中的使用"></a>正则表达式在 JavaScript 中的使用</h2><h3 id="创建正则表达式"><a href="#创建正则表达式" class="headerlink" title="创建正则表达式"></a>创建正则表达式</h3><p>在 JavaScript中，可以通过两种方式创建一个正则表达式。</p>
+<p>1.通过调用 <code>RegExp</code>对象的构造函数创建</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> 变量名 = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="regexp">/表达式/</span>);</span><br></pre></td></tr></table></figure>
 
-2.利用字面量创建正则表达式
-
+<p>2.利用字面量创建正则表达式</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 变量名 = <span class="regexp">/表达式/</span>;</span><br></pre></td></tr></table></figure>
 
-### 测试正则表达式 test
-
-`test()` 正则对象方法，用于检测字符串是否符合该规则，该对象会返回 true 或 false，其参数是测试字符串。
-
+<h3 id="测试正则表达式-test"><a href="#测试正则表达式-test" class="headerlink" title="测试正则表达式 test"></a>测试正则表达式 test</h3><p><code>test()</code> 正则对象方法，用于检测字符串是否符合该规则，该对象会返回 true 或 false，其参数是测试字符串。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">regexObj.test(str)</span><br></pre></td></tr></table></figure>
 
-1.`regxObj` 是写的正则表达式
-
-2.`str` 我们要测试的文本
-
-3.就是检测 `str `文本是符合我们写的正则表达式规范
-
-### 正则表达式的组成
-
-一个正则表达式<font color="red">可以由简单的字符构成，</font>比如/abc/,<font color="red">也可以是简单和特殊字符组合</font>,比如/ab*c/.其中特殊字符也被称为<font color="red">元字符</font>，在正则表达式中具有<font color="red">特殊</font>意义的专用<font color="red">符号</font>，比如`^、$、+`等
-
-特殊字符非常多，可以参考：
-
-- MDN：[正则表达式 - JavaScript | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
-- JQuery手册：正则表达式部分
-- 正则测试工具：http::/tool.oschina.net/regex
-
-#### 边界符
-
-正则表达式中的边界符（位置符号）用来提示<font color="red">提示字符所处的位置</font>，主要有两个字符。
-
-| 边界符 | 说明                           |
-| ------ | ------------------------------ |
-| ^      | 表示匹配行首的文本（以谁开始） |
-| $      | 表示匹配行尾的文本（以谁结束） |
-
-如果^ 和 $ 在一起，，表示必须是精确匹配。
-
-#### 字符类
-
-字符类表示有一些列字符可以供选择，只要匹配其中一个就可以了，<font color="red">所有可供选择的字符都放在方括号内</font>
-
+<p>1.<code>regxObj</code> 是写的正则表达式</p>
+<p>2.<code>str</code> 我们要测试的文本</p>
+<p>3.就是检测 <code>str</code>文本是符合我们写的正则表达式规范</p>
+<h3 id="正则表达式的组成"><a href="#正则表达式的组成" class="headerlink" title="正则表达式的组成"></a>正则表达式的组成</h3><p>一个正则表达式<font color="red">可以由简单的字符构成，</font>比如/abc/,<font color="red">也可以是简单和特殊字符组合</font>,比如/ab*c/.其中特殊字符也被称为<font color="red">元字符</font>，在正则表达式中具有<font color="red">特殊</font>意义的专用<font color="red">符号</font>，比如<code>^、$、+</code>等</p>
+<p>特殊字符非常多，可以参考：</p>
+<ul>
+<li>MDN：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank" rel="noopener">正则表达式 - JavaScript | MDN (mozilla.org)</a></li>
+<li>JQuery手册：正则表达式部分</li>
+<li>正则测试工具：http::/tool.oschina.net/regex</li>
+</ul>
+<h4 id="边界符"><a href="#边界符" class="headerlink" title="边界符"></a>边界符</h4><p>正则表达式中的边界符（位置符号）用来提示<font color="red">提示字符所处的位置</font>，主要有两个字符。</p>
+<table>
+<thead>
+<tr>
+<th>边界符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>^</td>
+<td>表示匹配行首的文本（以谁开始）</td>
+</tr>
+<tr>
+<td>$</td>
+<td>表示匹配行尾的文本（以谁结束）</td>
+</tr>
+</tbody></table>
+<p>如果^ 和 $ 在一起，，表示必须是精确匹配。</p>
+<h4 id="字符类"><a href="#字符类" class="headerlink" title="字符类"></a>字符类</h4><p>字符类表示有一些列字符可以供选择，只要匹配其中一个就可以了，<font color="red">所有可供选择的字符都放在方括号内</font></p>
 <p>1.[-] 放括号内部范围 范围符 -</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字符类：[] 表示有一些列字符可供选择，只要匹配其中一个就可以了</span></span><br><span class="line"><span class="keyword">var</span> rg = <span class="regexp">/[abc]/</span>; <span class="comment">// 只要包含有 a 或者 b 或者c 都返回true</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">'a132'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(rg.test(str)); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(rg.test(<span class="string">'color'</span>)); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(rg.test(<span class="string">'red'</span>)); <span class="comment">//false</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^[abc]$/</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'---------------'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">'aa'</span>)); <span class="comment">//false</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">'a'</span>)); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">'b'</span>)); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">'c'</span>)); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">'abc'</span>)); <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 输入26个小写字母都是对</span></span><br><span class="line"><span class="keyword">let</span> reg1 = <span class="regexp">/[a-z]/</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg1.test(<span class="string">'adssaff'</span>)); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(reg1.test(<span class="string">'a'</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(reg1.test(<span class="string">'1'</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(reg1.test(<span class="string">'A'</span>)); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
 <p>2.字符组合</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/^[a-z0<span class="number">-9</span>]$/.test(<span class="string">'a'</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<p>3.<sup><a href="#fn_" id="reffn_"></a></sup> 方括号内部 取反符^</p>
+
+<p>3.[^] 方括号内部 取反符^</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/^[^a-z0<span class="number">-9</span>]$/.test(<span class="string">'a'</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="量词符"><a href="#量词符" class="headerlink" title="量词符"></a>量词符</h4><p>量词符用来<font color="red">设定某个模式出现的次数</font></p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -406,8 +386,7 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>*</td>
 <td>重复零次或更多次</td>
 </tr>
@@ -431,10 +410,9 @@
 <td>{n,m}</td>
 <td>重复n到m次</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 量词符: 用来设定某个模式出现的次数</span></span><br><span class="line"><span class="comment">// 简单理解：就是让下面的a 这个字符重复出现多少次</span></span><br><span class="line"><span class="comment">// let reg = /^a$/;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// * 相当于 &gt;=0 可以出现0次或者更多次</span></span><br><span class="line"><span class="comment">// let reg = /^a*$/;</span></span><br><span class="line"><span class="comment">// console.log(reg.test('')); // true</span></span><br><span class="line"><span class="comment">// console.log(reg.test('a')); // true</span></span><br><span class="line"><span class="comment">// console.log(reg.test('aaa')); // true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// - 相当于&gt;=1 可以出现1次或者更多次</span></span><br><span class="line"><span class="comment">// let reg = /^a+$/;</span></span><br><span class="line"><span class="comment">// console.log(reg.test('')); // false</span></span><br><span class="line"><span class="comment">// console.log(reg.test('a')); // true</span></span><br><span class="line"><span class="comment">// console.log(reg.test('aaa')); // true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ？ 相当于 1 || 0</span></span><br><span class="line"><span class="comment">// let reg = /^a?$/;</span></span><br><span class="line"><span class="comment">// console.log(reg.test('')); // true</span></span><br><span class="line"><span class="comment">// console.log(reg.test('a')); // true</span></span><br><span class="line"><span class="comment">// console.log(reg.test('aaa')); // false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//&#123;3&#125; 只能重复3次</span></span><br><span class="line"><span class="comment">// let reg = /^a&#123;3&#125;$/;</span></span><br><span class="line"><span class="comment">// console.log(reg.test('')); // false</span></span><br><span class="line"><span class="comment">// console.log(reg.test('a')); // false</span></span><br><span class="line"><span class="comment">// console.log(reg.test('aaa')); // true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//&#123;3,&#125; &gt;=3次</span></span><br><span class="line"><span class="comment">// let reg = /^a&#123;3,&#125;$/;</span></span><br><span class="line"><span class="comment">// console.log(reg.test('')); // false</span></span><br><span class="line"><span class="comment">// console.log(reg.test('a')); // false</span></span><br><span class="line"><span class="comment">// console.log(reg.test('aaa')); // true</span></span><br><span class="line"><span class="comment">// console.log(reg.test('aaaa')); // true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//&#123;3,16&#125; &gt;=3 &amp;&amp; &lt;=16</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^a&#123;3,&#125;$/</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">''</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">'a'</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">'aaa'</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">'aaaa'</span>)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="案例：用户验证"><a href="#案例：用户验证" class="headerlink" title="案例：用户验证"></a>案例：用户验证</h3><h4 id="功能需求："><a href="#功能需求：" class="headerlink" title="功能需求："></a>功能需求：</h4><p>1.如果用户输入合法，则后面提示信息：用户名合法，并且颜色为绿色</p>
 <p>2.如果用户输入不合法，则后面提示信息：用户名不合法，并且为红色</p>
 <h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><p>1.用户名只能为英文字母，数字，下划线或者短横线组成，并且用户名产长度为6~16位</p>
@@ -443,12 +421,12 @@
 <p>4.如果符合正则表达式让后面的span标签加right类</p>
 <p>5.如果不符合正则规范，则后面的span标签加wrong类</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>正则表达式-用户名验证<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="selector-class">.right</span> &#123;</span></span><br><span class="line">            color: green;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-class">.wrong</span> &#123;</span></span><br><span class="line">            color: red;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"name"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"message"</span>&gt;</span>请输入用户名<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> name = <span class="built_in">document</span>.querySelector(<span class="string">'input'</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> msg = <span class="built_in">document</span>.querySelector(<span class="string">'span'</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> reg = <span class="regexp">/^[a-zA-Z0-9_-]&#123;6,16&#125;$/</span>;  <span class="comment">//用户看可以输入英文字母 数字 下划线 短横线</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// &#123;6,11&#125; 中间不能包含空格</span></span></span><br><span class="line"><span class="actionscript">    name.addEventListener(<span class="string">'blur'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">if</span> (reg.test(<span class="keyword">this</span>.value)) &#123;</span></span><br><span class="line"><span class="actionscript">            msg.innerHTML = <span class="string">'用户名合法'</span>;</span></span><br><span class="line"><span class="actionscript">            msg.classList.add(<span class="string">'right'</span>);</span></span><br><span class="line"><span class="actionscript">        &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="actionscript">            msg.innerHTML = <span class="string">'用户名不合法'</span>;</span></span><br><span class="line"><span class="actionscript">            msg.classList.add(<span class="string">'wrong'</span>);</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line"><span class="actionscript">    name.addEventListener(<span class="string">'focus'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        msg.innerHTML = <span class="string">'请输入用户名'</span>;</span></span><br><span class="line"><span class="actionscript">        msg.classList.remove(<span class="string">'right'</span>);</span></span><br><span class="line"><span class="actionscript">        msg.classList.remove(<span class="string">'wrong'</span>);</span></span><br><span class="line">    &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="括号总结"><a href="#括号总结" class="headerlink" title="括号总结"></a>括号总结</h3><p>1.大括号 量词符 里面表示重复次数</p>
 <p>2.中括号 字符集合 匹配括号内中的任意字符</p>
 <p>3.小括号 表示分组和捕获</p>
 <p>可在线测试：<a href="https://c.runoob.com/front-end/854" target="_blank" rel="noopener">正则表达式在线测试 | 菜鸟工具 (runoob.com)</a></p>
 <h3 id="预定义类"><a href="#预定义类" class="headerlink" title="预定义类"></a>预定义类</h3><p>预定义类指的是<font color="red">某些常见模式的简写方式</font></p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -456,8 +434,7 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>\d</td>
 <td>匹配0-9之间的任一数字，相当于[0-9]</td>
 </tr>
@@ -481,16 +458,17 @@
 <td>\S</td>
 <td>匹配非空格的字符，相当于[^\t\r\n\v\f]</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h4 id="座机号码验证"><a href="#座机号码验证" class="headerlink" title="座机号码验证"></a>座机号码验证</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 座机号码验证：全国座机号码 两种格式 010-12345678 或者 0530-1234567</span></span><br><span class="line"><span class="comment">// 正则里面的或者 符号 | 代表或</span></span><br><span class="line"><span class="comment">// const reg = /^0\d&#123;2&#125;-\d&#123;8&#125;|\d&#123;3&#125;-\d&#123;7&#125;$/;</span></span><br><span class="line"><span class="keyword">const</span> reg = <span class="regexp">/^0\d&#123;2,3&#125;-\d&#123;7,8&#125;$/</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">'010-12345678'</span>));</span><br></pre></td></tr></table></figure>
+
 <h2 id="正则表达式中的替换"><a href="#正则表达式中的替换" class="headerlink" title="正则表达式中的替换"></a>正则表达式中的替换</h2><h3 id="replace-替换"><a href="#replace-替换" class="headerlink" title="replace 替换"></a>replace 替换</h3><p><code>replace()</code> 方法可以实现替换字符串操作，用来替换掉参数可以是一个字符串或是一个正则表达式</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stringObject.replace(regsxp/substr,replaceement)</span><br></pre></td></tr></table></figure>
+
 <p>1.第一个参数：被替换的字符串 或者 正则表达式</p>
 <p>2.第二个参数：替换为的字符串</p>
 <p>3.返回值是一个替换完毕的新字符串</p>
 <h3 id="正则表达式参数"><a href="#正则表达式参数" class="headerlink" title="正则表达式参数"></a>正则表达式参数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/表达式/[swith]</span><br></pre></td></tr></table></figure>
+
 <p>switch(也称为修饰符) 按照什么样的模式来匹配，有三种值：</p>
 <ul>
 <li>g ：全局匹配</li>
@@ -498,6 +476,7 @@
 <li>gi：全局匹配且忽略大小写</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">'你妈的正则表达还是尼玛的'</span>;</span><br><span class="line"><span class="keyword">let</span> str2 = str.replace(<span class="string">'andy'</span>, <span class="string">'red'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(str2);</span><br><span class="line"><span class="built_in">console</span>.log(str.replace(<span class="regexp">/(尼玛的)|(你妈的)/g</span>, <span class="string">'***'</span>));</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -603,7 +582,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式概述"><span class="nav-number">1.</span> <span class="nav-text">正则表达式概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是正则表达式"><span class="nav-number">1.1.</span> <span class="nav-text">什么是正则表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#量词符"><span class="nav-number">1.1.1.</span> <span class="nav-text">量词符</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#案例：用户验证"><span class="nav-number">1.2.</span> <span class="nav-text">案例：用户验证</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#功能需求："><span class="nav-number">1.2.1.</span> <span class="nav-text">功能需求：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析："><span class="nav-number">1.2.2.</span> <span class="nav-text">分析：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#括号总结"><span class="nav-number">1.3.</span> <span class="nav-text">括号总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预定义类"><span class="nav-number">1.4.</span> <span class="nav-text">预定义类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#座机号码验证"><span class="nav-number">1.4.1.</span> <span class="nav-text">座机号码验证</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式中的替换"><span class="nav-number">2.</span> <span class="nav-text">正则表达式中的替换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#replace-替换"><span class="nav-number">2.1.</span> <span class="nav-text">replace 替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式参数"><span class="nav-number">2.2.</span> <span class="nav-text">正则表达式参数</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式概述"><span class="nav-number">1.</span> <span class="nav-text">正则表达式概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是正则表达式"><span class="nav-number">1.1.</span> <span class="nav-text">什么是正则表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式的特点"><span class="nav-number">1.2.</span> <span class="nav-text">正则表达式的特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式在-JavaScript-中的使用"><span class="nav-number">2.</span> <span class="nav-text">正则表达式在 JavaScript 中的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建正则表达式"><span class="nav-number">2.1.</span> <span class="nav-text">创建正则表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试正则表达式-test"><span class="nav-number">2.2.</span> <span class="nav-text">测试正则表达式 test</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式的组成"><span class="nav-number">2.3.</span> <span class="nav-text">正则表达式的组成</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#边界符"><span class="nav-number">2.3.1.</span> <span class="nav-text">边界符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符类"><span class="nav-number">2.3.2.</span> <span class="nav-text">字符类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#量词符"><span class="nav-number">2.3.3.</span> <span class="nav-text">量词符</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#案例：用户验证"><span class="nav-number">2.4.</span> <span class="nav-text">案例：用户验证</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#功能需求："><span class="nav-number">2.4.1.</span> <span class="nav-text">功能需求：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析："><span class="nav-number">2.4.2.</span> <span class="nav-text">分析：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#括号总结"><span class="nav-number">2.5.</span> <span class="nav-text">括号总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预定义类"><span class="nav-number">2.6.</span> <span class="nav-text">预定义类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#座机号码验证"><span class="nav-number">2.6.1.</span> <span class="nav-text">座机号码验证</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式中的替换"><span class="nav-number">3.</span> <span class="nav-text">正则表达式中的替换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#replace-替换"><span class="nav-number">3.1.</span> <span class="nav-text">replace 替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式参数"><span class="nav-number">3.2.</span> <span class="nav-text">正则表达式参数</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
       <div class="site-overview-wrap sidebar-panel">
@@ -618,7 +597,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">175</span>
+          <span class="site-state-item-count">176</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -741,7 +720,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24:11</span>
+    <span title="站点阅读时长">24:42</span>
 </div>
 
 <!--

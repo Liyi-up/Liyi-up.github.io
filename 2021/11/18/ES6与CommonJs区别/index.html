@@ -312,6 +312,7 @@
 <p>ES6 模块不是对象，而是通过export命令显式指定输出的代码，再通过import命令输入</p>
 <p>一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果你希望外部能够读取模块内部的某个变量，就必须使用export关键字输出该变量。</p>
 <a id="more"></a>
+
 <p>export语句输出的接口，与其对应的值是动态绑定关系，即通过该接口，可以取到模块内部实时的值。js引擎对脚本静态分析的时候，遇到模块加载命令import，就会生成一个只读引用。等到脚本真正执行时，再根据这个只读引用，到被加载的那个模块里面去取值</p>
 <h3 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h3><p>CommonJS 只能在运行时确定这些东西。CommonJS 加载的是一个对象（即module.exports属性），该对象只有在脚本运行完才会生成<br>CommonJS 模块输出的是值的拷贝，也就是说，一旦输出一个值，模块内部的变化就影响不到这个值<br>比如const a = ‘func’； const func = require(‘./test/‘+a+’.js’), 这个括号里面是可以放表达式的！！表达式 只能在运行时才能确定值啊，所以cmd只能在运行时确定模块关系 ，这就注定了在编译阶段不能做一些事。</p>
 
@@ -434,7 +435,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">175</span>
+          <span class="site-state-item-count">176</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -557,7 +558,7 @@ setInterval("createtime()",250);
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24:11</span>
+    <span title="站点阅读时长">24:42</span>
 </div>
 
 <!--
