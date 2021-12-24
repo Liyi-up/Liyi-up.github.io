@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liyi-up.top/"/>
-  <updated>2021-12-16T03:13:47.761Z</updated>
+  <updated>2021-12-24T09:17:47.196Z</updated>
   <id>https://liyi-up.top/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>webpack常用loader</title>
+    <link href="https://liyi-up.top/2021/12/24/webpack%E5%B8%B8%E7%94%A8loader/"/>
+    <id>https://liyi-up.top/2021/12/24/webpack%E5%B8%B8%E7%94%A8loader/</id>
+    <published>2021-12-24T06:39:51.000Z</published>
+    <updated>2021-12-24T09:17:47.196Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="什么是loader？"><a href="#什么是loader？" class="headerlink" title="什么是loader？"></a>什么是loader？</h3><p>对于webpack来说，默认只能打包处理JS文件，或者说JS模块，但是webpack作为模块打包工具，需要打包的模块肯定不仅仅只有JS模块，还有：图片模块，CSS模块等等；但是webpack默认是没有图片模块、CSS模块打包功能的，所以问题来了，webpack如何打包除了JS模块之外的其他模块哪？那就得用到第三方loader了，所以按照我们表面理解：<strong>loader就是帮助webpack打包那些webpack默认打包不了的模块的工具；</strong></p><h3 id="常用loader"><a href="#常用loader" class="headerlink" title="常用loader"></a>常用loader</h3><h4 id="加载文件"><a href="#加载文件" class="headerlink" title="加载文件"></a>加载文件</h4><p>● raw-loader(https:/<a href="https://link.zhihu.com/?target=http%3A//github.com/webpack-contrib/raw-loader">http://github.com/webpack-contrib/raw-loader</a>):将文本文件的内容加载到代码中。</p><p>● file-loader(https:/<a href="https://link.zhihu.com/?target=http%3A//github.com/webpack-contrib/file-loader">http://github.com/webpack-contrib/file-loader</a>):将webpack打包处理一系列的图片文件；比如：<strong>.png</strong> 、 <strong>.jpg 、.jepg</strong>等格式的图片；使用file-loader打包的图片会给每张图片都生成一个随机的hash值作为图片的名字；</p><p>● url-loader(<a href="https://link.zhihu.com/?target=https%3A//github">https://github</a>. com/webpack-contrib/url-loader):和file-loader类似,但是能在文件很小的情况下以base64方式将文件的内容注入代码中。</p><p>● source-map-loader(htps:/<a href="https://link.zhihu.com/?target=http%3A//github.com/webpack-contrib/source-map-loader">http://github.com/webpack-contrib/source-map-loader</a>):加载额外的 SourceMap文件,以方便断点调试。</p><p>● svg-inline-loader(<a href="https://link.zhihu.com/?target=https%3A//github.com/webpack-contrib/svg-inline-loader">https://github.com/webpack-contrib/svg-inline-loader</a>):将压缩后的SVG内容注入代码中。</p><p>● node-loader(<a href="https://link.zhihu.com/?target=https%3A//github.com/webpack-contrib/node-loader">https://github.com/webpack-contrib/node-loader</a>)加载Node.js原生模块的node文件。</p><p>● image-loader(<a href="https://link.zhihu.com/?target=https%3A//github.com/tcoopman/image-webpack-loader">https://github.com/tcoopman/image-webpack-loader</a>):加载并且压缩图片文件</p><p>● json–loader(<a href="https://link.zhihu.com/?target=https%3A//github.com/webpack-contrib/json-loader">https://github.com/webpack-contrib/json-loader</a>):加载JSON文件。</p><p>● yaml-loader(<a href="https://link.zhihu.com/?target=https%3A//github">https://github</a>. com/okonet/yaml-loader):加载YAML文件。</p><h4 id="编译模版"><a href="#编译模版" class="headerlink" title="编译模版"></a>编译模版</h4><p>● pug-loader(<a href="https://link.zhihu.com/?target=https%3A//github.com/pugs/pug-loader">https://github.com/pugs/pug-loader</a>):将Pug模版转换成 JavaScript函数并返回</p><p>● handlebars-loader(https:/<a href="https://link.zhihu.com/?target=http%3A//github.com/pcardune/handlebars-loader">http://github.com/pcardune/handlebars-loader</a>)：将Handlebars模版编译成函数并返回</p><p>● ejs-loader(<a href="https://link.zhihu.com/?target=https%3A//github.com/okonet/ejs-loader">https://github.com/okonet/ejs-loader</a>):将EJS模版编译成函数并返回。</p><p>● haml-loader(<a href="https://link.zhihu.com/?target=https%3A//github.com/alexanderpAvlenko/haml-loader">https://github.com/alexanderpAvlenko/haml-loader</a>)将HAML代码转换成HTML</p><p>● markdown-loader(<a href="https://link.zhihu.com/?target=https%3A//github.com/peerigon/markdown-loader%3A">https://github.com/peerigon/markdown-loader:</a>将 Markdown文件转换成HTML</p><h4 id="转换脚本语言"><a href="#转换脚本语言" class="headerlink" title="转换脚本语言"></a>转换脚本语言</h4><p>● babel-loader(<a href="https://link.zhihu.com/?target=https%3A//github.com/babel/babel-loader">https://github.com/babel/babel-loader</a>):将ES6转换成ES5</p><p>● ts-loader:将TypeScript转换成JavaScript</p><p>● awesome-typescript-loader：将 Type Script转换成 JavaScript,性能要比 ts-loader好。</p><p>● coffee-loader：将CoffeeScript转换成 JavaScript</p><h4 id="转换样式文件"><a href="#转换样式文件" class="headerlink" title="转换样式文件"></a>转换样式文件</h4><p>● css-loader：加载CSS,支持模块化、压缩、文件导入等特性。</p><p>● style-loader：将CSS代码注入JavaScript中,通过DOM操作去加载CSS。</p><p>● sass-loader：将 SCSS/SASS代码转</p><p>换成CSS。</p><p>● postcss-loader：扩展CSS语法,使用下一代CSS。</p><p>● less-loader：将Less代码转换成CSS代码。</p><p>● stylus-loader：将Stylus代码转换成CSS代码。</p><h4 id="检查代码"><a href="#检查代码" class="headerlink" title="检查代码"></a>检查代码</h4><p>● eslint-loader：通过ESLint检查JavaScript代码</p><p>● tslint-loader：通过 TSLint检查 TypeScript代码。</p><p>● mocha-loader：加载 Mocha测试用例的代码</p><p>● coverjs-loader:计算测试的覆盖率。</p><p>6.其他 Loader</p><p>● vue-loader：加载Vue.js单文件组件。</p><p>● il8n-loader：加载多语言版本,支持国际化。</p><p>● ignore- loader：忽略部分文件。</p><p>● ui-component-loader：按需加载UI组件库。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;什么是loader？&quot;&gt;&lt;a href=&quot;#什么是loader？&quot; class=&quot;headerlink&quot; title=&quot;什么是loader？&quot;&gt;&lt;/a&gt;什么是loader？&lt;/h3&gt;&lt;p&gt;对于webpack来说，默认只能打包处理JS文件，或者说JS模块，但是web
+      
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="https://liyi-up.top/categories/Web/"/>
+    
+      <category term="前端开发" scheme="https://liyi-up.top/categories/Web/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="WebPack" scheme="https://liyi-up.top/categories/Web/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/WebPack/"/>
+    
+    
+      <category term="模块化打包" scheme="https://liyi-up.top/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%89%93%E5%8C%85/"/>
+    
+  </entry>
   
   <entry>
     <title>负载均衡：SLB+nginx搭配，以及nginx</title>
@@ -544,33 +574,6 @@
       &lt;h1 id=&quot;算数运算符&quot;&gt;&lt;a href=&quot;#算数运算符&quot; class=&quot;headerlink&quot; title=&quot;算数运算符&quot;&gt;&lt;/a&gt;算数运算符&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;计算机&lt;/strong&gt;，顾名思义就是负责进行 &lt;strong&gt;数学计算&lt;/strong&gt; 并且 &lt;strong&gt;存储计算结果&lt;/strong&gt; 的电子设备&lt;/p&gt;
 &lt;h2 id=&quot;内容&quot;&gt;&lt;a href=&quot;#内容&quot; class=&quot;headerlink&quot; title=&quot;内容&quot;&gt;&lt;/a&gt;内容&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;算术运算符的基本使用&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="https://liyi-up.top/categories/Python/"/>
-    
-    
-      <category term="高级语言" scheme="https://liyi-up.top/tags/%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python-注释</title>
-    <link href="https://liyi-up.top/2021/09/15/Python-%E6%B3%A8%E9%87%8A/"/>
-    <id>https://liyi-up.top/2021/09/15/Python-%E6%B3%A8%E9%87%8A/</id>
-    <published>2021-09-15T06:02:37.000Z</published>
-    <updated>2021-09-15T06:04:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><ul><li>注释的作用</li><li>单行注释（行注释）</li><li>多行注释（块注释）</li></ul><a id="more"></a><h2 id="注释的作用"><a href="#注释的作用" class="headerlink" title="注释的作用"></a>注释的作用</h2><blockquote><p>使用用自己熟悉的语言，在程序中对某些代码进行标注说明，增强程序的可读性</p></blockquote><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://z3.ax1x.com/2021/09/15/4VsDmj.gif" alt="001_未使用注释的python程序"></p><h2 id="单行注释-行注释"><a href="#单行注释-行注释" class="headerlink" title="单行注释(行注释)"></a>单行注释(行注释)</h2><ul><li><p>以 <code>#</code> 开头，<code>#</code> 右边的所有东西都被当做说明文字，而不是真正要执行的程序，只起到辅助说明作用</p></li><li><p>示例代码如下：</p></li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这是第一个单行注释</span></span><br><span class="line">print(<span class="string">"hello python"</span>)</span><br></pre></td></tr></table></figure><blockquote><p>为了保证代码的可读性，<code>#</code> 后面建议先添加一个空格，然后再编写相应的说明文字</p></blockquote><h3 id="在代码后面增加的单行注释"><a href="#在代码后面增加的单行注释" class="headerlink" title="在代码后面增加的单行注释"></a>在代码后面增加的单行注释</h3><ul><li><p>在程序开发时，同样可以使用 <code>#</code> 在代码的后面（旁边）增加说明性的文字</p></li><li><p>但是，需要注意的是，<strong>为了保证代码的可读性</strong>，<strong>注释和代码之间</strong> 至少要有 <strong>两个空格</strong></p></li><li><p>示例代码如下：</p></li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"hello python"</span>)  <span class="comment"># 输出 `hello python`</span></span><br></pre></td></tr></table></figure><h2 id="多行注释（块注释）"><a href="#多行注释（块注释）" class="headerlink" title="多行注释（块注释）"></a>多行注释（块注释）</h2><ul><li><p>如果希望编写的 <strong>注释信息很多，一行无法显示</strong>，就可以使用多行注释</p></li><li><p>要在 Python 程序中使用多行注释，可以用 <strong>一对 连续的 三个 引号</strong>(单引号和双引号都可以)</p></li><li><p>示例代码如下：</p></li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">这是一个多行注释</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">在多行注释之间，可以写很多很多的内容……</span></span><br><span class="line"><span class="string">"""</span> </span><br><span class="line">print(<span class="string">"hello python"</span>)</span><br></pre></td></tr></table></figure><h3 id="什么时候需要使用注释？"><a href="#什么时候需要使用注释？" class="headerlink" title="什么时候需要使用注释？"></a>什么时候需要使用注释？</h3><ol><li><strong>注释不是越多越好</strong>，对于一目了然的代码，不需要添加注释</li><li>对于 <strong>复杂的操作</strong>，应该在操作开始前写上若干行注释</li><li>对于 <strong>不是一目了然的代码</strong>，应在其行尾添加注释（为了提高可读性，注释应该至少离开代码 2 个空格）</li><li>绝不要描述代码，假设阅读代码的人比你更懂 Python，他只是不知道你的代码要做什么</li></ol><blockquote><p>在一些正规的开发团队，通常会有 <strong>代码审核</strong> 的惯例，就是一个团队中彼此阅读对方的代码</p></blockquote><h3 id="关于代码规范"><a href="#关于代码规范" class="headerlink" title="关于代码规范"></a>关于代码规范</h3><ul><li><code>Python</code> 官方提供有一系列 PEP（Python Enhancement Proposals） 文档</li><li>其中第 8 篇文档专门针对 <strong>Python 的代码格式</strong> 给出了建议，也就是俗称的 <strong>PEP 8</strong></li><li>文档地址：<a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">https://www.python.org/dev/peps/pep-0008/</a></li><li>谷歌有对应的中文文档：<a href="http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/" target="_blank" rel="noopener">http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/</a></li></ul><blockquote><p>任何语言的程序员，编写出符合规范的代码，是开始程序生涯的第一步</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;内容&quot;&gt;&lt;a href=&quot;#内容&quot; class=&quot;headerlink&quot; title=&quot;内容&quot;&gt;&lt;/a&gt;内容&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;注释的作用&lt;/li&gt;
-&lt;li&gt;单行注释（行注释）&lt;/li&gt;
-&lt;li&gt;多行注释（块注释）&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>

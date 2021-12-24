@@ -1,445 +1,352 @@
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="loading">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
-<meta name="baidu-site-verification" content="code-kyNXUOJWrB" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('https://liyi-up.top').hostname,
-    root: '/',
-    scheme: 'Gemini',
-    version: '7.7.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","padding":18,"offset":10,"onmobile":false},
-    copycode: {"enable":true,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: true,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
-  };
-</script>
-
-  <meta name="description" content="A Programmer">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Liyi&#39;s personal blog">
-<meta property="og:url" content="https://liyi-up.top/page/31/index.html">
-<meta property="og:site_name" content="Liyi&#39;s personal blog">
-<meta property="og:description" content="A Programmer">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="Liyi">
-<meta property="article:tag" content="个人技术博客">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://liyi-up.top/page/31/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: true,
-    isPost: false
-  };
-</script>
-
-  <title>Liyi's personal blog</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-<link rel="alternate" href="/atom.xml" title="Liyi's personal blog" type="application/atom+xml">
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-    <a href="https://github.com/Liyi-up" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Liyi's personal blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-        <p class="site-subtitle">The whole stack</p>
-  </div>
-
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-</div>
-
-
-<nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-
-</nav>
-  <div class="site-search">
-    <div class="popup search-popup">
-    <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
-           placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
-  </div>
-</div>
-    </header>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Liyi&#39;s personal blog - The whole stack</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="前端开发,"> 
+    <meta name="description" content="A Programmer,"> 
+    <meta name="author" content="Liyi"> 
+    <link rel="alternative" href="atom.xml" title="Liyi&#39;s personal blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
 
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content">
-            
-
-  <div class="posts-expand">
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://liyi-up.top/2020/05/17/2020%E5%B9%B45%E6%9C%8817%E6%97%A5-SpringBoot-web/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="Liyi">
-      <meta itemprop="description" content="A Programmer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Liyi's personal blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/17/2020%E5%B9%B45%E6%9C%8817%E6%97%A5-SpringBoot-web/" class="post-title-link" itemprop="url">2020年5月17日-SpringBoo与Docker</a>
-        </h1>
-
-        <div class="post-meta">
-                    
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-17 16:58:54" itemprop="dateCreated datePublished" datetime="2020-05-17T16:58:54+08:00">2020-05-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-02 16:01:02" itemprop="dateModified" datetime="2020-07-02T16:01:02+08:00">2020-07-02</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index">
-                    <span itemprop="name">Web</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
-                    <span itemprop="name">后端开发</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/SpringBoot/" itemprop="url" rel="index">
-                    <span itemprop="name">SpringBoot</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
     
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/17/2020%E5%B9%B45%E6%9C%8817%E6%97%A5-SpringBoot-web/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/17/2020%E5%B9%B45%E6%9C%8817%E6%97%A5-SpringBoot-web/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>5.8k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
 
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+    
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    
+    <script>var musiclist = ""</script>
+    
+<script src="/js/loadaplayer.js"></script>
+
+    <!-- 引用依赖 -->
+    
+<link rel="stylesheet" href="/aplayer/dist/APlayer.min.css">
+
+    
+<script src="/aplayer/dist/APlayer.min.js"></script>
+<script src="/js/Meting.min.js"></script>
+
+    
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-      </header>
+    </div>
+    <span id="config-title" style="display:none">Liyi&#39;s personal blog</span>
+    <div id="loader"></div>
+    <div class="nav">
+    <ul id="menu-menu" class="menu">
+        
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/categories/" title="分类" external="false">分类</a>
+        </li>
+        
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/tags/" title="标签" external="false">标签</a>
+        </li>
+        
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/archives/" title="归档" external="false">归档</a>
+        </li>
+        
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/about/" title="关于" external="false">关于</a>
+        </li>
+        
+    </ul>
+    <p class="copyright" id="copyright">
+        &copy; 2021 Liyi.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+    </p>
+</div>
 
+<div id="container">
     
+<div class="search-box">
+    <form class="site-search-form">
+        <span class="iconfont icon-search"></span>
+        <input type="text" id="local-search-input" class="st-search-input" />
+        <div class="iconfont icon-cross search-box-close"></div>
+    </form>
+    <div class="search-scrollable">
+        <div id="local-search-result" class="local-search-result-cls" data-initialise="首次搜索，正在载入索引文件，请稍后……"
+            data-start="输入关键词搜索。" data-empty="没有找到内容，请尝试更换检索词。">
+            <span>输入关键词搜索。</span>
+        </div>
+    </div>
+</div>
+<div id="header">
+    <div>
+        <div class="logo animated fadeInDown">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/img/favicon.png" alt="">
+            <a class="image-logo" href="/"></a>
+        </div>
+        <ul id="menu-menu" class="menu text-menu">
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/categories/" title="分类" external="false" class="menu-link">分类</a>
+            </li>
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/tags/" title="标签" external="false" class="menu-link">标签</a>
+            </li>
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/archives/" title="归档" external="false" class="menu-link">归档</a>
+            </li>
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/about/" title="关于" external="false" class="menu-link">关于</a>
+            </li>
+            
+            
+            <li class="animated fadeInDown search-bar iconfont icon-search"></li>
+            
+        </ul>
+        <div class="iconfont icon-menu switchmenu gradient-text animated fadeInDown"></div>
+    </div>
+</div>
+<div id="screen">
+    <div id="mark">
+        <div class="cover animated fadeIn" style="
+            animation-delay: 900ms;
+            animation-duration: 2.8s;
+            background-image:
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.56), #100e17),
+                url(/img/cover.jpg);">
+        </div>
+    </div>
     
+    <div id="post0" class="else">
+        <p class="animated fadeInDown">
+            
+            <a href="/categories/Web"><b>「
+                </b>WEB<b> 」</b></a>
+            
+            五月 17, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown">
+            <a href="/2020/05/17/2020%E5%B9%B45%E6%9C%8817%E6%97%A5-SpringBoot-JDBC/" title="2020年5月18日-SpringBoot-JDBC" class="posttitle">2020年5月18日-SpringBoot-JDBC</a></h3>
+        
+        <p class="post-count animated fadeInDown">
+            
+            <span>
+                <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                41k
+            </span>
+            
+            
+            <span>
+                <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                37 mins.
+            </span>
+            
+            
+        </p>
+        
+        
+        <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Web%E5%BC%80%E5%8F%91/" rel="tag">Web开发</a></li></ul>
+        
+        <div class="md-content animated fadeIn">
+            
+            <h2 id="一、SpringBoot与数据访问"><a href="#一、SpringBoot与数据访问" class="headerlink" title="一、SpringBoot与数据访问"></a>一、SpringBoot与数据访问</h2><h3 id="1、JDBC"><a href="#1、JDBC" class="headerlink" title="1、JDBC"></a>1、JDBC</h3><p>pom文件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">  &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework...</span></pre></td></tr></table></figure>
+            
+            <span class="read-more"><a href="/2020/05/17/2020%E5%B9%B45%E6%9C%8817%E6%97%A5-SpringBoot-JDBC/" title="查看全文" class="posttitle">查看全文</a>
+                <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
     
-    <div class="post-body" itemprop="articleBody">
+</div>
 
-      
-          <h1 id="SpringBoots与Docker"><a href="#SpringBoots与Docker" class="headerlink" title="SpringBoots与Docker"></a>SpringBoots与Docker</h1><h3 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h3><p><strong>Docker</strong>是一个开源的应用容器引擎</p>
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="typed-text"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="primary">
+        
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="/categories/Web">
+                  <b>「 </b>WEB<b> 」</b>
+                </a>
+            
+            五月 17, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/05/17/2020%E5%B9%B45%E6%9C%8817%E6%97%A5-SpringBoot-JDBC/" title="2020年5月18日-SpringBoot-JDBC" class="posttitle">2020年5月18日-SpringBoot-JDBC</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        41k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        37 mins.
+                    </span>
+                
+                
+            </p>
+            
+                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Web%E5%BC%80%E5%8F%91/" rel="tag">Web开发</a></li></ul>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <h2 id="一、SpringBoot与数据访问"><a href="#一、SpringBoot与数据访问" class="headerlink" title="一、SpringBoot与数据访问"></a>一、SpringBoot与数据访问</h2><h3 id="1、JDBC"><a href="#1、JDBC" class="headerlink" title="1、JDBC"></a>1、JDBC</h3><p>pom文件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">  &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-jdbc&lt;&#x2F;artifactId&gt;</span><br><span class="line">        &lt;&#x2F;dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId...</span></pre></td></tr></table></figure>
+            
+            <span class="read-more"><a href="/2020/05/17/2020%E5%B9%B45%E6%9C%8817%E6%97%A5-SpringBoot-JDBC/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="/categories/Web">
+                  <b>「 </b>WEB<b> 」</b>
+                </a>
+            
+            五月 17, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/05/17/2020%E5%B9%B45%E6%9C%8817%E6%97%A5-SpringBoot-web/" title="2020年5月17日-SpringBoo与Docker" class="posttitle">2020年5月17日-SpringBoo与Docker</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        18k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        17 mins.
+                    </span>
+                
+                
+            </p>
+            
+                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E9%95%9C%E5%83%8F%E5%AE%B9%E5%99%A8/" rel="tag">镜像容器</a></li></ul>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <h1 id="SpringBoots与Docker"><a href="#SpringBoots与Docker" class="headerlink" title="SpringBoots与Docker"></a>SpringBoots与Docker</h1><h3 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h3><p><strong>Docker</strong>是一个开源的应用容器引擎</p>
 <p>Docker支持软件编译成一个镜像；然后在镜像中各种软件做好配置，将镜像发不出去，其他使用者可以直接使用这个配置；</p>
 <p>运行中这个镜像称为容器，容器启动时非常快的；</p>
 <p><strong>核心:</strong>Docker支持将软件编译成一个镜像；然后在镜像中各种软件做好配置，将镜像发布出去，其他使用者可以直接使用这个镜像。运行中的这个镜像称为容器，容器启动是非常快速的，类似windows里面的ghost操作系统，安装好后什么都有了；</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/17/2020%E5%B9%B45%E6%9C%8817%E6%97%A5-SpringBoot-web/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
+<a id="more"></a>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://liyi-up.top/2020/05/15/2020%E5%B9%B45%E6%9C%8815%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="Liyi">
-      <meta itemprop="description" content="A Programmer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Liyi's personal blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/15/2020%E5%B9%B45%E6%9C%8815%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">2020年5月15日-SpringBoot-外置Servlet</a>
-        </h1>
-
-        <div class="post-meta">
-                    
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-15 19:42:58" itemprop="dateCreated datePublished" datetime="2020-05-15T19:42:58+08:00">2020-05-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-08 15:16:02" itemprop="dateModified" datetime="2021-04-08T15:16:02+08:00">2021-04-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index">
-                    <span itemprop="name">Web</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
-                    <span itemprop="name">后端开发</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/SpringBoot/" itemprop="url" rel="index">
-                    <span itemprop="name">SpringBoot</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/15/2020%E5%B9%B45%E6%9C%8815%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/15/2020%E5%B9%B45%E6%9C%8815%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>5.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
+<p><strong>通俗说:</strong></p>
+<ul>
+<li>传统liunx...</li></ul>
+            
+            <span class="read-more"><a href="/2020/05/17/2020%E5%B9%B45%E6%9C%8817%E6%97%A5-SpringBoot-web/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
-      </header>
+    </div>
+</div>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
 
-      
-          <h2 id="一、配置外置Servlet容器"><a href="#一、配置外置Servlet容器" class="headerlink" title="一、配置外置Servlet容器"></a>一、配置外置Servlet容器</h2><p>嵌入式Servlet容器:–应用jar包打包方式；</p>
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="/categories/Web">
+                  <b>「 </b>WEB<b> 」</b>
+                </a>
+            
+            五月 15, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/05/15/2020%E5%B9%B45%E6%9C%8815%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/" title="2020年5月15日-SpringBoot-外置Servlet" class="posttitle">2020年5月15日-SpringBoot-外置Servlet</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        15k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        14 mins.
+                    </span>
+                
+                
+            </p>
+            
+                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Web%E5%BC%80%E5%8F%91/" rel="tag">Web开发</a></li></ul>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <h2 id="一、配置外置Servlet容器"><a href="#一、配置外置Servlet容器" class="headerlink" title="一、配置外置Servlet容器"></a>一、配置外置Servlet容器</h2><p>嵌入式Servlet容器:–应用jar包打包方式；</p>
 <ul>
 <li>优点:简单、便携；</li>
 <li>缺点:默认不支持JSP，优化和定制比较复杂(使用定制器【ServerProperties、自定义EmbeddedWebServerFactoryCustomizerAutoConfiguration，自己编写嵌入式Servlet容器工厂】)；</li>
@@ -449,357 +356,105 @@
 <ol>
 <li><p>必须创建一个war项目;</p>
 </li>
-<li><p>将嵌入式Tomcat指定为provided;</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-tomcat<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ol>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/15/2020%E5%B9%B45%E6%9C%8815%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://liyi-up.top/2020/05/13/2020%E5%B9%B45%E6%9C%8813%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="Liyi">
-      <meta itemprop="description" content="A Programmer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Liyi's personal blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/13/2020%E5%B9%B45%E6%9C%8813%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">2020年5月13日-SpringBoot-内置Servlet</a>
-        </h1>
-
-        <div class="post-meta">
-                    
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-13 09:05:17" itemprop="dateCreated datePublished" datetime="2020-05-13T09:05:17+08:00">2020-05-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-08 15:15:48" itemprop="dateModified" datetime="2021-04-08T15:15:48+08:00">2021-04-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index">
-                    <span itemprop="name">Web</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
-                    <span itemprop="name">后端开发</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/SpringBoot/" itemprop="url" rel="index">
-                    <span itemprop="name">SpringBoot</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/13/2020%E5%B9%B45%E6%9C%8813%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/13/2020%E5%B9%B45%E6%9C%8813%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>13k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>12 分钟</span>
-            </span>
-
+<li><p>将嵌入式Tomcat指定为provided...</p></li></ol>
+            
+            <span class="read-more"><a href="/2020/05/15/2020%E5%B9%B45%E6%9C%8815%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
-      </header>
+    </div>
+</div>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
 
-      
-          <h2 id="一、配置嵌入式Servlet容器"><a href="#一、配置嵌入式Servlet容器" class="headerlink" title="一、配置嵌入式Servlet容器"></a>一、配置嵌入式Servlet容器</h2><p>SpringBoot默认使用的是嵌入式Servlet容器(Tomcat)；![SpringBoot嵌入式Servlet容器.png)</p>
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="/categories/Web">
+                  <b>「 </b>WEB<b> 」</b>
+                </a>
+            
+            五月 13, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/05/13/2020%E5%B9%B45%E6%9C%8813%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/" title="2020年5月13日-SpringBoot-内置Servlet" class="posttitle">2020年5月13日-SpringBoot-内置Servlet</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        51k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        46 mins.
+                    </span>
+                
+                
+            </p>
+            
+                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Web%E5%BC%80%E5%8F%91/" rel="tag">Web开发</a></li></ul>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <h2 id="一、配置嵌入式Servlet容器"><a href="#一、配置嵌入式Servlet容器" class="headerlink" title="一、配置嵌入式Servlet容器"></a>一、配置嵌入式Servlet容器</h2><p>SpringBoot默认使用的是嵌入式Servlet容器(Tomcat)；![SpringBoot嵌入式Servlet容器.png)</p>
 <p><strong>问题?</strong></p>
 <ol>
 <li><p>如何定制和修改Servlet容器的相关信息;</p>
 <ul>
 <li><p>修改server有关的配置(ServerProperties);</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#给整个项目的访问路径设置别名</span></span><br><span class="line"><span class="comment">#http://localhost:8080/crud/</span></span><br><span class="line"><span class="meta">server.servlet.context-path</span>=<span class="string">/crud</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##修改项目访问端口</span></span><br><span class="line"><span class="comment">#server.port=8081</span></span><br><span class="line"><span class="attr">//通用的Servlet容器设置</span></span><br><span class="line"><span class="attr">server.xxx</span></span><br><span class="line"><span class="attr">//Tomcat的设置</span></span><br><span class="line"><span class="attr">server.tomcat.xxx</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编写一个EmbeddedServletContainerCustomizer；(嵌入式的Servlet容器的定制器)来修改Servlet容器的配置；注意:Spring Boot2.0以上版本EmbeddedServletContainerCustomizer被WebServerFactoryCustomizer替代</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.x以上版本</span><br><span class="line"><span class="meta">@Bean</span>  <span class="comment">//一定要将这个定制器加入到容器中</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> EmbeddedServletContainerCustomizer <span class="title">embeddedServletContainerCustomizer</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> EmbeddedServletContainerCustomizer() &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//定制嵌入式的Servlet容器相关的规则</span></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">customize</span><span class="params">(ConfigurableEmbeddedServletContainer container)</span> </span>&#123;</span><br><span class="line">            container.setPort(<span class="number">8081</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="number">2</span>.x以上版本   </span><br><span class="line"><span class="comment">//    创建Servlet容器的定制器</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> WebServerFactoryCustomizer&lt;ConfigurableWebServerFactory&gt; <span class="title">webServerFactoryCustomizer</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> WebServerFactoryCustomizer&lt;ConfigurableWebServerFactory&gt;() &#123;</span><br><span class="line">            <span class="comment">//定制嵌入式的Servlet容器相关的规则</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">customize</span><span class="params">(ConfigurableWebServerFactory factory)</span> </span>&#123;</span><br><span class="line">                factory.setPort(<span class="number">8081</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="二、注册Servlet三大组件-Servlet、Filter、Listener"><a href="#二、注册Servlet三大组件-Servlet、Filter、Listener" class="headerlink" title="二、注册Servlet三大组件[Servlet、Filter、Listener]"></a>二、注册Servlet三大组件[Servlet、Filter、Listener]</h2><p><strong>由于SpringBoot默认是以jar包的方式启动嵌入的Servlet容器来启动SpringBootWeb应用,没有web.xml文件.</strong></p>
-<p><strong>注册三大组件用以下方式</strong>:</p>
-<ul>
-<li><p>ServletRegistrationBean</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//    注册服务器三大组件</span></span><br><span class="line"><span class="comment">//    1.servlet</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ServletRegistrationBean&lt;MyServlet&gt; <span class="title">myServlet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        ServletRegistrationBean registrationBean = <span class="keyword">new</span> ServletRegistrationBean&lt;&gt;(<span class="keyword">new</span> MyServlet(), <span class="string">"/myServlet"</span>);</span><br><span class="line">        <span class="keyword">return</span> registrationBean;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>FilterRegistrationBean</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> FilterRegistrationBean <span class="title">myFilter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        FilterRegistrationBean&lt;Filter&gt; filterFilterRegistrationBean = <span class="keyword">new</span> FilterRegistrationBean&lt;&gt;();</span><br><span class="line"><span class="comment">//        注册Filter</span></span><br><span class="line">        filterFilterRegistrationBean.setFilter(<span class="keyword">new</span> MyFilter());</span><br><span class="line"><span class="comment">//        指定需要拦截的servlet请求</span></span><br><span class="line">        filterFilterRegistrationBean.setUrlPatterns(Arrays.asList(<span class="string">"/hello"</span>, <span class="string">"/MyServlet"</span>));</span><br><span class="line">        <span class="keyword">return</span> filterFilterRegistrationBean;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>ServletListenerRegistrationBean</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ServletListenerRegistrationBean <span class="title">MyListener</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ServletListenerRegistrationBean&lt;EventListener&gt; ServletListenerRegistrationBean = <span class="keyword">new</span> ServletListenerRegistrationBean&lt;&gt;(<span class="keyword">new</span> MyListener());</span><br><span class="line">    <span class="keyword">return</span> ServletListenerRegistrationBean;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>SpringBoot帮我们启动SpringMVC的时候,自动的注册SpringMVC的前端控制器;DispatcherServlet;</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">        <span class="function"><span class="keyword">public</span> DispatcherServletRegistrationBean <span class="title">dispatcherServletRegistration</span><span class="params">(DispatcherServlet dispatcherServlet, WebMvcProperties webMvcProperties, ObjectProvider&lt;MultipartConfigElement&gt; multipartConfig)</span> </span>&#123;</span><br><span class="line">            DispatcherServletRegistrationBean registration = <span class="keyword">new</span> DispatcherServletRegistrationBean(dispatcherServlet, webMvcProperties.getServlet().getPath());</span><br><span class="line">            registration.setName(<span class="string">"dispatcherServlet"</span>);</span><br><span class="line">            registration.setLoadOnStartup(webMvcProperties.getServlet().getLoadOnStartup());</span><br><span class="line">            multipartConfig.ifAvailable(registration::setMultipartConfig);</span><br><span class="line">            <span class="keyword">return</span> registration;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//默认拦截: / 所有请求:包括静态资源,但是不拦截jsp请求； /*会拦截jsp</span></span><br><span class="line">可以通过server.servletPath来修改SpringMVC前端控制器默认拦截路径</span><br></pre></td></tr></table></figure>
-
-<h2 id="三、替换为其他嵌入式Servlet容器"><a href="#三、替换为其他嵌入式Servlet容器" class="headerlink" title="三、替换为其他嵌入式Servlet容器"></a>三、替换为其他嵌入式Servlet容器</h2><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="%E5%AE%B9%E5%99%A8%E5%B7%A5%E5%8E%82.png" alt="容器工厂"></p>
-<p>默认支持：</p>
-<ul>
-<li><p>Tomcat(默认使用)</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">引入web模块默认就是使用Tomcat作为Servlet嵌入式容器</span><br><span class="line">      <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>jetty；</p>
-<ol>
-<li><p>排除掉 spring-boot-starter-tomcat</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-tomcat<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-<pre><code>2. ```xml
-      &lt;!--引入其他Servlet容器--&gt;
-           &lt;dependency&gt;
-               &lt;artifactId&gt;spring-boot-starter-jetty&lt;/artifactId&gt;
-               &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-           &lt;/dependency&gt;
-           &lt;dependency&gt;
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- undertow</span><br><span class="line"></span><br><span class="line">  &#96;&#96;&#96;xml</span><br><span class="line">&lt;exclusions&gt;</span><br><span class="line">                  &lt;exclusion&gt;</span><br><span class="line">                      &lt;artifactId&gt;spring-boot-starter-tomcat&lt;&#x2F;artifactId&gt;</span><br><span class="line">                      &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">                  &lt;&#x2F;exclusion&gt;</span><br><span class="line">              &lt;&#x2F;exclusions&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--引入其他Servlet容器--&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-undertow<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></code></pre><ul>
-<li><p>Netty(2.x以上版本)</p>
-<h2 id="四、嵌入式Servlet容器自动配置原理"><a href="#四、嵌入式Servlet容器自动配置原理" class="headerlink" title="四、嵌入式Servlet容器自动配置原理;"></a>四、嵌入式Servlet容器自动配置原理;</h2><p> EmbeddedWebServerFactoryCustomizerAutoConfiguration;配置嵌入式Servlet容器自动配置（springBoot2.x)</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span>(</span><br><span class="line">    proxyBeanMethods = <span class="keyword">false</span></span><br><span class="line">)</span><br><span class="line"><span class="meta">@ConditionalOnWebApplication</span></span><br><span class="line"><span class="meta">@EnableConfigurationProperties</span>(&#123;ServerProperties<span class="class">.<span class="keyword">class</span>&#125;)</span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">class</span> <span class="title">EmbeddedWebServerFactoryCustomizerAutoConfiguration</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">EmbeddedWebServerFactoryCustomizerAutoConfiguration</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Configuration</span>(</span><br><span class="line">        proxyBeanMethods = <span class="keyword">false</span></span><br><span class="line">    )</span><br><span class="line">    <span class="meta">@ConditionalOnClass</span>(&#123;HttpServer<span class="class">.<span class="keyword">class</span>&#125;)</span></span><br><span class="line"><span class="class">    <span class="title">public</span> <span class="title">static</span> <span class="title">class</span> <span class="title">NettyWebServerFactoryCustomizerConfiguration</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">NettyWebServerFactoryCustomizerConfiguration</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Bean</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> NettyWebServerFactoryCustomizer <span class="title">nettyWebServerFactoryCustomizer</span><span class="params">(Environment environment, ServerProperties serverProperties)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> NettyWebServerFactoryCustomizer(environment, serverProperties);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Configuration</span>(</span><br><span class="line">        proxyBeanMethods = <span class="keyword">false</span></span><br><span class="line">    )</span><br><span class="line">    <span class="meta">@ConditionalOnClass</span>(&#123;Undertow<span class="class">.<span class="keyword">class</span>, <span class="title">SslClientAuthMode</span>.<span class="title">class</span>&#125;)</span></span><br><span class="line"><span class="class">    <span class="title">public</span> <span class="title">static</span> <span class="title">class</span> <span class="title">UndertowWebServerFactoryCustomizerConfiguration</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">UndertowWebServerFactoryCustomizerConfiguration</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Bean</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> UndertowWebServerFactoryCustomizer <span class="title">undertowWebServerFactoryCustomizer</span><span class="params">(Environment environment, ServerProperties serverProperties)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> UndertowWebServerFactoryCustomizer(environment, serverProperties);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Configuration</span>(</span><br><span class="line">        proxyBeanMethods = <span class="keyword">false</span></span><br><span class="line">    )</span><br><span class="line">    <span class="meta">@ConditionalOnClass</span>(&#123;Server<span class="class">.<span class="keyword">class</span>, <span class="title">Loader</span>.<span class="title">class</span>, <span class="title">WebAppContext</span>.<span class="title">class</span>&#125;)</span></span><br><span class="line"><span class="class">    <span class="title">public</span> <span class="title">static</span> <span class="title">class</span> <span class="title">JettyWebServerFactoryCustomizerConfiguration</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">JettyWebServerFactoryCustomizerConfiguration</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Bean</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> JettyWebServerFactoryCustomizer <span class="title">jettyWebServerFactoryCustomizer</span><span class="params">(Environment environment, ServerProperties serverProperties)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> JettyWebServerFactoryCustomizer(environment, serverProperties);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Configuration</span>(</span><br><span class="line">        proxyBeanMethods = <span class="keyword">false</span></span><br><span class="line">    )</span><br><span class="line">    <span class="comment">//旁段当前是否引入了Tomcat依赖</span></span><br><span class="line">    <span class="meta">@ConditionalOnClass</span>(&#123;Tomcat<span class="class">.<span class="keyword">class</span>, <span class="title">UpgradeProtocol</span>.<span class="title">class</span>&#125;)</span></span><br><span class="line"><span class="class">    <span class="title">public</span> <span class="title">static</span> <span class="title">class</span> <span class="title">TomcatWebServerFactoryCustomizerConfiguration</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">TomcatWebServerFactoryCustomizerConfiguration</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Bean</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> TomcatWebServerFactoryCustomizer <span class="title">tomcatWebServerFactoryCustomizer</span><span class="params">(Environment environment, ServerProperties serverProperties)</span> </span>&#123;<span class="comment">//如果有则返回一个Tomcat容器工厂(创建嵌入式Tomcat容器)</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> TomcatWebServerFactoryCustomizer(environment, serverProperties);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServerProperties、EmbeddedServletContainerCustomizer</span><br></pre></td></tr></table></figure>
-
-<p> WebServerFactoryCustomizer;定制器帮我们修改了Servlet的一些配置;</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span>(</span><br><span class="line">    proxyBeanMethods = <span class="keyword">false</span></span><br><span class="line">)</span><br><span class="line"><span class="meta">@AutoConfigureOrder</span>(-<span class="number">2147483648</span>)</span><br><span class="line"><span class="meta">@ConditionalOnClass</span>(&#123;ServletRequest<span class="class">.<span class="keyword">class</span>&#125;)</span></span><br><span class="line"><span class="class">@<span class="title">ConditionalOnWebApplication</span>(</span></span><br><span class="line"><span class="class">    <span class="title">type</span> </span>= Type.SERVLET</span><br><span class="line">)</span><br><span class="line"><span class="meta">@EnableConfigurationProperties</span>(&#123;ServerProperties<span class="class">.<span class="keyword">class</span>&#125;)</span></span><br><span class="line"><span class="class">@<span class="title">Import</span>(</span>&#123;ServletWebServerFactoryAutoConfiguration.BeanPostProcessorsRegistrar<span class="class">.<span class="keyword">class</span>, <span class="title">EmbeddedTomcat</span>.<span class="title">class</span>, <span class="title">EmbeddedJetty</span>.<span class="title">class</span>, <span class="title">EmbeddedUndertow</span>.<span class="title">class</span>&#125;)</span></span><br><span class="line"><span class="class">//导入<span class="title">BeanPostProcessorsRegistrar</span>：<span class="title">spring</span>注解版</span>;给容器中导入一些组件</span><br><span class="line"><span class="comment">//导入EmbeddedTomcat</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServletWebServerFactoryAutoConfiguration</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ServletWebServerFactoryAutoConfiguration</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ServletWebServerFactoryCustomizer <span class="title">servletWebServerFactoryCustomizer</span><span class="params">(ServerProperties serverProperties)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ServletWebServerFactoryCustomizer(serverProperties);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@ConditionalOnClass</span>(</span><br><span class="line">        name = &#123;<span class="string">"org.apache.catalina.startup.Tomcat"</span>&#125;</span><br><span class="line">    )</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TomcatServletWebServerFactoryCustomizer <span class="title">tomcatServletWebServerFactoryCustomizer</span><span class="params">(ServerProperties serverProperties)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> TomcatServletWebServerFactoryCustomizer(serverProperties);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@ConditionalOnMissingFilterBean</span>(&#123;ForwardedHeaderFilter<span class="class">.<span class="keyword">class</span>&#125;)</span></span><br><span class="line"><span class="class">    @<span class="title">ConditionalOnProperty</span>(</span></span><br><span class="line"><span class="class">        <span class="title">value</span> </span>= &#123;<span class="string">"server.forward-headers-strategy"</span>&#125;,</span><br><span class="line">        havingValue = <span class="string">"framework"</span></span><br><span class="line">    )</span><br><span class="line">    <span class="function"><span class="keyword">public</span> FilterRegistrationBean&lt;ForwardedHeaderFilter&gt; <span class="title">forwardedHeaderFilter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        ForwardedHeaderFilter filter = <span class="keyword">new</span> ForwardedHeaderFilter();</span><br><span class="line">        FilterRegistrationBean&lt;ForwardedHeaderFilter&gt; registration = <span class="keyword">new</span> FilterRegistrationBean(filter, <span class="keyword">new</span> ServletRegistrationBean[<span class="number">0</span>]);</span><br><span class="line">        registration.setDispatcherTypes(DispatcherType.REQUEST, <span class="keyword">new</span> DispatcherType[]&#123;DispatcherType.ASYNC, DispatcherType.ERROR&#125;);</span><br><span class="line">        registration.setOrder(-<span class="number">2147483648</span>);</span><br><span class="line">        <span class="keyword">return</span> registration;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">BeanPostProcessorsRegistrar</span> <span class="keyword">implements</span> <span class="title">ImportBeanDefinitionRegistrar</span>, <span class="title">BeanFactoryAware</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> ConfigurableListableBeanFactory beanFactory;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">BeanPostProcessorsRegistrar</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBeanFactory</span><span class="params">(BeanFactory beanFactory)</span> <span class="keyword">throws</span> BeansException </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (beanFactory <span class="keyword">instanceof</span> ConfigurableListableBeanFactory) &#123;</span><br><span class="line">                <span class="keyword">this</span>.beanFactory = (ConfigurableListableBeanFactory)beanFactory;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">registerBeanDefinitions</span><span class="params">(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.beanFactory != <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">this</span>.registerSyntheticBeanIfMissing(registry, <span class="string">"webServerFactoryCustomizerBeanPostProcessor"</span>, </span><br><span class="line">                                                    WebServerFactoryCustomizerBeanPostProcessor<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">                <span class="comment">//给容器中注册WebServerFactoryCustomizerBeanPostProcessor</span></span><br><span class="line">                <span class="comment">//后置处理器;bean初始化前后(刚创建完对象，还没给属性赋值)执行执行初始化工具</span></span><br><span class="line">                <span class="keyword">this</span>.registerSyntheticBeanIfMissing(registry, <span class="string">"errorPageRegistrarBeanPostProcessor"</span>, ErrorPageRegistrarBeanPostProcessor<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">registerSyntheticBeanIfMissing</span><span class="params">(BeanDefinitionRegistry registry, String name, Class&lt;?&gt; beanClass)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (ObjectUtils.isEmpty(<span class="keyword">this</span>.beanFactory.getBeanNamesForType(beanClass, <span class="keyword">true</span>, <span class="keyword">false</span>))) &#123;</span><br><span class="line">                RootBeanDefinition beanDefinition = <span class="keyword">new</span> RootBeanDefinition(beanClass);</span><br><span class="line">                beanDefinition.setSynthetic(<span class="keyword">true</span>);</span><br><span class="line">                registry.registerBeanDefinition(name, beanDefinition);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>WebServerFactoryCustomizerBeanPostProcessor；</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//初始化之前</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Object <span class="title">postProcessBeforeInitialization</span><span class="params">(Object bean, String beanName)</span> <span class="keyword">throws</span> BeansException </span>&#123;</span><br><span class="line">    <span class="comment">//如果当前初始化的是一个WebServerFactory类型组件，就调用下面的postProcessBeforeInitialization方法</span></span><br><span class="line">        <span class="keyword">if</span> (bean <span class="keyword">instanceof</span> WebServerFactory) &#123;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">this</span>.postProcessBeforeInitialization((WebServerFactory)bean);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> bean;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//获取所有的定制器并回调每一个定制器的customizer方法来给Servlet容器进行属性赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">postProcessBeforeInitialization</span><span class="params">(WebServerFactory webServerFactory)</span> </span>&#123;</span><br><span class="line">        ((Callbacks)LambdaSafe.callbacks(WebServerFactoryCustomizer.class, this.getCustomizers(), webServerFactory, new Object[0]).withLogger(WebServerFactoryCustomizerBeanPostProcessor.class)).invoke((customizer) -&gt; &#123;</span><br><span class="line">            customizer.customize(webServerFactory);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line">    <span class="keyword">private</span> Collection&lt;WebServerFactoryCustomizer&lt;?&gt;&gt; getCustomizers() &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.customizers == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.customizers = <span class="keyword">new</span> ArrayList(<span class="keyword">this</span>.getWebServerFactoryCustomizerBeans());</span><br><span class="line">            <span class="keyword">this</span>.customizers.sort(AnnotationAwareOrderComparator.INSTANCE);</span><br><span class="line">            <span class="keyword">this</span>.customizers = Collections.unmodifiableList(<span class="keyword">this</span>.customizers);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.customizers;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//从容器中获取所有这个类型的组件:WebServerFactoryCustomizer</span></span><br><span class="line"><span class="comment">//定制Servlet容器，给容器中添加一个WebServerFactoryCustomizer类型的定制器</span></span><br><span class="line"><span class="keyword">private</span> Collection&lt;WebServerFactoryCustomizer&lt;?&gt;&gt; getWebServerFactoryCustomizerBeans() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.beanFactory.getBeansOfType(WebServerFactoryCustomizer<span class="class">.<span class="keyword">class</span>, <span class="title">false</span>, <span class="title">false</span>).<span class="title">values</span>()</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>步骤:</p>
-<ol>
-<li><p>SpringBoot根据导入的依赖情况，给容器中添加相应的ServletWebServerFactoryConfiguration【TomcatServletWebServerFactory】嵌入式Servlet容器</p>
-</li>
-<li><p>容器中某个组件床架你对象就会惊动后置处理器;</p>
-<p>WebServerFactoryCustomizerBeanPostProcessor;</p>
-<p>只要是WebServerFactory(web服务器工厂)，后置处理器就工作</p>
-</li>
-<li><p>后置处理器，从容器中获取所有的WebServerFactoryCustomizer(web服务器工厂定制器)，调用定制器的定制方法</p>
-</li>
-</ol>
-<h2 id="五、嵌入式Servlet容器启动原理"><a href="#五、嵌入式Servlet容器启动原理" class="headerlink" title="五、嵌入式Servlet容器启动原理"></a>五、嵌入式Servlet容器启动原理</h2><p>什么时候床架你嵌入式Servlet容器工厂？什么时候获取嵌入式的Servlet容器并启动Tomcat;</p>
-<p>获取嵌入式的Servlet容器工厂;</p>
-<ol>
-<li><p>SpringBoot应用启动运行run方法</p>
-</li>
-<li><p>refreshContext(context)；SpringBoot刷新IOC容器【创建IOC容器对象，并初始化容器，创建容器中每一个组件】;如果是Web应用的创建</p>
-<p><strong>AnnotationConfigEmbeddedWebApplicationContext</strong>，否则：<strong>AnnotationConfigApplicationContext</strong></p>
-</li>
-<li><p>refresh(context)刷新刚才创建的ioc容器;</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">       </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">refresh</span><span class="params">()</span> <span class="keyword">throws</span> BeansException, IllegalStateException </span>&#123;</span><br><span class="line">    <span class="keyword">synchronized</span>(<span class="keyword">this</span>.startupShutdownMonitor) &#123;</span><br><span class="line">        <span class="keyword">this</span>.prepareRefresh();</span><br><span class="line">        ConfigurableListableBeanFactory beanFactory = <span class="keyword">this</span>.obtainFreshBeanFactory();</span><br><span class="line">        <span class="keyword">this</span>.prepareBeanFactory(beanFactory);</span><br><span class="line">       </span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.postProcessBeanFactory(beanFactory);</span><br><span class="line">            <span class="keyword">this</span>.invokeBeanFactoryPostProcessors(beanFactory);</span><br><span class="line">            <span class="keyword">this</span>.registerBeanPostProcessors(beanFactory);</span><br><span class="line">            <span class="keyword">this</span>.initMessageSource();</span><br><span class="line">            <span class="keyword">this</span>.initApplicationEventMulticaster();</span><br><span class="line">            <span class="keyword">this</span>.onRefresh();</span><br><span class="line">            <span class="keyword">this</span>.registerListeners();</span><br><span class="line">            <span class="keyword">this</span>.finishBeanFactoryInitialization(beanFactory);</span><br><span class="line">            <span class="keyword">this</span>.finishRefresh();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (BeansException var9) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.logger.isWarnEnabled()) &#123;</span><br><span class="line">                <span class="keyword">this</span>.logger.warn(<span class="string">"Exception encountered during context initialization - cancelling refresh attempt: "</span> + var9);</span><br><span class="line">            &#125;</span><br><span class="line">       </span><br><span class="line">            <span class="keyword">this</span>.destroyBeans();</span><br><span class="line">            <span class="keyword">this</span>.cancelRefresh(var9);</span><br><span class="line">            <span class="keyword">throw</span> var9;</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.resetCommonCaches();</span><br><span class="line">        &#125;</span><br><span class="line">       </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>onRefresh(); web的ioc容器重写了onRefresh方法</p>
-</li>
-<li><p>webioc容器会创建嵌入式的Servlet容器；<strong>createWebServer();</strong></p>
-</li>
-<li><p>获取嵌入式的Servlet容器工厂：<strong>ServletWebServerFactory factory = this.getWebServerFactory();</strong>从ioc容器中获取 ServletWebServerFactory 组件；TomcatWebServerFactoryCustomizerConfiguration创建对象，后置处理器判断存在这个对象，就获取所有的定制器来定制Servlet容器相关配置;</p>
-</li>
-<li><p><strong>使用容器工厂获取嵌入式的Servlet容器</strong>：this.webServer = factory.getWebServer(new ServletContextInitializer[]{this.getSelfInitializer()});</p>
-</li>
-<li><p>嵌入式的Servlet容器创建对象并启动Servlet容器；</p>
-<p>先启动嵌入式的Servlet容器，然后再ioc容器中其他剩下没有创建出的对象获取出来;</p>
-<p>IOC容器启动创建嵌入式Servlet容器</p>
-</li>
-</ol>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://liyi-up.top/2020/05/06/2020%E5%B9%B45%E6%9C%886%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="Liyi">
-      <meta itemprop="description" content="A Programmer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Liyi's personal blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/06/2020%E5%B9%B45%E6%9C%886%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">2020年5月6日-2020年5月10日-SpringBoot-Restful</a>
-        </h1>
-
-        <div class="post-meta">
-                    
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-06 08:33:19" itemprop="dateCreated datePublished" datetime="2020-05-06T08:33:19+08:00">2020-05-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-08 15:15:40" itemprop="dateModified" datetime="2021-04-08T15:15:40+08:00">2021-04-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index">
-                    <span itemprop="name">Web</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
-                    <span itemprop="name">后端开发</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/SpringBoot/" itemprop="url" rel="index">
-                    <span itemprop="name">SpringBoot</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/06/2020%E5%B9%B45%E6%9C%886%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/06/2020%E5%B9%B45%E6%9C%886%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>17k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>15 分钟</span>
-            </span>
-
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#给整个项目的访问路径设置别名</span></span><br><span class="line"><span class="comment">#http://localhost:8080/crud/</span></span><br><span class="line"><span class="meta">server.servlet.context-path</span>=<span class="string">/crud</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##修改项目访问端口</span></span><br><span class="line"><span class="comment">#server....</span></span></pre></td></tr></table></figure></li></ul></li></ol>
+            
+            <span class="read-more"><a href="/2020/05/13/2020%E5%B9%B45%E6%9C%8813%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
-      </header>
+    </div>
+</div>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
 
-      
-          <h2 id="1、登录"><a href="#1、登录" class="headerlink" title="1、登录"></a>1、登录</h2><p>模板引擎在开发期间修改后，要实时生效</p>
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="/categories/Web">
+                  <b>「 </b>WEB<b> 」</b>
+                </a>
+            
+            五月 06, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/05/06/2020%E5%B9%B45%E6%9C%886%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/" title="2020年5月6日-2020年5月10日-SpringBoot-Restful" class="posttitle">2020年5月6日-2020年5月10日-SpringBoot-Restful</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        94k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        1:26
+                    </span>
+                
+                
+            </p>
+            
+                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Web%E5%BC%80%E5%8F%91/" rel="tag">Web开发</a></li></ul>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <h2 id="1、登录"><a href="#1、登录" class="headerlink" title="1、登录"></a>1、登录</h2><p>模板引擎在开发期间修改后，要实时生效</p>
 <ol>
 <li><p>禁用模板引擎的缓存;</p>
 <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#禁用模板引擎的缓存</span></span><br><span class="line"><span class="meta">spring.thymeleaf.cache</span>=<span class="string">false</span></span><br></pre></td></tr></table></figure>
@@ -814,485 +469,263 @@
 <h4 id="1、Thymeleaf控制语句-th-if-“-表达式-”"><a href="#1、Thymeleaf控制语句-th-if-“-表达式-”" class="headerlink" title="1、Thymeleaf控制语句(th:if=“${表达式}”)"></a>1、Thymeleaf控制语句(th:if=“${表达式}”)</h4><ol>
 <li>当v-if中的表达式成立时当前元素才能生效，元素中其他的th:属性才能有效</li>
 <li>#{}除了可以取出一些上下文信息之外，还能够取出一些基本对象和工具对象</li>
-<li>登录消息错误提示</li></ol>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/06/2020%E5%B9%B45%E6%9C%886%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://liyi-up.top/2020/05/03/2020%E5%B9%B45%E6%9C%883%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="Liyi">
-      <meta itemprop="description" content="A Programmer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Liyi's personal blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/03/2020%E5%B9%B45%E6%9C%883%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">2020年5月3日-SpringBoot-Restful</a>
-        </h1>
-
-        <div class="post-meta">
-                    
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-03 21:42:39" itemprop="dateCreated datePublished" datetime="2020-05-03T21:42:39+08:00">2020-05-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-08 15:15:34" itemprop="dateModified" datetime="2021-04-08T15:15:34+08:00">2021-04-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index">
-                    <span itemprop="name">Web</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
-                    <span itemprop="name">后端开发</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/SpringBoot/" itemprop="url" rel="index">
-                    <span itemprop="name">SpringBoot</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/03/2020%E5%B9%B45%E6%9C%883%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/03/2020%E5%B9%B45%E6%9C%883%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>8.4k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>8 分钟</span>
-            </span>
-
+<li>登录消息错误提示<a id="more"></a></li>
+</ol>
+<p>))![基本对象.png)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"color...</span></span></span></pre></td></tr></table></figure>
+            
+            <span class="read-more"><a href="/2020/05/06/2020%E5%B9%B45%E6%9C%886%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1、RestfulCRUD"><a href="#1、RestfulCRUD" class="headerlink" title="1、RestfulCRUD"></a>1、RestfulCRUD</h2><h4 id="1-默认访问首页配置"><a href="#1-默认访问首页配置" class="headerlink" title="1. 默认访问首页配置"></a>1. 默认访问首页配置</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">//    方式一</span></span><br><span class="line">    <span class="meta">@RequestMapping</span>(value = <span class="string">"/"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toIndex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"login"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方式二</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyMvcConfig</span> <span class="keyword">extends</span> <span class="title">WebMvcConfigurationSupport</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">addViewControllers</span><span class="params">(ViewControllerRegistry registry)</span> </span>&#123;</span><br><span class="line"><span class="comment">//        浏览器发送请求,去到对应页面(首页)</span></span><br><span class="line">        registry.addViewController(<span class="string">"/"</span>).setViewName(<span class="string">"login"</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/03/2020%E5%B9%B45%E6%9C%883%E6%97%A5-SpringBoot%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-  </div>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/30/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><span class="page-number current">31</span><a class="page-number" href="/page/32/">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="extend next" rel="next" href="/page/32/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let activeClass = CONFIG.comments.activeClass;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Liyi"
-      src="/images/author.jpg">
-  <p class="site-author-name" itemprop="name">Liyi</p>
-  <div class="site-description" itemprop="description">A Programmer</div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">177</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">32</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">68</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/Liyi-up" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Liyi-up" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:2933909306@qq.ocm" title="E-Mail → mailto:2933909306@qq.ocm" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://weibo.com/5640102042/profile?rightmod=1&wvr=6&mod=personinfo" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;5640102042&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://www.jianshu.com/u/51f275a2e381" title="简书 → https:&#x2F;&#x2F;www.jianshu.com&#x2F;u&#x2F;51f275a2e381" rel="noopener" target="_blank"><i class="fa fa-fw fa-heartbeat"></i>简书</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
-      </span>
-  </div>
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title">
-      <i class="fa fa-fw fa-link"></i>
-      友链
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://www.sunofbeach.net/course" title="https:&#x2F;&#x2F;www.sunofbeach.net&#x2F;course" rel="noopener" target="_blank">阳光沙滩</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://www.leancloud.cn/" title="https:&#x2F;&#x2F;www.leancloud.cn&#x2F;" rel="noopener" target="_blank">Leancloud</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://www.runoob.com/" title="https:&#x2F;&#x2F;www.runoob.com&#x2F;" rel="noopener" target="_blank">菜鸟教程</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="http://theme-next.iissnan.com/" title="http:&#x2F;&#x2F;theme-next.iissnan.com&#x2F;" rel="noopener" target="_blank">NexT</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="http://www.fontawesome.com.cn/" title="http:&#x2F;&#x2F;www.fontawesome.com.cn&#x2F;" rel="noopener" target="_blank">图标库</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="http://www.daovoice.io/" title="http:&#x2F;&#x2F;www.daovoice.io&#x2F;" rel="noopener" target="_blank">DaoVoice</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://valine.js.org/" title="https:&#x2F;&#x2F;valine.js.org&#x2F;" rel="noopener" target="_blank">Valine</a>
-        </li>
-    </ul>
-  </div>
-  <div class="cc-license motion-element" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" class="cc-opacity" rel="noopener" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
-  </div>
-
-
-
-      </div>
 
     </div>
-  </aside>
-
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-<!-- 网站运行时间的设置 -->
-<i class="fa fa-clock "></i>
-<span id="timeDate">载入天数...</span>
-<span id="times">载入时分秒...</span>
-<script>
-    var now = new Date();
-    function createtime() {
-        var grt= new Date("01/05/2020 00:00:00");//此处修改你的建站时间或者网站上线时间
-        now.setTime(now.getTime()+250);
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
-    }
-setInterval("createtime()",250);
-</script>
-
-<div class="copyright">
-  
-  &copy; 2020 – 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Liyi</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    <span title="站点总字数">1.6m</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">24:45</span>
+    
+    <div id="pager"><a href="/page/32/" class="more" data-loading="加载中..." data-load-more="加载更多">加载更多</a></div>
+    
 </div>
+<div id="preview"></div>
 
-<!--
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
-  </div>-->
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span> 人
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span> 次
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  
-  <script color='0,0,0' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-  <script>
-    (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el: '#valine-comments',
-      verify: false,
-      notify: false,
-      appId: 'gsPFVcn0pcvQ6V1TeIkbYRzi-gzGzoHsz',
-      appKey: '5qOf6uppzbXVEsrhqi7L1fhg',
-      placeholder: "评论一句",
-      avatar: 'mm',
-      meta: guest,
-      pageSize: '10' || 10,
-      visitor: false,
-      lang: '' || 'zh-cn',
-      path: location.pathname,
-      recordIP: false,
-      serverURLs: ''
-    });
-  }, window.Valine);
-});
-</script>
-
-  
-<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/clicklove.js"></script>
-<!--动态title-->
-<script type="text/javascript" src="/js/activetitle.js"></script>
-
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
 <script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
         </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2021
+        <span class="gradient-text">
+            Liyi
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.9.3" target="_blank" rel="noopener">v1.4.9.3</a></small>
+        
+        </br>
+        
+        
+        
+        </br>
+        <i class="gradient-text"></i>
+        <span id="timeDate">载入天数...</span>
+        <span id="times">载入时分秒...</span>
+        <script>
+            var now = new Date();
+            function createtime() {
+                var grt= new Date("01/05/2020 00:00:00");//此处修改你的建站时间或者网站上线时间
+                now.setTime(now.getTime()+250);
+                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+            }
+        setInterval("createtime()",250);
+        </script>
+        
+        
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+ 
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['There is no dark magic in the computer world', '计算机世界没有黑魔法'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+<!-- 引用依赖 -->
+<script>document.write(aplayerconf)</script>
+
+
 </html>

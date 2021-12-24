@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liyi-up.top/archives/index.html</loc>
+    
+    <lastmod>2021-12-24T09:33:25.574Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liyi-up.top/2021/12/24/webpack%E5%B8%B8%E7%94%A8loader/</loc>
+    
+    <lastmod>2021-12-24T09:17:47.196Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liyi-up.top/2021/12/16/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%EF%BC%9ASLB-nginx%E6%90%AD%E9%85%8D%EF%BC%8C%E4%BB%A5%E5%8F%8Anginx/</loc>
     
     <lastmod>2021-12-16T03:13:47.761Z</lastmod>

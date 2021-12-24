@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Refresh" content="0; URL=https://aplayer.js.org/#/zh-Hans/" />
+    <title>APlayer Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .container {
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 150px;
+        }
+        h1 {
+            font-size: 54px;
+            color: #333;
+            margin: 30px 0 10px;
+        }
+        h2 {
+            font-size: 22px;
+            color: #555;
+        }
+        h3 {
+            font-size: 24px;
+            color: #555;
+        }
+        hr {
+            display: block;
+            width: 7rem;
+            height: 1px;
+            margin: 2.5rem 0;
+            background-color: #eee;
+            border: 0;
+        }
+        a {
+            color: #08c;
+            text-decoration: none;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vconsole/dist/vconsole.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js"></script>
+    <script src="APlayer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Liyi's personal blog" type="application/atom+xml">
+</head>
+<body>
+    <div class="container">
+        <h1>APlayer</h1>
+        <h2>Wow, such a beautiful html5 music player</h2>
+        <p>Made by <a href="https://www.anotherhome.net/" target="_blank">DIYgod</a>. Available on <a href="https://github.com/DIYgod/APlayer" target="_blank">GitHub</a>. Licensed MIT.</p>
+        <hr>
+        <h3>Normal</h3>
+        <div id="player1"></div>
+        <p></p>
+        <button onclick="ap1.play()">ap.play()</button>
+        <button onclick="ap1.seek(100)">ap.seek(100)</button>
+        <button onclick="ap1.pause()">ap.pause()</button>
+        <button onclick="ap1.toggle()">ap.toggle()</button>
+        <button onclick="ap1.volume(0.1)">ap.volume(0.1)</button>
+        <button onclick="ap1.addAudio([
+            {
+                name: 'あっちゅ～ま青春!',
+                artist: '七森中☆ごらく部',
+                url: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/yuruyuri.mp3',
+                cover: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/yuruyuri.jpg'
+            },
+            {
+                name: 'secret base~君がくれたもの~',
+                artist: '茅野愛衣',
+                url: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/secretbase.mp3',
+                cover: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/secretbase.jpg'
+            },
+            {
+                name: '回レ！雪月花',
+                artist: '小倉唯',
+                url: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/snowmoonflowers.mp3',
+                cover: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/snowmoonflowers.jpg'
+            }
+        ])">ap.addAudio(...)</button>
+        <button onclick="ap1.destroy()">ap.destroy()</button>
+        <h3>With playlist</h3>
+        <div id="player4" class="aplayer"></div>
+        <p></p>
+        <button onclick="ap4.switchAudio(2)">ap.switchAudio(2)</button>
+        <h3>With lyrics</h3>
+        <div id="player3" class="aplayer"></div>
+        <h3>With playlist and lyrics</h3>
+        <div id="player5" class="aplayer"></div>
+        <h3>Narrow</h3>
+        <div id="player2" class="aplayer"></div>
+        <h3>HLS</h3>
+        <div id="player6" class="aplayer"></div>
+        <div id="player7" class="aplayer"></div>
+        <div id="player8" class="aplayer"></div>
+    </div>
+    <script>
+        if (/mobile/i.test(window.navigator.userAgent)) {
+            new VConsole();
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="demo.js"></script>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</html>
