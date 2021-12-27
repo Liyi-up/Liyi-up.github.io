@@ -157,35 +157,38 @@
             <a href="/categories/Web"><b>「
                 </b>WEB<b> 」</b></a>
             
-            六月 05, 2020
+            六月 08, 2020
         </p>
         <h3 class="post-title animated fadeInDown">
-            <a href="/2020/06/05/2020%E5%B9%B46%E6%9C%885%E6%97%A5-SpringBoot-%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/" title="2020年6月5日-SpringBoot-全文检索" class="posttitle">2020年6月5日-SpringBoot-全文检索</a></h3>
+            <a href="/2020/06/08/2020%E5%B9%B46%E6%9C%888%E6%97%A5-SpringBoot-%E4%BB%BB%E5%8A%A1/" title="2020年6月8日-SpringBoot-任务" class="posttitle">2020年6月8日-SpringBoot-任务</a></h3>
         
         <p class="post-count animated fadeInDown">
             
             <span>
                 <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                9.4k
+                17k
             </span>
             
             
             <span>
                 <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                9 mins.
+                15 mins.
             </span>
             
             
         </p>
         
         
-        <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/" rel="tag">全文检索</a></li></ul>
+        <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E4%BB%BB%E5%8A%A1/" rel="tag">任务</a></li></ul>
         
         <div class="md-content animated fadeIn">
             
-            <h2 id="一、检索"><a href="#一、检索" class="headerlink" title="一、检索"></a>一、检索</h2><p>我们的应用经常需要添加检索功能，开源的<strong>ElasticSearch</strong>是目前全文搜索引擎的首选，他可以快速的存储、搜索和分析海量数据。Spring Boot通过整合<strong>Spring Dalasta ElasticSerac...</strong></p>
+            <h2 id="一、异步任务"><a href="#一、异步任务" class="headerlink" title="一、异步任务"></a>一、异步任务</h2><p>在实际开发中为了让一段程序执行的时候，不阻塞其他线程，其他方法能够异步调用时就需要用到异步处理。</p>
+<p>在SpringBoot中有专门的注解实现程序的异步处理:</p>
+<ul>
+<li>@EnableAsync:开启...</li></ul>
             
-            <span class="read-more"><a href="/2020/06/05/2020%E5%B9%B46%E6%9C%885%E6%97%A5-SpringBoot-%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/" title="查看全文" class="posttitle">查看全文</a>
+            <span class="read-more"><a href="/2020/06/08/2020%E5%B9%B46%E6%9C%888%E6%97%A5-SpringBoot-%E4%BB%BB%E5%8A%A1/" title="查看全文" class="posttitle">查看全文</a>
                 <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
@@ -206,6 +209,61 @@
 
     <div id="primary">
         
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="/categories/Web">
+                  <b>「 </b>WEB<b> 」</b>
+                </a>
+            
+            六月 08, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/06/08/2020%E5%B9%B46%E6%9C%888%E6%97%A5-SpringBoot-%E4%BB%BB%E5%8A%A1/" title="2020年6月8日-SpringBoot-任务" class="posttitle">2020年6月8日-SpringBoot-任务</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        17k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        15 mins.
+                    </span>
+                
+                
+            </p>
+            
+                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E4%BB%BB%E5%8A%A1/" rel="tag">任务</a></li></ul>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <h2 id="一、异步任务"><a href="#一、异步任务" class="headerlink" title="一、异步任务"></a>一、异步任务</h2><p>在实际开发中为了让一段程序执行的时候，不阻塞其他线程，其他方法能够异步调用时就需要用到异步处理。</p>
+<p>在SpringBoot中有专门的注解实现程序的异步处理:</p>
+<ul>
+<li>@EnableAsync:开启异步任务</li>
+<li>@Async :声明此方法为异步方法</li>
+</ul>
+<a id="more"></a>
+
+<p>Springboot04TaskApplication.java：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//开启异步注解</span></span><br><span class="line"><span class="meta">@EnableAsync</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Springboot04TaskApplication...</span></span></span></pre></td></tr></table></figure>
+            
+            <span class="read-more"><a href="/2020/06/08/2020%E5%B9%B46%E6%9C%888%E6%97%A5-SpringBoot-%E4%BB%BB%E5%8A%A1/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
 <div class="post" id="post">
     <div class="post-cover animated fadeIn" style="
             background-image:
@@ -410,56 +468,6 @@
 <li>传统liunx...</li></ul>
             
             <span class="read-more"><a href="/2020/06/01/2020%E5%B9%B46%E6%9C%881%E6%97%A5-SpringBoot%E4%B8%8EDocker/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/welcome-cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="/categories/Web">
-                  <b>「 </b>WEB<b> 」</b>
-                </a>
-            
-            五月 30, 2020
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/05/30/2020%E5%B9%B45%E6%9C%8830%E6%97%A5-JWT/" title="2020年5月30日-JWT" class="posttitle">2020年5月30日-JWT</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                        41k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                        37 mins.
-                    </span>
-                
-                
-            </p>
-            
-                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/" rel="tag">自学笔记</a></li></ul>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                <h2 id="JWT"><a href="#JWT" class="headerlink" title="JWT"></a>JWT</h2><h4 id="1、介绍"><a href="#1、介绍" class="headerlink" title="1、介绍"></a>1、介绍</h4><p>JWT(json web token) 一般用于前后端分离/微信小程序/app开发的项目中用户登录。</p>
-<h4 id="2、传统token验证"><a href="#2、传统token验证" class="headerlink" title="2、传统token验证"></a>2、传统token验证</h4><p>用户登录,服务器生成一个token(随机字符串),并保存在服务端(可以是cache、redis、database)中,以后客户端用户再来访问时，需要携带token，服务端获取token之后，再去cache/redis/database中进行校验</p>
-<a id="more"></a>
-
-<h4 id="3、JWT验证"><a href="#3、JWT验证" class="headerlink" title="3、JWT验证"></a>3、JWT验证</h4><p>用户登录，服务端给客户端返回一个token，但本身服务端不保存，以后客户端访问，需要携带token，...</p>
-            
-            <span class="read-more"><a href="/2020/05/30/2020%E5%B9%B45%E6%9C%8830%E6%97%A5-JWT/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
 </div>

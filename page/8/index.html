@@ -157,22 +157,22 @@
             <a href="/categories/Web"><b>「
                 </b>WEB<b> 」</b></a>
             
-            七月 05, 2021
+            七月 06, 2021
         </p>
         <h3 class="post-title animated fadeInDown">
-            <a href="/2021/07/05/JavaScript-BOM%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1/" title="JavaScript-BOM浏览器对象" class="posttitle">JavaScript-BOM浏览器对象</a></h3>
+            <a href="/2021/07/06/JavaScript-%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88/" title="JavaScript-网页特效" class="posttitle">JavaScript-网页特效</a></h3>
         
         <p class="post-count animated fadeInDown">
             
             <span>
                 <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                28k
+                187k
             </span>
             
             
             <span>
                 <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                25 mins.
+                2:50
             </span>
             
             
@@ -183,10 +183,12 @@
         
         <div class="md-content animated fadeIn">
             
-            <h2 id="BOM-概述"><a href="#BOM-概述" class="headerlink" title="BOM 概述"></a>BOM 概述</h2><h3 id="什么是-BOM"><a href="#什么是-BOM" class="headerlink" title="什么是 BOM"></a>什么是 BOM</h3><p>BOM（Browser Object Model）即<font color="red"><strong>浏览器对象模型</strong></font>，它提供了独立于内容而与<font color="red">浏览器窗口交互的对象，</font>其核心对象是window。</p>
-<p>BOM 由一些列对象构成，并且每个...</p>
+            <h2 id="元素偏移量-offset-系列"><a href="#元素偏移量-offset-系列" class="headerlink" title="元素偏移量 offset 系列"></a>元素偏移量 offset 系列</h2><h3 id="offset-概述"><a href="#offset-概述" class="headerlink" title="offset 概述"></a>offset 概述</h3><p><code>offset</code>翻译过来就是偏移量，我们使用<code>offset</code>系列相关属性可以<font color="red">动态的</font>得到该元素的位置（偏移）、大小等</p>
+<ul>
+<li>获取元素带有定位的父元素的位置</li>
+<li>获取元素自...</li></ul>
             
-            <span class="read-more"><a href="/2021/07/05/JavaScript-BOM%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1/" title="查看全文" class="posttitle">查看全文</a>
+            <span class="read-more"><a href="/2021/07/06/JavaScript-%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88/" title="查看全文" class="posttitle">查看全文</a>
                 <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
@@ -207,6 +209,74 @@
 
     <div id="primary">
         
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="/categories/Web">
+                  <b>「 </b>WEB<b> 」</b>
+                </a>
+            
+            七月 06, 2021
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2021/07/06/JavaScript-%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88/" title="JavaScript-网页特效" class="posttitle">JavaScript-网页特效</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        187k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        2:50
+                    </span>
+                
+                
+            </p>
+            
+                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <h2 id="元素偏移量-offset-系列"><a href="#元素偏移量-offset-系列" class="headerlink" title="元素偏移量 offset 系列"></a>元素偏移量 offset 系列</h2><h3 id="offset-概述"><a href="#offset-概述" class="headerlink" title="offset 概述"></a>offset 概述</h3><p><code>offset</code>翻译过来就是偏移量，我们使用<code>offset</code>系列相关属性可以<font color="red">动态的</font>得到该元素的位置（偏移）、大小等</p>
+<ul>
+<li>获取元素带有定位的父元素的位置</li>
+<li>获取元素自身的大小（宽度高度）</li>
+<li>注意：返回的数值都不带单位</li>
+</ul>
+<a id="more"></a>
+
+<p><code>offset</code> 系列常用属性：</p>
+<table>
+<thead>
+<tr>
+<th>offset系列属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>element.offsetParent</td>
+<td>返回作为该元素带有定位的父级元素 如果父级都没有定位则返回body</td>
+</tr>
+<tr>
+<td>element.offsetTop</td>
+<td>返回元素相对带有定位父元素...</td></tr></tbody></table>
+            
+            <span class="read-more"><a href="/2021/07/06/JavaScript-%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
 <div class="post" id="post">
     <div class="post-cover animated fadeIn" style="
             background-image:
@@ -752,67 +822,6 @@
 <h3 id="手机屏幕的现状"><a href="#手机屏幕的现状" class="headerlink" title="手机屏幕的现状"></a>手机屏幕的...</h3>
             
             <span class="read-more"><a href="/2021/06/28/CSS%E6%A0%B7%E5%BC%8F%E8%A1%A8-WEB%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/welcome-cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="/categories/Web">
-                  <b>「 </b>WEB<b> 」</b>
-                </a>
-            
-            六月 27, 2021
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2021/06/27/CSS%E6%A0%B7%E5%BC%8F%E8%A1%A8-CSS3%E6%89%A9%E5%B1%95/" title="CSS样式表-CSS3扩展" class="posttitle">CSS样式表-CSS3扩展</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                        125k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                        1:54
-                    </span>
-                
-                
-            </p>
-            
-                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                <h2 id="CSS3-2D转换"><a href="#CSS3-2D转换" class="headerlink" title="CSS3 2D转换"></a>CSS3 2D转换</h2><p><strong>转换（transform)</strong>是CSS3中具有颠覆性的特征之一，可以实现元素的位移、旋转、缩放等效果</p>
-<p>转换（transform）你可以简单理解为变形</p>
-
-
-<a id="more"></a>
-
-<ul>
-<li>移动：translate</li>
-<li>旋转：rotate</li>
-<li>缩放：scale</li>
-</ul>
-<h3 id="二维坐标系"><a href="#二维坐标系" class="headerlink" title="二维坐标系"></a>二维坐标系</h3><p>2D转换时改变标签在二维平面上的位置和形状的一种技术，先来学习二维坐标系</p>
-<p></p>
-<h3 id="2D转换之移动-translate"><a href="#2D转换之移动-translate" class="headerlink" title="2D转换之移动 translate"></a>2D转换之移动 translate</h3>
-
-<h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translate</span>(<span class="selector-tag">x</span>,<span class="selector-tag">y</span>); 或者分开写</span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translateX</span>(<span class="selector-tag">n</span>);</span><br><span class="line"><span class="selector-tag">transform...</span></span></pre></td></tr></table></figure>
-            
-            <span class="read-more"><a href="/2021/06/27/CSS%E6%A0%B7%E5%BC%8F%E8%A1%A8-CSS3%E6%89%A9%E5%B1%95/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
 </div>
